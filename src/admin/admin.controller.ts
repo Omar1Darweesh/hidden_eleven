@@ -17,13 +17,16 @@ import {
   MaxFileSizeValidator,
   FileTypeValidator,
   BadRequestException,
+  NotFoundException,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ThrottlerGuard, Throttle, seconds } from '@nestjs/throttler';
 import { InjectPinoLogger, PinoLogger } from 'nestjs-pino';
 import type { Response } from 'express';
 import * as https from 'https';
+import * as fs from 'fs';
 import { AdminService } from './admin.service.js';
+import { BackupService } from './backup.service.js';
 import { AdminAuthGuard } from '../shared/admin-auth.guard.js';
 import { CreatePlayerDto, UpdatePlayerDto } from './dto/admin-player.dto.js';
 import {
@@ -97,6 +100,7 @@ const IMAGE_PROXY_MAX_BYTES = 6 * 1024 * 1024; // 6 MB — above 5 MB upload cap
 export class AdminController {
   constructor(
     private readonly adminService: AdminService,
+    private readonly backupService: BackupService,
     @InjectPinoLogger(AdminController.name)
     private readonly logger: PinoLogger = new PinoLogger({ pinoHttp: { level: 'silent' } }),
   ) {}
@@ -548,6 +552,34 @@ export class AdminController {
   @Get('assets')
   getAssets() {
     return this.adminService.getAssetTree();
+  }
+
+  // ── Backups ──────────────────────────────────────────────────────────────────
+  // Single rotating archive (admin-data/ + assets/ + match-history.db) — see
+  // BackupService's doc comment. A daily cron keeps it fresh automatically;
+  // these routes are for the admin dashboard's status display, manual
+  // "Backup Now" trigger, and direct download.
+
+  @UseGuards(AdminAuthGuard)
+  @Get('backup')
+  getBackupStatus() {
+    return this.backupService.getStatus();
+  }
+
+  @UseGuards(AdminAuthGuard)
+  @Post('backup')
+  async runBackupNow() {
+    return this.backupService.createBackup();
+  }
+
+  @UseGuards(AdminAuthGuard)
+  @Get('backup/download')
+  downloadBackup(@Res() res: Response) {
+    const archivePath = this.backupService.getArchivePath();
+    if (!fs.existsSync(archivePath)) {
+      throw new NotFoundException('No backup exists yet — run one first.');
+    }
+    res.download(archivePath, 'hidden-eleven-backup.tar.gz');
   }
 
   // ── Image proxy (bypasses CORS for allowlisted CDNs on Flutter web) ──────────

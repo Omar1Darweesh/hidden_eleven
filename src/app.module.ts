@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { ScheduleModule } from '@nestjs/schedule';
 import { LoggerModule } from 'nestjs-pino';
 import { RoomsModule } from './rooms/rooms.module.js';
 import { AdminModule } from './admin/admin.module.js';
@@ -12,6 +13,9 @@ import { LOGGER_CONFIG } from './shared/logger-config.js';
   imports: [
     LoggerModule.forRoot(LOGGER_CONFIG),
     ThrottlerModule.forRoot(THROTTLER_CONFIG),
+    // Enables @Cron()-decorated methods anywhere in the app (currently just
+    // BackupService's daily backup) — must be imported once, at the root.
+    ScheduleModule.forRoot(),
     RoomsModule,
     AdminModule,
     // Also imported by GameModule (so GameService can inject

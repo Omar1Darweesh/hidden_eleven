@@ -13,5 +13,9 @@ dist/
 match-history.db
 *.log
 
+# Generated backup archives (BackupService) — regenerated on demand, never
+# something to version-control.
+backups/
+
 # OS/editor cruft
 .DS_Store

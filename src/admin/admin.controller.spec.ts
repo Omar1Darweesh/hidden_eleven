@@ -9,6 +9,7 @@ import * as https from 'https';
 import { AdminModule } from './admin.module';
 import { AdminController } from './admin.controller';
 import { AdminService } from './admin.service';
+import { BackupService } from './backup.service';
 
 jest.mock('https');
 
@@ -35,7 +36,7 @@ describe('AdminController — proxy/image timeout & error handling (unit)', () =
   // so a plain `new` works without wiring nestjs-pino's LoggerModule.
   beforeEach(() => {
     jest.clearAllMocks();
-    controller = new AdminController(new AdminService());
+    controller = new AdminController(new AdminService(), new BackupService());
   });
 
   it('pipes the upstream response through on success', () => {
