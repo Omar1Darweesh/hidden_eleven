@@ -1,0 +1,202 @@
+[
+  {
+    "slug": "1-division",
+    "name": "1. Division",
+    "active": false
+  },
+  {
+    "slug": "2-bundesliga",
+    "name": "2. Bundesliga",
+    "active": false
+  },
+  {
+    "slug": "3-liga",
+    "name": "3. Liga",
+    "active": false
+  },
+  {
+    "slug": "a-league-men",
+    "name": "A-League Men",
+    "active": false
+  },
+  {
+    "slug": "allsvenskan",
+    "name": "Allsvenskan",
+    "active": false
+  },
+  {
+    "slug": "bundesliga",
+    "name": "Bundesliga",
+    "active": false
+  },
+  {
+    "slug": "categoria-primera-a",
+    "name": "Categoría Primera A",
+    "active": false
+  },
+  {
+    "slug": "championship",
+    "name": "Championship",
+    "active": false
+  },
+  {
+    "slug": "division-de-futbol-profesional",
+    "name": "División de Fútbol Profesional",
+    "active": false
+  },
+  {
+    "slug": "division-profesional",
+    "name": "División Profesional",
+    "active": false
+  },
+  {
+    "slug": "ekstraklasa",
+    "name": "Ekstraklasa",
+    "active": false
+  },
+  {
+    "slug": "eliteserien",
+    "name": "Eliteserien",
+    "active": false
+  },
+  {
+    "slug": "eredivisie",
+    "name": "Eredivisie",
+    "active": false
+  },
+  {
+    "slug": "hrvatska-nogometna-liga",
+    "name": "Hrvatska nogometna liga",
+    "active": false
+  },
+  {
+    "slug": "k-league-1",
+    "name": "K League 1",
+    "active": false
+  },
+  {
+    "slug": "la-liga",
+    "name": "La Liga",
+    "active": false
+  },
+  {
+    "slug": "la-liga-2",
+    "name": "La Liga 2",
+    "active": false
+  },
+  {
+    "slug": "league-one",
+    "name": "League One",
+    "active": false
+  },
+  {
+    "slug": "liga-1",
+    "name": "Liga 1",
+    "active": false
+  },
+  {
+    "slug": "liga-i",
+    "name": "Liga I",
+    "active": false
+  },
+  {
+    "slug": "liga-profesional-de-futbol",
+    "name": "Liga Profesional de Fútbol",
+    "active": false
+  },
+  {
+    "slug": "ligue-1",
+    "name": "Ligue 1",
+    "active": false
+  },
+  {
+    "slug": "ligue-2",
+    "name": "Ligue 2",
+    "active": false
+  },
+  {
+    "slug": "major-league-soccer",
+    "name": "Major League Soccer",
+    "active": false
+  },
+  {
+    "slug": "nemzeti-bajnoksag-i",
+    "name": "Nemzeti Bajnokság I",
+    "active": false
+  },
+  {
+    "slug": "premier-league",
+    "name": "Premier League",
+    "active": true
+  },
+  {
+    "slug": "premiership",
+    "name": "Premiership",
+    "active": false
+  },
+  {
+    "slug": "premyer-liqa",
+    "name": "Premyer Liqa",
+    "active": false
+  },
+  {
+    "slug": "primeira-liga",
+    "name": "Primeira Liga",
+    "active": false
+  },
+  {
+    "slug": "primera-division",
+    "name": "Primera División",
+    "active": false
+  },
+  {
+    "slug": "pro-league",
+    "name": "Pro League",
+    "active": false
+  },
+  {
+    "slug": "prvni-liga",
+    "name": "První liga",
+    "active": false
+  },
+  {
+    "slug": "serie-a",
+    "name": "Serie A",
+    "active": false
+  },
+  {
+    "slug": "brasileirao-serie-a",
+    "name": "Série A",
+    "active": false
+  },
+  {
+    "slug": "serie-b",
+    "name": "Serie B",
+    "active": false
+  },
+  {
+    "slug": "super-league",
+    "name": "Super League",
+    "active": false
+  },
+  {
+    "slug": "super-lig",
+    "name": "Süper Lig",
+    "active": false
+  },
+  {
+    "slug": "superliga",
+    "name": "Superliga",
+    "active": false
+  },
+  {
+    "slug": "ukrainian-premier-league",
+    "name": "Ukrainian Premier League",
+    "active": false
+  },
+  {
+    "slug": "veikkausliiga",
+    "name": "Veikkausliiga",
+    "active": false
+  }
+]

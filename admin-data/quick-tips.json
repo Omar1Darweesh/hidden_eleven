@@ -1,0 +1,37 @@
+[
+  {
+    "id": "86ee2705-de5d-4394-a406-fbe06b5ba7f1",
+    "text": "Tap any card to see its full stats before you commit.",
+    "phase": null,
+    "order": 0,
+    "visible": true
+  },
+  {
+    "id": "ba1af742-f3e9-465a-82b2-62f89ed40eff",
+    "text": "Pick your position first, then compare the offered candidates.",
+    "phase": "selecting_position",
+    "order": 1,
+    "visible": true
+  },
+  {
+    "id": "807de3ef-e1c6-48b6-9e2c-99e04ebc4269",
+    "text": "A lower-rated card with the right chemistry can outscore a bigger name.",
+    "phase": "selecting_card",
+    "order": 2,
+    "visible": true
+  },
+  {
+    "id": "8c6ed722-1b63-4b7a-bfb7-c87e748f1c5d",
+    "text": "You won't see the card until you reveal it — order wisely if you're first.",
+    "phase": "hidden_pick",
+    "order": 3,
+    "visible": true
+  },
+  {
+    "id": "a43e8630-3107-4b45-9ab3-0c77720a1f41",
+    "text": "Fix out-of-position starters before confirming — they block your lineup.",
+    "phase": "subs",
+    "order": 4,
+    "visible": true
+  }
+]

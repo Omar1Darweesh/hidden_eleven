@@ -1,0 +1,44 @@
+[
+  {
+    "type": "captain",
+    "name": "Captain Card",
+    "enabled": true,
+    "color": "#FFC83D",
+    "description": "Your captained player’s chemistry counts ×{captainMultiplier}."
+  },
+  {
+    "type": "yellow",
+    "name": "Yellow Card",
+    "enabled": true,
+    "color": "#F2C037",
+    "description": "Knock {yellowPenalty} points off a rival’s score."
+  },
+  {
+    "type": "red",
+    "name": "Red Card",
+    "enabled": true,
+    "color": "#E74C3C",
+    "description": "Kill a rival player’s chemistry (rating stays)."
+  },
+  {
+    "type": "extra_bench",
+    "name": "Extra Bench Card",
+    "enabled": true,
+    "color": "#22D3EE",
+    "description": "An extra sub that fits ANY position."
+  },
+  {
+    "type": "sub",
+    "name": "Sub Card",
+    "enabled": true,
+    "color": "#2ECC71",
+    "description": "Swap a player with a rival’s same-position player."
+  },
+  {
+    "type": "coach",
+    "name": "Coach Card",
+    "enabled": true,
+    "color": "#A55CFF",
+    "description": "Add a new position to one of your players."
+  }
+]

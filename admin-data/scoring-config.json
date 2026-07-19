@@ -1,0 +1,181 @@
+{
+  "draft": {
+    "version": 5,
+    "status": "draft",
+    "createdAt": "2026-07-16T12:45:01.487Z",
+    "values": {
+      "userChallenges": {
+        "rewardPerChallenge": 15
+      },
+      "cardChemistry": {
+        "tierRewards": {
+          "easy": 3,
+          "medium": 5,
+          "hard": 7
+        },
+        "thresholds": {
+          "sameClubCount": 2,
+          "sameNationCount": 2,
+          "sameLeagueCount": 3,
+          "positionGroupCount": 2,
+          "clubAndPositionClubCount": 2,
+          "clubAndPositionGroupCount": 2,
+          "nationAndPositionNationCount": 2,
+          "nationAndPositionGroupCount": 2
+        }
+      },
+      "lineLeader": {
+        "bonusPerLine": 10
+      },
+      "abilityEffects": {
+        "yellowPenalty": 30,
+        "captainMultiplier": 2
+      }
+    }
+  },
+  "published": {
+    "version": 4,
+    "status": "published",
+    "createdAt": "2026-07-16T12:45:01.487Z",
+    "publishedAt": "2026-07-16T12:45:01.487Z",
+    "values": {
+      "userChallenges": {
+        "rewardPerChallenge": 15
+      },
+      "cardChemistry": {
+        "tierRewards": {
+          "easy": 3,
+          "medium": 5,
+          "hard": 7
+        },
+        "thresholds": {
+          "sameClubCount": 2,
+          "sameNationCount": 2,
+          "sameLeagueCount": 3,
+          "positionGroupCount": 2,
+          "clubAndPositionClubCount": 2,
+          "clubAndPositionGroupCount": 2,
+          "nationAndPositionNationCount": 2,
+          "nationAndPositionGroupCount": 2
+        }
+      },
+      "lineLeader": {
+        "bonusPerLine": 10
+      },
+      "abilityEffects": {
+        "yellowPenalty": 30,
+        "captainMultiplier": 2
+      }
+    }
+  },
+  "history": [
+    {
+      "version": 1,
+      "status": "published",
+      "createdAt": "2026-07-16T07:08:50.087Z",
+      "publishedAt": "2026-07-16T07:08:50.087Z",
+      "note": "Initial version — matches pre-existing hardcoded scoring exactly.",
+      "values": {
+        "userChallenges": {
+          "rewardPerChallenge": 5
+        },
+        "cardChemistry": {
+          "tierRewards": {
+            "easy": 2,
+            "medium": 4,
+            "hard": 6
+          },
+          "thresholds": {
+            "sameClubCount": 2,
+            "sameNationCount": 2,
+            "sameLeagueCount": 3,
+            "positionGroupCount": 2,
+            "clubAndPositionClubCount": 2,
+            "clubAndPositionGroupCount": 2,
+            "nationAndPositionNationCount": 2,
+            "nationAndPositionGroupCount": 2
+          }
+        },
+        "lineLeader": {
+          "bonusPerLine": 2
+        },
+        "abilityEffects": {
+          "yellowPenalty": 20,
+          "captainMultiplier": 2
+        }
+      }
+    },
+    {
+      "version": 2,
+      "status": "published",
+      "createdAt": "2026-07-16T07:45:44.028Z",
+      "publishedAt": "2026-07-16T07:45:44.028Z",
+      "note": "first edit",
+      "values": {
+        "userChallenges": {
+          "rewardPerChallenge": 15
+        },
+        "cardChemistry": {
+          "tierRewards": {
+            "easy": 2,
+            "medium": 4,
+            "hard": 6
+          },
+          "thresholds": {
+            "sameClubCount": 2,
+            "sameNationCount": 2,
+            "sameLeagueCount": 3,
+            "positionGroupCount": 2,
+            "clubAndPositionClubCount": 2,
+            "clubAndPositionGroupCount": 2,
+            "nationAndPositionNationCount": 2,
+            "nationAndPositionGroupCount": 2
+          }
+        },
+        "lineLeader": {
+          "bonusPerLine": 5
+        },
+        "abilityEffects": {
+          "yellowPenalty": 30,
+          "captainMultiplier": 2
+        }
+      }
+    },
+    {
+      "version": 3,
+      "status": "published",
+      "createdAt": "2026-07-16T09:24:57.366Z",
+      "publishedAt": "2026-07-16T09:24:57.366Z",
+      "note": "try",
+      "values": {
+        "userChallenges": {
+          "rewardPerChallenge": 20
+        },
+        "cardChemistry": {
+          "tierRewards": {
+            "easy": 3,
+            "medium": 5,
+            "hard": 7
+          },
+          "thresholds": {
+            "sameClubCount": 2,
+            "sameNationCount": 2,
+            "sameLeagueCount": 3,
+            "positionGroupCount": 2,
+            "clubAndPositionClubCount": 2,
+            "clubAndPositionGroupCount": 2,
+            "nationAndPositionNationCount": 2,
+            "nationAndPositionGroupCount": 2
+          }
+        },
+        "lineLeader": {
+          "bonusPerLine": 10
+        },
+        "abilityEffects": {
+          "yellowPenalty": 40,
+          "captainMultiplier": 2
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ef351ef1-834d-4edd-bb35-81141b9010c0",
+    "question": "What happens if I run out of time on my turn?",
+    "answer": "The server automatically picks for you so the game keeps moving — an open slot and the first offered card, if a timer is configured for the room.",
+    "order": 0,
+    "visible": true
+  },
+  {
+    "id": "28819ad7-f771-4290-910f-fff375e53fc4",
+    "question": "Can I change my mind after picking a card?",
+    "answer": "No — picks are final the moment you confirm them. Take your time before tapping a card.",
+    "order": 1,
+    "visible": true
+  },
+  {
+    "id": "33cb549d-9fac-42c8-bcdb-b0a1951dce50",
+    "question": "What if I lose connection mid-game?",
+    "answer": "Just reopen the app — you'll automatically reconnect to your game in progress, with your squad and turn state intact.",
+    "order": 2,
+    "visible": true
+  }
+]

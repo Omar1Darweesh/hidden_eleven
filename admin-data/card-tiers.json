@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "black",
+    "name": "Black",
+    "minRating": 0,
+    "color": "#4A4E69"
+  },
+  {
+    "slug": "grey",
+    "name": "Grey",
+    "minRating": 60,
+    "color": "#9AA5B1"
+  },
+  {
+    "slug": "green",
+    "name": "Green",
+    "minRating": 70,
+    "color": "#2ECC71"
+  },
+  {
+    "slug": "blue",
+    "name": "Blue",
+    "minRating": 75,
+    "color": "#3A8DDE"
+  },
+  {
+    "slug": "yellow",
+    "name": "Yellow",
+    "minRating": 80,
+    "color": "#FFD700"
+  },
+  {
+    "slug": "gold",
+    "name": "Gold",
+    "minRating": 85,
+    "color": "#C0392B"
+  },
+  {
+    "slug": "purple",
+    "name": "Purple",
+    "minRating": 90,
+    "color": "#A55CFF"
+  }
+]

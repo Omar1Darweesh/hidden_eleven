@@ -1,0 +1,215 @@
+[
+  {
+    "key": "draft_scoring",
+    "title": "Draft & Scoring",
+    "visible": true,
+    "sections": [
+      {
+        "heading": "SQUAD RATING NUMBERS",
+        "entries": [
+          {
+            "label": "Raw Sum",
+            "body": "The plain total of all 11 pitch cards' ratings, added up with no averaging or chemistry. A squad-power stat only — it is NOT your final score."
+          },
+          {
+            "label": "Avg",
+            "body": "The average rating across your 11 starters (Raw Sum ÷ 11)."
+          },
+          {
+            "label": "DEF / MID / ATK",
+            "body": "The average rating within each line (defence / midfield / attack). An out-of-position card scores 0 for its line."
+          }
+        ]
+      },
+      {
+        "heading": "FINAL SCORE",
+        "entries": [
+          {
+            "label": "How it's calculated",
+            "body": "Final Score = (DEF avg + MID avg + ATK avg) + chemistry bonuses (user challenges, card chemistry, line leaders) ± ability effects (Captain bonus, Yellow-card penalty, Red-card nullification)."
+          },
+          {
+            "label": "What chemistry affects",
+            "body": "Chemistry bonuses only count for in-position, non-red-carded cards. Out-of-position cards contribute 0 to both their line average and their own chemistry."
+          }
+        ]
+      },
+      {
+        "heading": "ABILITY CARDS",
+        "entries": [
+          {
+            "label": "Chemistry-only, not a match event",
+            "body": "The Red Card ability disables a targeted card's chemistry for scoring — it is pre-match/draft-phase logic only. It is NOT the same as a real red card shown in tournament match events."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "abilities",
+    "title": "Ability Cards",
+    "visible": true,
+    "sections": [
+      {
+        "heading": "HOW IT WORKS",
+        "entries": [
+          {
+            "label": "Pick a secret card",
+            "body": "At kickoff each player draws one ability — kept hidden from everyone else."
+          },
+          {
+            "label": "Build your XI",
+            "body": "Draft your 11 players as normal."
+          },
+          {
+            "label": "Play or discard",
+            "body": "Before subs, use your card on a target (or discard it). Everyone sees what’s played."
+          },
+          {
+            "label": "Subs",
+            "body": "Spin subs to recover from anything done to your squad."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "match_details",
+    "title": "Live Match Details",
+    "visible": true,
+    "sections": [
+      {
+        "heading": "EVENT TIMELINE",
+        "entries": [
+          {
+            "label": "Left side vs right side",
+            "body": "Events for the team named on the left render on the left; the other team's events render on the right. A shared minute rail runs down the centre, so you can follow both teams at a glance."
+          },
+          {
+            "label": "Event types",
+            "body": "⚽ Goal (with assist if any) · 🟨 Yellow Card · 🟥 Red Card · 💨 Big Chance Missed — each shows the minute and player."
+          }
+        ]
+      },
+      {
+        "heading": "PENALTIES",
+        "entries": [
+          {
+            "label": "Shootout display",
+            "body": "A match level after 90 minutes goes to a real shootout — individual kicks appear in the same timeline (labelled \"P1\", \"P2\", …), and the final result reads like \"1–1 (4–3 pens)\"."
+          }
+        ]
+      },
+      {
+        "heading": "PLAYER STATE",
+        "entries": [
+          {
+            "label": "Sent-off players",
+            "body": "Once a player receives a red card, they cannot score, assist, miss a chance, pick up another card, or take a penalty later in that same match — the event log always stays realistic."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "result_page",
+    "title": "Result Page",
+    "visible": true,
+    "sections": [
+      {
+        "heading": "THE WINNER",
+        "entries": [
+          {
+            "label": "Who won and why",
+            "body": "The hero banner names whoever has the highest final total and gives the real reason — usually the tournament champion bonus, another tournament bonus, or simply the highest draft score."
+          },
+          {
+            "label": "Shared rank",
+            "body": "If two or more users end with the exact same final total, they share that rank (e.g. both shown as joint 1st) rather than one being arbitrarily placed above the other."
+          }
+        ]
+      },
+      {
+        "heading": "FINAL STANDINGS & POINTS",
+        "entries": [
+          {
+            "label": "Final Score vs Final Points",
+            "body": "Final Score is your draft/chemistry score alone (line averages + chemistry). Final Points is that score PLUS any tournament bonuses (champion, runner-up, award bonuses) — it's what actually decides the winner."
+          },
+          {
+            "label": "Per-user breakdown",
+            "body": "Tap any row in Final Standings to see that user's full breakdown: base squad score, then each bonus they earned, adding up to their final total."
+          }
+        ]
+      },
+      {
+        "heading": "TOURNAMENT AWARDS",
+        "entries": [
+          {
+            "label": "Top Contributions",
+            "body": "Goals + assists combined — a separate leaderboard from Top Scorer and Top Assists, showing all-round attacking impact."
+          },
+          {
+            "label": "Shared awards",
+            "body": "If players tie on a stat (and on minutes played, where that applies), the award is shared — every tied winner is shown, each earning an equal, rounded-up share of the bonus points."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "tournament",
+    "title": "Tournament",
+    "visible": true,
+    "sections": [
+      {
+        "heading": "BRACKET & ROUNDS",
+        "entries": [
+          {
+            "label": "How it works",
+            "body": "Teams are drawn into a knockout bracket. Win your match to advance; lose and you're out. The bracket at the top always shows the live state of every round."
+          },
+          {
+            "label": "Rounds do not auto-advance",
+            "body": "A finished round stays visible so you can review it. The next round only begins once every manager presses Ready — never automatically."
+          }
+        ]
+      },
+      {
+        "heading": "READY CHECK",
+        "entries": [
+          {
+            "label": "What it means",
+            "body": "Before a round's matches simulate, every real manager in that round must confirm Ready. Managers who don't respond in time are auto-readied so the tournament can continue."
+          }
+        ]
+      },
+      {
+        "heading": "LIVE MATCH DETAILS",
+        "entries": [
+          {
+            "label": "Expand a card",
+            "body": "Tap a match card to open its live event timeline in place — no separate screen. Goals, cards, and big chances appear as they happen, split by team side."
+          },
+          {
+            "label": "Penalties",
+            "body": "A match level after regulation goes to a real penalty shootout. The result reads like real football, e.g. \"1–1 (4–3 pens)\" — a sent-off player can never step up to take a penalty."
+          }
+        ]
+      },
+      {
+        "heading": "TOURNAMENT AWARDS",
+        "entries": [
+          {
+            "label": "How leaders are decided",
+            "body": "Top Scorer and Top Assists rank by goals/assists. Top Contributions ranks by goals + assists combined. Best Rating ranks by real tournament match ratings, not pre-tournament squad rating."
+          },
+          {
+            "label": "Tie rules",
+            "body": "A tie is broken by whichever player logged fewer minutes played (Best Rating has no minutes tiebreak). If still tied, the award is shared — every tied winner gets an equal, rounded-up share of the bonus points (e.g. 15 split 2 ways → 8 each)."
+          }
+        ]
+      }
+    ]
+  }
+]

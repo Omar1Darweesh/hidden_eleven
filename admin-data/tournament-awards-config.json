@@ -1,0 +1,31 @@
+{
+  "draft": {
+    "version": 1,
+    "status": "published",
+    "createdAt": "2026-07-16T13:53:44.915Z",
+    "publishedAt": "2026-07-16T13:53:44.915Z",
+    "note": "Initial version — matches pre-existing hardcoded tournament awards exactly.",
+    "values": {
+      "championPoints": 50,
+      "runnerUpPoints": 20,
+      "topScorerBonus": 15,
+      "mostAssistsBonus": 10,
+      "highestRatingBonus": 10
+    }
+  },
+  "published": {
+    "version": 1,
+    "status": "published",
+    "createdAt": "2026-07-16T13:53:44.915Z",
+    "publishedAt": "2026-07-16T13:53:44.915Z",
+    "note": "Initial version — matches pre-existing hardcoded tournament awards exactly.",
+    "values": {
+      "championPoints": 50,
+      "runnerUpPoints": 20,
+      "topScorerBonus": 15,
+      "mostAssistsBonus": 10,
+      "highestRatingBonus": 10
+    }
+  },
+  "history": []
+}

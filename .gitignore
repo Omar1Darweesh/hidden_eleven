@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output (rebuilt on the server via `npm run build`)
+dist/
+
+# Environment secrets — never commit real .env, only .env.example
+.env
+.env.*
+!.env.example
+
+# Runtime data / logs — local dev artifacts, not part of the app
+match-history.db
+*.log
+
+# OS/editor cruft
+.DS_Store

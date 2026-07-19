@@ -1,0 +1,58 @@
+[
+  {
+    "key": "overview",
+    "title": "Game Overview",
+    "body": "Hidden Eleven is a head-to-head football card drafting game. Build the best XI you can, then score points based on your squad's ratings and chemistry.",
+    "order": 0,
+    "visible": true
+  },
+  {
+    "key": "how_to_play",
+    "title": "How to Play",
+    "body": "Each round, players take turns picking a position, then a player card for that position. After every player has a full squad, you sub in bonus players before your final lineup is scored.",
+    "order": 1,
+    "visible": true
+  },
+  {
+    "key": "rounds",
+    "title": "Round-by-Round",
+    "body": "The draft plays out over 11 rounds — one per outfield position. Each round, the first picker chooses a slot and a card, then orders the remaining cards for the next round's hidden pick.",
+    "order": 2,
+    "visible": true
+  },
+  {
+    "key": "drafting",
+    "title": "Drafting Help",
+    "body": "On your turn, tap an empty slot on your pitch to choose which position you're drafting for, then pick a card from the offered candidates. Higher-rated cards aren't always the best pick — check chemistry bonuses too.",
+    "order": 3,
+    "visible": true
+  },
+  {
+    "key": "hidden_pick",
+    "title": "Hidden Pick & Reveal",
+    "body": "After the first pick, other players choose blind from a face-down deck. You won't know which card you get until you reveal it — so the order the first picker sets matters.",
+    "order": 4,
+    "visible": true
+  },
+  {
+    "key": "abilities",
+    "title": "Abilities Help",
+    "body": "Each player drafts one secret ability card at the start of the game (Captain, Yellow, Red, Extra Bench, or Sub). Abilities are used once, during the Ability Activation phase, before subs.",
+    "order": 5,
+    "visible": true
+  },
+  {
+    "key": "subs",
+    "title": "Subs & Lineup Help",
+    "body": "Spin for bonus bench players in each position group, then swap any card with any other before confirming your final lineup. Out-of-position starters block confirmation — fix them first.",
+    "order": 6,
+    "visible": true
+  },
+  {
+    "key": "scoring",
+    "title": "Win Condition & Scoring",
+    "body": "Your final score is your squad's total rating plus chemistry bonuses, minus any penalties (like a red card). The highest score wins.",
+    "order": 7,
+    "visible": true
+  }
+]
