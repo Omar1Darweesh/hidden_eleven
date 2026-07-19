@@ -68,8 +68,13 @@ export class BackupService {
       return;
     }
     try {
+      // Explicit host/port 587 (STARTTLS), not the `service: 'gmail'` shorthand
+      // (which defaults to port 465) — several VPS providers, including this
+      // one, block outbound 465 by default while leaving 587 open.
       const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false,
         auth: { user, pass },
       });
       await transporter.sendMail({
