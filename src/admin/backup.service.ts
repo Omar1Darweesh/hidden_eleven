@@ -4,6 +4,7 @@ import { execFile } from 'child_process';
 import { promisify } from 'util';
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
+import nodemailer from 'nodemailer';
 
 const execFileAsync = promisify(execFile);
 
@@ -40,12 +41,47 @@ export class BackupService {
     try {
       const result = await this.createBackup();
       this.logger.log(`Scheduled backup completed: ${result.filename} (${result.sizeBytes} bytes)`);
+      await this.emailBackupOffServer(this.getArchivePath(), result.sizeBytes);
     } catch (err) {
       // A failed scheduled backup must never crash the server or block
       // gameplay — log it loudly so an admin notices, and leave whatever
       // the PREVIOUS successful backup was untouched (see createBackup's
       // atomic-rename doc comment) rather than losing it.
       this.logger.error(`Scheduled backup failed: ${(err as Error).message}`);
+    }
+  }
+
+  /**
+   * Best-effort: mails the archive off the VPS so a lost/corrupted server
+   * doesn't also mean a lost backup. Silently no-ops if the email env vars
+   * aren't set (e.g. local dev, or before the admin has configured it), and
+   * never throws — a mail failure must not be mistaken for a backup failure.
+   */
+  private async emailBackupOffServer(archivePath: string, sizeBytes: number): Promise<void> {
+    const user = process.env.BACKUP_EMAIL_USER;
+    const pass = process.env.BACKUP_EMAIL_APP_PASSWORD;
+    const to = process.env.BACKUP_EMAIL_TO;
+    if (!user || !pass || !to) {
+      this.logger.warn(
+        'BACKUP_EMAIL_USER/APP_PASSWORD/TO not set — skipping off-server email copy.',
+      );
+      return;
+    }
+    try {
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: { user, pass },
+      });
+      await transporter.sendMail({
+        from: user,
+        to,
+        subject: `Hidden Eleven backup — ${new Date().toISOString().slice(0, 10)}`,
+        text: `Daily backup attached (${(sizeBytes / (1024 * 1024)).toFixed(1)} MB).`,
+        attachments: [{ filename: 'hidden-eleven-backup.tar.gz', path: archivePath }],
+      });
+      this.logger.log(`Backup emailed to ${to}`);
+    } catch (err) {
+      this.logger.error(`Failed to email backup off-server: ${(err as Error).message}`);
     }
   }
 

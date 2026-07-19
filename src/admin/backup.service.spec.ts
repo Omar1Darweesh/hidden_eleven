@@ -2,9 +2,12 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { execFile } from 'child_process';
 import { promisify } from 'util';
+import nodemailer from 'nodemailer';
 import { BackupService } from './backup.service';
 
 const execFileAsync = promisify(execFile);
+
+jest.mock('nodemailer');
 
 /**
  * Runs for real against this repo's actual admin-data/ and assets/ dirs
@@ -16,8 +19,12 @@ describe('BackupService', () => {
   const backupsDir = path.resolve(process.cwd(), 'backups');
   const archivePath = path.join(backupsDir, 'hidden-eleven-backup.tar.gz');
 
+  const originalEnv = { ...process.env };
+
   afterEach(() => {
     if (fs.existsSync(backupsDir)) fs.rmSync(backupsDir, { recursive: true, force: true });
+    process.env = { ...originalEnv };
+    jest.clearAllMocks();
   });
 
   it('getStatus reports exists: false when no backup has ever been created', () => {
@@ -77,5 +84,54 @@ describe('BackupService', () => {
     await service.createBackup();
 
     expect(fs.existsSync(path.join(backupsDir, '.staging'))).toBe(false);
+  });
+
+  describe('runScheduledBackup — off-server email copy', () => {
+    it('skips emailing when BACKUP_EMAIL_* env vars are unset (no throw)', async () => {
+      delete process.env.BACKUP_EMAIL_USER;
+      delete process.env.BACKUP_EMAIL_APP_PASSWORD;
+      delete process.env.BACKUP_EMAIL_TO;
+      const service = new BackupService();
+
+      await expect(service.runScheduledBackup()).resolves.toBeUndefined();
+      expect(nodemailer.createTransport).not.toHaveBeenCalled();
+    });
+
+    it('emails the archive as an attachment when env vars are set', async () => {
+      process.env.BACKUP_EMAIL_USER = 'sender@gmail.com';
+      process.env.BACKUP_EMAIL_APP_PASSWORD = 'app-password';
+      process.env.BACKUP_EMAIL_TO = 'owner@gmail.com';
+      const sendMail = jest.fn().mockResolvedValue(undefined);
+      (nodemailer.createTransport as jest.Mock).mockReturnValue({ sendMail });
+      const service = new BackupService();
+
+      await service.runScheduledBackup();
+
+      expect(nodemailer.createTransport).toHaveBeenCalledWith(
+        expect.objectContaining({
+          auth: { user: 'sender@gmail.com', pass: 'app-password' },
+        }),
+      );
+      expect(sendMail).toHaveBeenCalledWith(
+        expect.objectContaining({
+          from: 'sender@gmail.com',
+          to: 'owner@gmail.com',
+          attachments: [
+            expect.objectContaining({ filename: 'hidden-eleven-backup.tar.gz' }),
+          ],
+        }),
+      );
+    });
+
+    it('a mail-send failure is swallowed — never crashes the scheduled job', async () => {
+      process.env.BACKUP_EMAIL_USER = 'sender@gmail.com';
+      process.env.BACKUP_EMAIL_APP_PASSWORD = 'app-password';
+      process.env.BACKUP_EMAIL_TO = 'owner@gmail.com';
+      const sendMail = jest.fn().mockRejectedValue(new Error('SMTP down'));
+      (nodemailer.createTransport as jest.Mock).mockReturnValue({ sendMail });
+      const service = new BackupService();
+
+      await expect(service.runScheduledBackup()).resolves.toBeUndefined();
+    });
   });
 });
