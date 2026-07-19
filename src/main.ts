@@ -119,6 +119,19 @@ async function bootstrap() {
     },
   });
 
+  // SPA deep-link fallback: the Flutter admin panel is a client-side route
+  // with no matching static file, so a direct browser navigation to /admin
+  // (bookmark, share, refresh) 404s unless we hand it the same index.html
+  // the root route serves and let the client-side router take over from
+  // there. Registered after useStaticAssets so real static files (if any
+  // ever exist under /admin) still take priority.
+  app
+    .getHttpAdapter()
+    .getInstance()
+    .get(['/admin', '/admin/*path'], (_req: unknown, res: import('express').Response) => {
+      res.sendFile(join(webRoot, 'index.html'));
+    });
+
   const port = process.env.PORT ?? 3000;
   // '::' (IPv6 wildcard), not '0.0.0.0' — on Windows dev machines, ngrok's
   // agent dials the upstream via IPv6 loopback ([::1]) specifically. Binding
