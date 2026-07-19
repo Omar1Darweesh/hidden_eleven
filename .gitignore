@@ -17,5 +17,16 @@ match-history.db
 # something to version-control.
 backups/
 
+# Stale, unused build output — the server serves the Flutter web build from
+# the sibling ../hidden_eleven/build/web directory (see main.ts), never from
+# a public/ folder inside this repo. This was dead weight left over from
+# early local dev.
+public/
+
+# Machine-specific PM2 config (real production secrets — ADMIN_API_KEY,
+# RECONNECT_TOKEN_SECRET) — never committed, set up manually per-server.
+ecosystem.config.js
+ecosystem.config.jsy
+
 # OS/editor cruft
 .DS_Store
