@@ -14,6 +14,28 @@ import { TournamentAwardsConfigFile, TournamentAwardsConfigValues, TournamentAwa
 const DATA_DIR = path.resolve(process.cwd(), 'admin-data');
 const ASSETS_ROOT = path.resolve(process.cwd(), 'assets');
 
+// ── Partial-update merge helper ─────────────────────────────────────────────────
+
+/**
+ * Strips keys whose value is `undefined` from an update DTO before it's spread
+ * over an existing stored record.
+ *
+ * Why this exists: the API's update DTOs (UpdatePlayerDto, etc.) declare every
+ * field `@IsOptional()`, and with the project's ES2023 tsconfig target
+ * (useDefineForClassFields) every declared class field becomes an OWN property
+ * on the instance — set to `undefined` when the client didn't send it. A naive
+ * `{ ...existing, ...dto }` therefore overwrites stored values with `undefined`
+ * for every field the client omitted. That silently WIPED player photoUrls on
+ * any edit that didn't re-send the photo (the client only sends photoUrl when
+ * it changed), and the same trap applied to club logos, nation flags, etc.
+ * Filtering out undefined makes the spread a true partial update.
+ */
+function definedOnly<T extends object>(dto: T): Partial<T> {
+  return Object.fromEntries(
+    Object.entries(dto).filter(([, v]) => v !== undefined),
+  ) as Partial<T>;
+}
+
 // ── Slug helper ───────────────────────────────────────────────────────────────
 
 function slugify(name: string): string {
@@ -735,7 +757,7 @@ export class AdminService {
     const players = this.getPlayers();
     const idx = players.findIndex(p => p.id === id);
     if (idx === -1) throw new NotFoundException(`Player not found: ${id}`);
-    players[idx] = { ...players[idx], ...dto };
+    players[idx] = { ...players[idx], ...definedOnly(dto) };
     writeJson('players.json', players);
     return players[idx];
   }
@@ -768,7 +790,7 @@ export class AdminService {
     const clubs = this.getClubs();
     const idx = clubs.findIndex(c => c.slug === slug);
     if (idx === -1) throw new NotFoundException(`Club not found: ${slug}`);
-    clubs[idx] = { ...clubs[idx], ...dto };
+    clubs[idx] = { ...clubs[idx], ...definedOnly(dto) };
     writeJson('clubs.json', clubs);
     return clubs[idx];
   }
@@ -801,7 +823,7 @@ export class AdminService {
     const nations = this.getNations();
     const idx = nations.findIndex(n => n.slug === slug);
     if (idx === -1) throw new NotFoundException(`Nation not found: ${slug}`);
-    nations[idx] = { ...nations[idx], ...dto };
+    nations[idx] = { ...nations[idx], ...definedOnly(dto) };
     writeJson('nations.json', nations);
     return nations[idx];
   }
@@ -829,7 +851,7 @@ export class AdminService {
     // If a league with this slug already exists, update it instead of duplicating.
     const existingIdx = leagues.findIndex(l => l.slug === slug);
     if (existingIdx !== -1) {
-      leagues[existingIdx] = { ...leagues[existingIdx], ...dto, slug };
+      leagues[existingIdx] = { ...leagues[existingIdx], ...definedOnly(dto), slug };
       writeJson('leagues.json', leagues);
       return leagues[existingIdx];
     }
@@ -842,7 +864,7 @@ export class AdminService {
     const leagues = this.getLeagues();
     const idx = leagues.findIndex(l => l.slug === slug);
     if (idx === -1) throw new NotFoundException(`League not found: ${slug}`);
-    leagues[idx] = { ...leagues[idx], ...dto };
+    leagues[idx] = { ...leagues[idx], ...definedOnly(dto) };
     writeJson('leagues.json', leagues);
     return leagues[idx];
   }
@@ -965,7 +987,7 @@ export class AdminService {
 
     bundles[idx] = {
       ...bundles[idx],
-      ...dto,
+      ...definedOnly(dto),
       id,
       name,
       description:
@@ -1057,7 +1079,7 @@ export class AdminService {
     const formations = this.getFormations();
     const idx = formations.findIndex(f => f.slug === slug);
     if (idx === -1) throw new NotFoundException(`Formation not found: ${slug}`);
-    formations[idx] = { ...formations[idx], ...dto };
+    formations[idx] = { ...formations[idx], ...definedOnly(dto) };
     writeJson('formations.json', formations);
     return formations[idx];
   }
@@ -1085,7 +1107,7 @@ export class AdminService {
     const tiers = this.getCardTiers();
     const idx = tiers.findIndex(t => t.slug === slug);
     if (idx === -1) throw new NotFoundException(`Card tier not found: ${slug}`);
-    tiers[idx] = { ...tiers[idx], ...dto };
+    tiers[idx] = { ...tiers[idx], ...definedOnly(dto) };
     writeJson('card-tiers.json', tiers);
     return tiers[idx];
   }
@@ -1117,7 +1139,7 @@ export class AdminService {
     const abilities = this.getAbilities();
     const idx = abilities.findIndex(a => a.type === type);
     if (idx === -1) throw new NotFoundException(`Ability not found: ${type}`);
-    abilities[idx] = { ...abilities[idx], ...dto, type };
+    abilities[idx] = { ...abilities[idx], ...definedOnly(dto), type };
     writeJson('abilities.json', abilities);
     return abilities[idx];
   }
@@ -1276,7 +1298,7 @@ export class AdminService {
     const sections = this.getGuideSections();
     const idx = sections.findIndex(s => s.key === key);
     if (idx === -1) throw new NotFoundException(`Guide section not found: ${key}`);
-    sections[idx] = { ...sections[idx], ...dto, key };
+    sections[idx] = { ...sections[idx], ...definedOnly(dto), key };
     writeJson('guide-sections.json', sections);
     return sections[idx];
   }
@@ -1306,7 +1328,7 @@ export class AdminService {
     const items = this.getFaqItems();
     const idx = items.findIndex(i => i.id === id);
     if (idx === -1) throw new NotFoundException(`FAQ item not found: ${id}`);
-    items[idx] = { ...items[idx], ...dto, id };
+    items[idx] = { ...items[idx], ...definedOnly(dto), id };
     writeJson('faq.json', items);
     return items[idx];
   }
@@ -1341,7 +1363,7 @@ export class AdminService {
     const tips = this.getQuickTips();
     const idx = tips.findIndex(t => t.id === id);
     if (idx === -1) throw new NotFoundException(`Quick tip not found: ${id}`);
-    tips[idx] = { ...tips[idx], ...dto, id };
+    tips[idx] = { ...tips[idx], ...definedOnly(dto), id };
     writeJson('quick-tips.json', tips);
     return tips[idx];
   }
@@ -1365,7 +1387,7 @@ export class AdminService {
     const items = this.getContextHelp();
     const idx = items.findIndex(c => c.key === key);
     if (idx === -1) throw new NotFoundException(`Context help not found: ${key}`);
-    items[idx] = { ...items[idx], ...dto, key };
+    items[idx] = { ...items[idx], ...definedOnly(dto), key };
     writeJson('context-help.json', items);
     return items[idx];
   }
