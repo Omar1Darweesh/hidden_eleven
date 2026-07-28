@@ -127,6 +127,14 @@ export interface GameSession {
   createdAt: number;
   /** League slugs selected for this game. Empty = all leagues allowed. */
   leagues: string[];
+  /**
+   * Host-chosen card-rating window, snapshotted from the room at session
+   * start. Only pool players rated within [minRating, maxRating] are offered
+   * as draft candidates / substitution options. Null = no bound on that end
+   * (full 1–99 range). See GameService.generateCandidates.
+   */
+  minRating: number | null;
+  maxRating: number | null;
   /** playerId (pool) → 3 card chemistry bonuses. Built once at session start. */
   playerBonusCache: Map<string, import('../data/league-bonus-pools.js').ChemistryBonus[]>;
   /** gamePlayerId → 5 user chemistry challenges. Built once at session start. */

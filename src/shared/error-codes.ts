@@ -38,6 +38,15 @@ export const ErrorCodes = {
   AMBIGUOUS_LEAGUES: 'AMBIGUOUS_LEAGUES',
   /** `leagueBundleId` unknown, inactive, or has no resolvable leagues. */
   INVALID_LEAGUE_BUNDLE: 'INVALID_LEAGUE_BUNDLE',
+  /** Host sent a rating window with minRating > maxRating. */
+  INVALID_RATING_RANGE: 'INVALID_RATING_RANGE',
+  /**
+   * Game start blocked: the filtered draft pool (leagues + rating window)
+   * can't supply enough unique players for every formation position given
+   * the current player count. Detail (short positions) rides alongside the
+   * code in the error payload.
+   */
+  INSUFFICIENT_DRAFT_POOL: 'INSUFFICIENT_DRAFT_POOL',
 
   // ── game.service.ts: session / phase guards (recur across most handlers) ──
   SESSION_NOT_FOUND: 'SESSION_NOT_FOUND',

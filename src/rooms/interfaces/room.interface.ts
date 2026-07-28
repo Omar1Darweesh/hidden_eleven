@@ -65,6 +65,15 @@ export interface Room {
   abilityTimerSeconds: number | null;
   /** Formation slug chosen by the host. Null = server picks at random. */
   formationSlug: string | null;
+  /**
+   * Host-chosen card-rating window for the draft pool. Only players whose
+   * rating falls within [minRating, maxRating] are offered as draft
+   * candidates (and as substitution options). Null = no bound on that end
+   * (defaults to the full 1–99 range). Enforced sufficient for the room's
+   * player count at game start — see GameService.checkDraftPoolSufficiency.
+   */
+  minRating: number | null;
+  maxRating: number | null;
   /** When true, a knockout tournament runs after the subs phase. Default false. */
   tournamentEnabled: boolean;
   /** Host-chosen tournament live-event pacing. Default 'normal'. */

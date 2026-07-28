@@ -58,6 +58,25 @@ export class CreateRoomDto {
   @MaxLength(60)
   formationSlug?: string | null;
 
+  /**
+   * Card-rating window for the draft/substitution pool. Only players rated
+   * within [minRating, maxRating] are offered. Absent/null on either end =
+   * no bound there (full 1–99 range). The gateway rejects an inverted range
+   * (min > max), and game start is blocked if the resulting pool is too
+   * small for the room's player count (checkDraftPoolSufficiency).
+   */
+  @IsOptional()
+  @IsInt()
+  @Min(1)
+  @Max(99)
+  minRating?: number | null;
+
+  @IsOptional()
+  @IsInt()
+  @Min(1)
+  @Max(99)
+  maxRating?: number | null;
+
   /** When true, a knockout tournament runs after the subs phase instead of going
    *  straight to the result screen. Absent = false (normal game). */
   @IsOptional()

@@ -656,6 +656,13 @@ export class RoomsGateway
       return;
     }
 
+    const minRating = dto.minRating ?? null;
+    const maxRating = dto.maxRating ?? null;
+    if (minRating != null && maxRating != null && minRating > maxRating) {
+      this.send(client, 'error', { code: ErrorCodes.INVALID_RATING_RANGE });
+      return;
+    }
+
     let leagues = manualLeagues;
     let selectedBundleId: string | null = null;
     let selectedBundleName: string | null = null;
@@ -698,6 +705,8 @@ export class RoomsGateway
       dto.abilityTimerSeconds ?? null,
       selectedBundleId,
       selectedBundleName,
+      minRating,
+      maxRating,
     );
     this.send(client, 'room_update', {
       ...this.roomSnapshot(result.room, result.playerId),
@@ -1346,6 +1355,25 @@ export class RoomsGateway
     const startResult = this.roomsService.startGame(client.id);
     if ('error' in startResult) {
       this.send(client, 'error', { code: startResult.error });
+      return;
+    }
+
+    // Pool-sufficiency gate: the host's league + rating filter must leave
+    // enough unique players for every formation position at the current
+    // player count. On failure, roll back the started flag startGame just
+    // set (nothing has been observed yet — no game_state sent, no session
+    // created, and Node is single-threaded so this is race-free) and return
+    // the short positions so the client can tell the host exactly what to
+    // widen.
+    const shortages = this.gameService.checkDraftPoolSufficiency(
+      startResult.room,
+    );
+    if (shortages.length > 0) {
+      startResult.room.isStarted = false;
+      this.send(client, 'error', {
+        code: ErrorCodes.INSUFFICIENT_DRAFT_POOL,
+        shortages,
+      });
       return;
     }
 

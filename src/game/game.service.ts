@@ -415,6 +415,8 @@ export class GameService implements OnModuleDestroy {
 
     const sessionId = uuidv4();
     const leagues = room.leagues ?? [];
+    const minRating = room.minRating ?? null;
+    const maxRating = room.maxRating ?? null;
     const pool = loadPlayerPool();
     // Snapshot the currently-published scoring config once, here, so nothing
     // later in this session ever re-reads scoring-config.json — see the
@@ -439,6 +441,8 @@ export class GameService implements OnModuleDestroy {
       roomCode: room.code,
       createdAt: Date.now(),
       leagues,
+      minRating,
+      maxRating,
       playerBonusCache,
       userChallengeCache,
       scoringConfig: scoringConfig.values,
@@ -2623,10 +2627,16 @@ export class GameService implements OnModuleDestroy {
     const leagueSet = new Set(session.leagues);
     const leagueOf = (p: PlayerCardDefinition) =>
       (p as any).league ?? CLUB_LEAGUE[p.club] ?? '';
+    // Substitutions honour the same host rating window as the draft, so a
+    // player can never bring on a bench card outside the configured range.
+    const minR = session.minRating ?? 1;
+    const maxR = session.maxRating ?? 99;
+    const withinRating = (p: PlayerCardDefinition) =>
+      p.rating >= minR && p.rating <= maxR;
     const allClubs = [
       ...new Set(
         pool
-          .filter((p) => leagueSet.size === 0 || leagueSet.has(leagueOf(p)))
+          .filter((p) => (leagueSet.size === 0 || leagueSet.has(leagueOf(p))) && withinRating(p))
           .map((p) => p.club)
           .filter((c): c is string => !!c),
       ),
@@ -2636,6 +2646,7 @@ export class GameService implements OnModuleDestroy {
       pool.some(
         (p) =>
           p.club === club &&
+          withinRating(p) &&
           p.positions.some((pos) => eligiblePositions.has(pos)) &&
           !usedIds.has(p.id),
       );
@@ -2672,6 +2683,7 @@ export class GameService implements OnModuleDestroy {
       const eligiblePlayers = pool.filter(
         (p) =>
           p.club === club &&
+          withinRating(p) &&
           p.positions.some((pos) => eligiblePositions.has(pos)) &&
           !usedIds.has(p.id),
       );
@@ -4248,6 +4260,55 @@ export class GameService implements OnModuleDestroy {
    * shared player pool, excluding cards already drafted in this session.
    * When `leagues` is non-empty, only players from those leagues are considered.
    */
+  /**
+   * Pre-start gate: can the room's filtered pool (leagues + rating window)
+   * supply enough UNIQUE players for every formation position, given the
+   * current player count? Every player drafts the same formation, so a
+   * position with `k` slots needs `k × playerCount` unique cards; each draft
+   * round for that position offers `playerCount + 2` candidates, so the true
+   * floor that still gives the final round a full unique slate is
+   * `k × playerCount + 2`. Returns one entry per SHORT position (empty array
+   * = safe to start). Used by the gateway to block start with a clear reason.
+   */
+  checkDraftPoolSufficiency(
+    room: Room,
+  ): { position: BasePositionType; available: number; needed: number }[] {
+    const formation = this.pickFormation(room.formationSlug);
+    const playerCount = room.players.filter((p) => p.isConnected).length;
+    const leagueSet = new Set(room.leagues ?? []);
+    const minR = room.minRating ?? 1;
+    const maxR = room.maxRating ?? 99;
+
+    // How many slots of each base position the (shared) formation has.
+    const slotsByPosition = new Map<BasePositionType, number>();
+    for (const slot of formation.slots) {
+      const pos = slot.basePositionType as BasePositionType;
+      slotsByPosition.set(pos, (slotsByPosition.get(pos) ?? 0) + 1);
+    }
+
+    const filtered = loadPlayerPool().filter((p) => {
+      if (leagueSet.size > 0) {
+        const lg = (p as any).league ?? CLUB_LEAGUE[p.club] ?? '';
+        if (!leagueSet.has(lg)) return false;
+      }
+      return p.rating >= minR && p.rating <= maxR;
+    });
+
+    const shortages: {
+      position: BasePositionType;
+      available: number;
+      needed: number;
+    }[] = [];
+    for (const [position, slotCount] of slotsByPosition) {
+      const available = filtered.filter((p) =>
+        p.positions.includes(position),
+      ).length;
+      const needed = slotCount * playerCount + 2;
+      if (available < needed) shortages.push({ position, available, needed });
+    }
+    return shortages;
+  }
+
   private generateCandidates(
     basePositionType: BasePositionType,
     draftedCardIds: Set<string>,
@@ -4258,14 +4319,20 @@ export class GameService implements OnModuleDestroy {
     const count = playerCount + 2;
     const pool = loadPlayerPool();
 
-    // Apply league filter when the room was created with specific leagues
+    // Apply the host's league filter (when specific leagues were chosen) and
+    // rating window together. minRating/maxRating null = no bound on that end
+    // (full 1–99 range); the pre-start check (checkDraftPoolSufficiency) has
+    // already guaranteed this combined filter leaves enough per position.
     const leagueSet = new Set(leagues);
-    const leagueFiltered = leagueSet.size > 0
-      ? pool.filter((p) => {
-          const playerLeague = (p as any).league ?? CLUB_LEAGUE[p.club] ?? '';
-          return leagueSet.has(playerLeague);
-        })
-      : pool;
+    const minR = session?.minRating ?? 1;
+    const maxR = session?.maxRating ?? 99;
+    const leagueFiltered = pool.filter((p) => {
+      if (leagueSet.size > 0) {
+        const playerLeague = (p as any).league ?? CLUB_LEAGUE[p.club] ?? '';
+        if (!leagueSet.has(playerLeague)) return false;
+      }
+      return p.rating >= minR && p.rating <= maxR;
+    });
 
     // Strict primary-position matching: a player is eligible only if the slot's
     // position is one of their configured card positions. No sibling/alt fallback

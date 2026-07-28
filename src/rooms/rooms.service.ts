@@ -175,6 +175,8 @@ export class RoomsService {
     abilityTimerSeconds: number | null = null,
     selectedBundleId: string | null = null,
     selectedBundleName: string | null = null,
+    minRating: number | null = null,
+    maxRating: number | null = null,
   ): { room: Room; playerId: string } {
     const code = this.generateCode();
     const playerId = uuidv4();
@@ -196,6 +198,8 @@ export class RoomsService {
       subsTimerSeconds,
       abilityTimerSeconds,
       formationSlug,
+      minRating,
+      maxRating,
       tournamentEnabled,
       simulationSpeed,
     };
