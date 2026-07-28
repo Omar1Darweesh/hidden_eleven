@@ -498,6 +498,38 @@ export class RoomsService {
     return { room, roomCode };
   }
 
+  /**
+   * Host adjusts the draft rating window live in the lobby (before start).
+   * null on either end clears that bound (full range). Rejects an inverted
+   * range; the actual pool-sufficiency check for the current player count is
+   * surfaced separately via the room snapshot's `poolShortages`.
+   */
+  setRatingRange(
+    socketId: string,
+    minRating: number | null,
+    maxRating: number | null,
+  ): { room: Room; roomCode: string } | { error: string } {
+    const entry = this.socketIndex.get(socketId);
+    if (!entry) return { error: 'NOT_IN_ROOM' };
+
+    const { roomCode, playerId } = entry;
+    const room = this.rooms.get(roomCode);
+    if (!room) return { error: 'ROOM_NOT_FOUND' };
+    if (room.isStarted) return { error: 'ROOM_STARTED' };
+
+    const player = room.players.find((p) => p.id === playerId);
+    if (!player?.isHost) return { error: 'NOT_HOST' };
+
+    if (minRating != null && maxRating != null && minRating > maxRating) {
+      return { error: 'INVALID_RATING_RANGE' };
+    }
+
+    room.minRating = minRating;
+    room.maxRating = maxRating;
+    room.lastActivityAt = Date.now();
+    return { room, roomCode };
+  }
+
   // ── Check Presence ────────────────────────────────────────────────────────
 
   checkPresence(

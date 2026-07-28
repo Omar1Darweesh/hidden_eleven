@@ -24,6 +24,7 @@ import { GameService } from '../game/game.service';
 import { RoomsService } from './rooms.service';
 import { WsSafetyInterceptor } from './ws-safety.interceptor.js';
 import { CreateRoomDto } from './dto/create-room.dto';
+import { SetRatingRangeDto } from './dto/set-rating-range.dto';
 import { JoinRoomDto } from './dto/join-room.dto';
 import { ReconnectDto } from './dto/reconnect.dto';
 import { KickPlayerDto } from './dto/kick-player.dto';
@@ -617,6 +618,15 @@ export class RoomsGateway
       localPlayerId: playerId ?? null,
       localSpectatorId: spectatorId ?? null,
       tournamentEnabled: room.tournamentEnabled ?? false,
+      // Host-tunable draft rating window + a LIVE sufficiency check for the
+      // current connected-player count, so the lobby can show the host — as
+      // players join/leave and as they drag the range — whether a game can
+      // actually start. `poolOk` false means `poolShortages` names what's
+      // short (same shape start uses). Recomputed on every room_update, so
+      // it's always current without any extra polling.
+      minRating: room.minRating ?? null,
+      maxRating: room.maxRating ?? null,
+      poolShortages: this.gameService.checkDraftPoolSufficiency(room),
     };
   }
 
@@ -1393,6 +1403,30 @@ export class RoomsGateway
     // call both).
     this._scheduleTurnTimer(session, startResult.roomCode);
     this._scheduleAbilityDraftTimer(session, startResult.roomCode);
+  }
+
+  @SubscribeMessage('set_rating_range')
+  handleSetRatingRange(
+    @MessageBody() dto: SetRatingRangeDto,
+    @ConnectedSocket() client: WebSocket & { id: string },
+  ): void {
+    const result = this.roomsService.setRatingRange(
+      client.id,
+      dto.minRating ?? null,
+      dto.maxRating ?? null,
+    );
+    if ('error' in result) {
+      this.send(client, 'error', { code: result.error });
+      return;
+    }
+    // Broadcast the new range + freshly-recomputed pool sufficiency to
+    // everyone in the lobby (roomSnapshot embeds both), so the host sees
+    // live feedback as they drag and guests see the current setting.
+    this.broadcastRoom(
+      result.roomCode,
+      'room_update',
+      this.roomSnapshot(result.room),
+    );
   }
 
   @SubscribeMessage('pick_ability')

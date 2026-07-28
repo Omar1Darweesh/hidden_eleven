@@ -31,7 +31,12 @@ describe('create_room league bundle resolution', () => {
     adminService = {
       resolveLeagueBundleForRoom: jest.fn(),
     } as unknown as AdminService;
-    gateway = new RoomsGateway(roomsService, {} as GameService, adminService);
+    // roomSnapshot embeds a live pool-sufficiency check; these tests don't
+    // exercise it, so a stub returning "no shortages" is enough.
+    const gameService = {
+      checkDraftPoolSufficiency: () => [],
+    } as unknown as GameService;
+    gateway = new RoomsGateway(roomsService, gameService, adminService);
   });
 
   afterEach(() => {
