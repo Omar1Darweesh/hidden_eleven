@@ -82,7 +82,8 @@
     "positions": [
       "ST",
       "RW",
-      "CAM"
+      "CAM",
+      "RM"
     ],
     "nationality": "France",
     "club": "Paris Saint-Germain",
@@ -176,19 +177,18 @@
     "name": "A. Hakimi",
     "rating": 89,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Morocco",
     "club": "Paris Saint-Germain",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/235/212/26_120.png",
     "pace": 92,
     "shooting": 79,
     "passing": 82,
     "dribbling": 83,
     "defending": 82,
-    "physical": 79
+    "physical": 79,
+    "photoUrl": "https://cdn.sofifa.net/players/235/212/26_120.png"
   },
   {
     "id": "fc_255253",
@@ -645,7 +645,9 @@
     "rating": 87,
     "positions": [
       "LW",
-      "RW"
+      "RW",
+      "RM",
+      "LM"
     ],
     "nationality": "Georgia",
     "club": "Paris Saint-Germain",
@@ -795,8 +797,7 @@
     "rating": 87,
     "positions": [
       "RB",
-      "CB",
-      "RW"
+      "CB"
     ],
     "nationality": "France",
     "club": "FC Barcelona",
@@ -942,7 +943,7 @@
     "rating": 86,
     "positions": [
       "RB",
-      "RW"
+      "CM"
     ],
     "nationality": "England",
     "club": "Real Madrid",
@@ -1018,19 +1019,18 @@
     "name": "Nuno Mendes",
     "rating": 86,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Portugal",
     "club": "Paris Saint-Germain",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/252/145/26_120.png",
     "pace": 95,
     "shooting": 65,
     "passing": 76,
     "dribbling": 82,
     "defending": 80,
-    "physical": 77
+    "physical": 77,
+    "photoUrl": "https://cdn.sofifa.net/players/252/145/26_120.png"
   },
   {
     "id": "fc_211110",
@@ -1358,8 +1358,7 @@
     "name": "Carvajal",
     "rating": 85,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Spain",
     "club": "Real Madrid",
@@ -1398,7 +1397,8 @@
     "positions": [
       "RW",
       "LW",
-      "CM"
+      "LM",
+      "RM"
     ],
     "nationality": "France",
     "club": "Paris Saint-Germain",
@@ -1850,7 +1850,8 @@
     "positions": [
       "RB",
       "CM",
-      "RW"
+      "RW",
+      "RM"
     ],
     "nationality": "Spain",
     "club": "Atlético Madrid",
@@ -2044,18 +2045,19 @@
     "name": "B. Pavard",
     "rating": 84,
     "positions": [
-      "CB"
+      "CB",
+      "RB"
     ],
     "nationality": "France",
     "club": "Olympique de Marseille",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/226/851/26_120.png",
     "pace": 75,
     "shooting": 67,
     "passing": 76,
     "dribbling": 75,
     "defending": 86,
-    "physical": 79
+    "physical": 79,
+    "photoUrl": "https://cdn.sofifa.net/players/226/851/26_120.png"
   },
   {
     "id": "fc_257279",
@@ -2404,7 +2406,9 @@
     "rating": 84,
     "positions": [
       "LW",
-      "RW"
+      "RW",
+      "RM",
+      "LM"
     ],
     "nationality": "France",
     "club": "Paris Saint-Germain",
@@ -3033,8 +3037,7 @@
     "rating": 83,
     "positions": [
       "CB",
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Slovakia",
     "club": "Atlético Madrid",
@@ -3399,8 +3402,7 @@
     "name": "Balde",
     "rating": 83,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "FC Barcelona",
@@ -3750,8 +3752,7 @@
     "rating": 82,
     "positions": [
       "CB",
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Austria",
     "club": "Real Madrid",
@@ -4179,7 +4180,8 @@
     "rating": 82,
     "positions": [
       "CDM",
-      "CM"
+      "CM",
+      "CB"
     ],
     "nationality": "Switzerland",
     "club": "AS Monaco",
@@ -4542,7 +4544,9 @@
     "rating": 82,
     "positions": [
       "RW",
-      "CAM"
+      "CAM",
+      "RM",
+      "ST"
     ],
     "nationality": "England",
     "club": "Olympique de Marseille",
@@ -5851,8 +5855,7 @@
     "name": "F. Mendy",
     "rating": 81,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "Real Madrid",
@@ -5906,8 +5909,7 @@
     "name": "Gayà",
     "rating": 81,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Valencia CF",
@@ -6448,19 +6450,18 @@
     "rating": 81,
     "positions": [
       "CB",
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "Paris Saint-Germain",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/220/814/26_120.png",
     "pace": 71,
     "shooting": 54,
     "passing": 72,
     "dribbling": 70,
     "defending": 82,
-    "physical": 77
+    "physical": 77,
+    "photoUrl": "https://cdn.sofifa.net/players/220/814/26_120.png"
   },
   {
     "id": "fc_188567",
@@ -7439,8 +7440,7 @@
     "name": "J. Clauss",
     "rating": 80,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "France",
     "club": "OGC Nice",
@@ -7459,8 +7459,7 @@
     "rating": 80,
     "positions": [
       "RB",
-      "RW",
-      "LW"
+      "CB"
     ],
     "nationality": "Spain",
     "club": "RC Celta",
@@ -7480,7 +7479,8 @@
     "positions": [
       "CM",
       "CDM",
-      "CAM"
+      "CAM",
+      "RB"
     ],
     "nationality": "France",
     "club": "Paris Saint-Germain",
@@ -7686,8 +7686,7 @@
     "name": "Álvaro Carreras",
     "rating": 80,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Real Madrid",
@@ -7843,8 +7842,7 @@
     "name": "Javi Galán",
     "rating": 80,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Atlético Madrid",
@@ -8249,7 +8247,8 @@
     "name": "Igor Paixão",
     "rating": 80,
     "positions": [
-      "LW"
+      "LW",
+      "LM"
     ],
     "nationality": "Brazil",
     "club": "Olympique de Marseille",
@@ -8720,7 +8719,8 @@
     "rating": 80,
     "positions": [
       "RW",
-      "CAM"
+      "CAM",
+      "RM"
     ],
     "nationality": "France",
     "club": "AS Monaco",
@@ -9155,8 +9155,7 @@
     "name": "A. Christensen",
     "rating": 80,
     "positions": [
-      "CB",
-      "CM"
+      "CB"
     ],
     "nationality": "Denmark",
     "club": "FC Barcelona",
@@ -9617,8 +9616,7 @@
     "name": "Yuri Berchiche",
     "rating": 79,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Athletic Club",
@@ -9714,7 +9712,8 @@
     "positions": [
       "LW",
       "CM",
-      "LB"
+      "LB",
+      "LM"
     ],
     "nationality": "Spain",
     "club": "Real Sociedad",
@@ -9871,7 +9870,8 @@
     "rating": 79,
     "positions": [
       "LW",
-      "CAM"
+      "CAM",
+      "LM"
     ],
     "nationality": "Russia",
     "club": "AS Monaco",
@@ -10162,7 +10162,8 @@
     "rating": 79,
     "positions": [
       "RW",
-      "CM"
+      "CM",
+      "RM"
     ],
     "nationality": "Korea Republic",
     "club": "Paris Saint-Germain",
@@ -10278,8 +10279,7 @@
     "name": "N. Molina",
     "rating": 79,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Argentina",
     "club": "Atlético Madrid",
@@ -10316,8 +10316,7 @@
     "name": "A. Rațiu",
     "rating": 79,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Romania",
     "club": "Rayo Vallecano",
@@ -10663,8 +10662,7 @@
     "name": "H. Traoré",
     "rating": 79,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Mali",
     "club": "Paris FC",
@@ -11068,8 +11066,7 @@
     "name": "Sergi Cardona",
     "rating": 79,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Villarreal CF",
@@ -11293,7 +11290,6 @@
     "rating": 79,
     "positions": [
       "RB",
-      "RW",
       "CB"
     ],
     "nationality": "Spain",
@@ -11405,8 +11401,7 @@
     "name": "Fran García",
     "rating": 79,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Real Madrid",
@@ -11657,19 +11652,18 @@
     "rating": 79,
     "positions": [
       "CB",
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Argentina",
     "club": "Olympique de Marseille",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/236/804/26_120.png",
     "pace": 74,
     "shooting": 44,
     "passing": 70,
     "dribbling": 72,
     "defending": 79,
-    "physical": 81
+    "physical": 81,
+    "photoUrl": "https://cdn.sofifa.net/players/236/804/26_120.png"
   },
   {
     "id": "fc_213761",
@@ -11921,8 +11915,7 @@
     "positions": [
       "CB",
       "RB",
-      "CDM",
-      "RW"
+      "CDM"
     ],
     "nationality": "Spain",
     "club": "FC Barcelona",
@@ -13702,8 +13695,7 @@
     "name": "J. Mojica",
     "rating": 78,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Colombia",
     "club": "RCD Mallorca",
@@ -14131,19 +14123,18 @@
     "name": "N. Tagliafico",
     "rating": 78,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Argentina",
     "club": "Olympique Lyonnais",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/211/256/26_120.png",
     "pace": 67,
     "shooting": 56,
     "passing": 70,
     "dribbling": 76,
     "defending": 77,
-    "physical": 76
+    "physical": 76,
+    "photoUrl": "https://cdn.sofifa.net/players/211/256/26_120.png"
   },
   {
     "id": "fc_239977",
@@ -14170,7 +14161,8 @@
     "positions": [
       "CAM",
       "LW",
-      "CM"
+      "CM",
+      "LM"
     ],
     "nationality": "Iceland",
     "club": "Lille OSC",
@@ -14513,7 +14505,8 @@
     "rating": 78,
     "positions": [
       "LW",
-      "CAM"
+      "CAM",
+      "LM"
     ],
     "nationality": "Japan",
     "club": "AS Monaco",
@@ -14903,7 +14896,8 @@
     "positions": [
       "RW",
       "ST",
-      "RB"
+      "RB",
+      "RM"
     ],
     "nationality": "Spain",
     "club": "CA Osasuna",
@@ -14998,19 +14992,18 @@
     "rating": 78,
     "positions": [
       "LB",
-      "LW",
       "CB"
     ],
     "nationality": "France",
     "club": "OGC Nice",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/254/548/26_120.png",
     "pace": 78,
     "shooting": 52,
     "passing": 69,
     "dribbling": 74,
     "defending": 75,
-    "physical": 76
+    "physical": 76,
+    "photoUrl": "https://cdn.sofifa.net/players/254/548/26_120.png"
   },
   {
     "id": "fc_235844",
@@ -16284,7 +16277,8 @@
     "name": "M. Fofana",
     "rating": 78,
     "positions": [
-      "LW"
+      "LW",
+      "LM"
     ],
     "nationality": "Belgium",
     "club": "Olympique Lyonnais",
@@ -16377,19 +16371,18 @@
     "rating": 78,
     "positions": [
       "CB",
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Brazil",
     "club": "Paris Saint-Germain",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/279/709/26_120.png",
     "pace": 66,
     "shooting": 38,
     "passing": 66,
     "dribbling": 68,
     "defending": 79,
-    "physical": 75
+    "physical": 75,
+    "photoUrl": "https://cdn.sofifa.net/players/279/709/26_120.png"
   },
   {
     "id": "fc_270086",
@@ -17409,7 +17402,8 @@
     "rating": 77,
     "positions": [
       "RW",
-      "RB"
+      "RB",
+      "RM"
     ],
     "nationality": "United States",
     "club": "Olympique de Marseille",
@@ -17930,7 +17924,8 @@
     "rating": 77,
     "positions": [
       "RW",
-      "CAM"
+      "CAM",
+      "RM"
     ],
     "nationality": "France",
     "club": "Stade Rennais FC",
@@ -18084,8 +18079,7 @@
     "name": "Diego Rico",
     "rating": 77,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Getafe CF",
@@ -18181,7 +18175,8 @@
     "rating": 77,
     "positions": [
       "RB",
-      "RW"
+      "RW",
+      "RM"
     ],
     "nationality": "England",
     "club": "Olympique Lyonnais",
@@ -18199,19 +18194,18 @@
     "name": "Emerson",
     "rating": 77,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Italy",
     "club": "Olympique de Marseille",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/210/736/26_120.png",
     "pace": 69,
     "shooting": 63,
     "passing": 75,
     "dribbling": 76,
     "defending": 74,
-    "physical": 65
+    "physical": 65,
+    "photoUrl": "https://cdn.sofifa.net/players/210/736/26_120.png"
   },
   {
     "id": "fc_219985",
@@ -18334,19 +18328,18 @@
     "name": "B. Chilwell",
     "rating": 77,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "England",
     "club": "RC Strasbourg Alsace",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/229/984/26_120.png",
     "pace": 70,
     "shooting": 60,
     "passing": 77,
     "dribbling": 75,
     "defending": 76,
-    "physical": 68
+    "physical": 68,
+    "photoUrl": "https://cdn.sofifa.net/players/229/984/26_120.png"
   },
   {
     "id": "fc_263781",
@@ -18507,19 +18500,18 @@
     "name": "Caio Henrique",
     "rating": 77,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Brazil",
     "club": "AS Monaco",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/232/440/26_120.png",
     "pace": 78,
     "shooting": 58,
     "passing": 77,
     "dribbling": 77,
     "defending": 72,
-    "physical": 66
+    "physical": 66,
+    "photoUrl": "https://cdn.sofifa.net/players/232/440/26_120.png"
   },
   {
     "id": "fc_209846",
@@ -18737,8 +18729,7 @@
     "name": "Pep Chavarría",
     "rating": 77,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Rayo Vallecano",
@@ -18872,18 +18863,20 @@
     "positions": [
       "LW",
       "LB",
-      "RW"
+      "RW",
+      "LM",
+      "RM"
     ],
     "nationality": "Belgium",
     "club": "RC Strasbourg Alsace",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/270/039/26_120.png",
     "pace": 90,
     "shooting": 67,
     "passing": 69,
     "dribbling": 79,
     "defending": 64,
-    "physical": 68
+    "physical": 68,
+    "photoUrl": "https://cdn.sofifa.net/players/270/039/26_120.png"
   },
   {
     "id": "fc_241390",
@@ -19004,8 +18997,7 @@
     "name": "Álex Moreno",
     "rating": 77,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Girona FC",
@@ -19293,7 +19285,8 @@
     "rating": 77,
     "positions": [
       "LW",
-      "CAM"
+      "CAM",
+      "LM"
     ],
     "nationality": "Côte d'Ivoire",
     "club": "Olympique de Marseille",
@@ -19579,8 +19572,7 @@
     "name": "Tiago Santos",
     "rating": 77,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Portugal",
     "club": "Lille OSC",
@@ -20201,7 +20193,8 @@
     "rating": 77,
     "positions": [
       "LW",
-      "ST"
+      "ST",
+      "LM"
     ],
     "nationality": "Nigeria",
     "club": "Paris FC",
@@ -20275,8 +20268,7 @@
     "name": "J. Aramburu",
     "rating": 77,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Venezuela",
     "club": "Real Sociedad",
@@ -20524,19 +20516,18 @@
     "rating": 77,
     "positions": [
       "RB",
-      "CB",
-      "RW"
+      "CB"
     ],
     "nationality": "Côte d'Ivoire",
     "club": "RC Strasbourg Alsace",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/275/208/26_120.png",
     "pace": 72,
     "shooting": 47,
     "passing": 70,
     "dribbling": 72,
     "defending": 74,
-    "physical": 78
+    "physical": 78,
+    "photoUrl": "https://cdn.sofifa.net/players/275/208/26_120.png"
   },
   {
     "id": "fc_258715",
@@ -20642,7 +20633,9 @@
       "CAM",
       "LW",
       "RW",
-      "CM"
+      "CM",
+      "LM",
+      "RM"
     ],
     "nationality": "Czechia",
     "club": "Olympique Lyonnais",
@@ -20715,8 +20708,7 @@
     "rating": 77,
     "positions": [
       "RB",
-      "CB",
-      "RW"
+      "CB"
     ],
     "nationality": "Morocco",
     "club": "RCD Espanyol",
@@ -21547,8 +21539,7 @@
     "rating": 77,
     "positions": [
       "CB",
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Spain",
     "club": "Real Madrid",
@@ -22449,27 +22440,25 @@
     "name": "D. Machado",
     "rating": 76,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Colombia",
     "club": "RC Lens",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/220/837/26_120.png",
     "pace": 84,
     "shooting": 69,
     "passing": 71,
     "dribbling": 76,
     "defending": 71,
-    "physical": 76
+    "physical": 76,
+    "photoUrl": "https://cdn.sofifa.net/players/220/837/26_120.png"
   },
   {
     "id": "fc_202371",
     "name": "T. Meunier",
     "rating": 76,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Belgium",
     "club": "Lille OSC",
@@ -22815,19 +22804,18 @@
     "name": "Q. Merlin",
     "rating": 76,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "Stade Rennais FC",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/261/616/26_120.png",
     "pace": 74,
     "shooting": 59,
     "passing": 75,
     "dribbling": 76,
     "defending": 73,
-    "physical": 64
+    "physical": 64,
+    "photoUrl": "https://cdn.sofifa.net/players/261/616/26_120.png"
   },
   {
     "id": "fc_221363",
@@ -22892,8 +22880,7 @@
     "name": "K. Lala",
     "rating": 76,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "France",
     "club": "Stade Brestois 29",
@@ -23050,7 +23037,8 @@
     "positions": [
       "ST",
       "RW",
-      "CAM"
+      "CAM",
+      "RM"
     ],
     "nationality": "France",
     "club": "RC Lens",
@@ -23535,19 +23523,18 @@
     "rating": 76,
     "positions": [
       "RB",
-      "CB",
-      "RW"
+      "CB"
     ],
     "nationality": "Panama",
     "club": "Olympique de Marseille",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/237/841/26_120.png",
     "pace": 84,
     "shooting": 57,
     "passing": 70,
     "dribbling": 71,
     "defending": 70,
-    "physical": 76
+    "physical": 76,
+    "photoUrl": "https://cdn.sofifa.net/players/237/841/26_120.png"
   },
   {
     "id": "fc_205369",
@@ -23710,19 +23697,18 @@
     "name": "A. Abdi",
     "rating": 76,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Tunisia",
     "club": "OGC Nice",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/252/711/26_120.png",
     "pace": 86,
     "shooting": 62,
     "passing": 70,
     "dribbling": 73,
     "defending": 69,
-    "physical": 75
+    "physical": 75,
+    "photoUrl": "https://cdn.sofifa.net/players/252/711/26_120.png"
   },
   {
     "id": "fc_228946",
@@ -23748,7 +23734,8 @@
     "name": "R. Del Castillo",
     "rating": 76,
     "positions": [
-      "RW"
+      "RW",
+      "RM"
     ],
     "nationality": "France",
     "club": "Stade Brestois 29",
@@ -24154,8 +24141,7 @@
     "name": "Carmona",
     "rating": 76,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Spain",
     "club": "Sevilla FC",
@@ -24331,8 +24317,7 @@
     "rating": 76,
     "positions": [
       "RB",
-      "LB",
-      "RW"
+      "LB"
     ],
     "nationality": "Albania",
     "club": "Rayo Vallecano",
@@ -24425,7 +24410,8 @@
     "rating": 76,
     "positions": [
       "LW",
-      "CAM"
+      "CAM",
+      "LM"
     ],
     "nationality": "Morocco",
     "club": "OGC Nice",
@@ -24443,8 +24429,7 @@
     "name": "R. Aguilar",
     "rating": 76,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "France",
     "club": "RC Lens",
@@ -24501,8 +24486,7 @@
     "rating": 76,
     "positions": [
       "RB",
-      "LB",
-      "RW"
+      "LB"
     ],
     "nationality": "Portugal",
     "club": "Valencia CF",
@@ -24540,7 +24524,8 @@
     "rating": 76,
     "positions": [
       "LW",
-      "ST"
+      "ST",
+      "LM"
     ],
     "nationality": "Côte d'Ivoire",
     "club": "OGC Nice",
@@ -25267,7 +25252,7 @@
     "rating": 76,
     "positions": [
       "RB",
-      "RW"
+      "CB"
     ],
     "nationality": "Netherlands",
     "club": "AS Monaco",
@@ -25492,7 +25477,8 @@
     "name": "J. Ikoné",
     "rating": 76,
     "positions": [
-      "RW"
+      "RW",
+      "RM"
     ],
     "nationality": "France",
     "club": "Paris FC",
@@ -25893,7 +25879,8 @@
     "rating": 76,
     "positions": [
       "LW",
-      "CAM"
+      "CAM",
+      "LM"
     ],
     "nationality": "Morocco",
     "club": "Lille OSC",
@@ -25989,7 +25976,8 @@
     "positions": [
       "CAM",
       "LW",
-      "CM"
+      "CM",
+      "LM"
     ],
     "nationality": "Sweden",
     "club": "RC Strasbourg Alsace",
@@ -26238,7 +26226,8 @@
     "rating": 76,
     "positions": [
       "RW",
-      "CAM"
+      "CAM",
+      "RM"
     ],
     "nationality": "Algeria",
     "club": "Paris FC",
@@ -26494,7 +26483,9 @@
     "positions": [
       "LW",
       "RW",
-      "ST"
+      "ST",
+      "LM",
+      "RM"
     ],
     "nationality": "France",
     "club": "OGC Nice",
@@ -27772,8 +27763,7 @@
     "name": "P. Frankowski",
     "rating": 75,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Poland",
     "club": "Stade Rennais FC",
@@ -28003,8 +27993,7 @@
     "name": "Pedraza",
     "rating": 75,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Villarreal CF",
@@ -28831,8 +28820,7 @@
     "name": "Abel Bretones",
     "rating": 75,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "CA Osasuna",
@@ -29023,8 +29011,7 @@
     "name": "Adrià Pedrosa",
     "rating": 75,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Elche CF",
@@ -29081,8 +29068,7 @@
     "rating": 75,
     "positions": [
       "RB",
-      "LB",
-      "RW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Athletic Club",
@@ -29158,8 +29144,7 @@
     "name": "Carlos Romero",
     "rating": 75,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "RCD Espanyol",
@@ -29318,7 +29303,8 @@
     "positions": [
       "ST",
       "RW",
-      "CAM"
+      "CAM",
+      "RM"
     ],
     "nationality": "France",
     "club": "RC Lens",
@@ -29450,8 +29436,7 @@
     "name": "Junior Firpo",
     "rating": 75,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Dominican Republic",
     "club": "Real Betis Balompié",
@@ -29489,7 +29474,8 @@
     "rating": 75,
     "positions": [
       "LW",
-      "LB"
+      "LB",
+      "LM"
     ],
     "nationality": "Italy",
     "club": "Atlético Madrid",
@@ -29685,7 +29671,9 @@
     "positions": [
       "RW",
       "LW",
-      "CAM"
+      "CAM",
+      "LM",
+      "RM"
     ],
     "nationality": "Norway",
     "club": "Toulouse FC",
@@ -29820,19 +29808,18 @@
     "rating": 75,
     "positions": [
       "LB",
-      "LW",
       "CM"
     ],
     "nationality": "Argentina",
     "club": "RC Strasbourg Alsace",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/263/370/26_120.png",
     "pace": 76,
     "shooting": 50,
     "passing": 75,
     "dribbling": 78,
     "defending": 68,
-    "physical": 61
+    "physical": 61,
+    "photoUrl": "https://cdn.sofifa.net/players/263/370/26_120.png"
   },
   {
     "id": "fc_206254",
@@ -30056,8 +30043,7 @@
     "rating": 75,
     "positions": [
       "RB",
-      "CAM",
-      "RW"
+      "CAM"
     ],
     "nationality": "Spain",
     "club": "Sevilla FC",
@@ -30996,8 +30982,7 @@
     "name": "Aihen Muñoz",
     "rating": 75,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Real Sociedad",
@@ -31698,8 +31683,7 @@
     "positions": [
       "CB",
       "RB",
-      "LB",
-      "RW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Girona FC",
@@ -31717,8 +31701,7 @@
     "name": "S. Abdulhamid",
     "rating": 75,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Saudi Arabia",
     "club": "RC Lens",
@@ -31736,19 +31719,18 @@
     "name": "A. Mandi",
     "rating": 75,
     "positions": [
-      "CB",
-      "RB"
+      "CB"
     ],
     "nationality": "Algeria",
     "club": "Lille OSC",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/201/143/26_120.png",
     "pace": 57,
     "shooting": 46,
     "passing": 71,
     "dribbling": 67,
     "defending": 75,
-    "physical": 73
+    "physical": 73,
+    "photoUrl": "https://cdn.sofifa.net/players/201/143/26_120.png"
   },
   {
     "id": "fc_266500",
@@ -31814,7 +31796,9 @@
     "positions": [
       "RW",
       "ST",
-      "LW"
+      "LW",
+      "LM",
+      "RM"
     ],
     "nationality": "Jordan",
     "club": "Stade Rennais FC",
@@ -31908,7 +31892,9 @@
     "rating": 75,
     "positions": [
       "LW",
-      "RW"
+      "RW",
+      "LM",
+      "RM"
     ],
     "nationality": "Portugal",
     "club": "Lille OSC",
@@ -32282,19 +32268,18 @@
     "rating": 75,
     "positions": [
       "LB",
-      "CB",
-      "LW"
+      "CB"
     ],
     "nationality": "Switzerland",
     "club": "Olympique de Marseille",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/223/143/26_120.png",
     "pace": 79,
     "shooting": 49,
     "passing": 66,
     "dribbling": 71,
     "defending": 70,
-    "physical": 74
+    "physical": 74,
+    "photoUrl": "https://cdn.sofifa.net/players/223/143/26_120.png"
   },
   {
     "id": "fc_208335",
@@ -32602,7 +32587,8 @@
     "positions": [
       "CAM",
       "LW",
-      "ST"
+      "ST",
+      "LM"
     ],
     "nationality": "France",
     "club": "Toulouse FC",
@@ -32638,7 +32624,8 @@
     "name": "Ansu Fati",
     "rating": 75,
     "positions": [
-      "LW"
+      "LW",
+      "LM"
     ],
     "nationality": "Spain",
     "club": "AS Monaco",
@@ -32826,7 +32813,9 @@
     "rating": 75,
     "positions": [
       "LW",
-      "RW"
+      "RW",
+      "LM",
+      "RM"
     ],
     "nationality": "Spain",
     "club": "Lille OSC",
@@ -32902,19 +32891,18 @@
     "name": "B. Locko",
     "rating": 75,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "Stade Brestois 29",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/263/908/26_120.png",
     "pace": 73,
     "shooting": 50,
     "passing": 63,
     "dribbling": 71,
     "defending": 74,
-    "physical": 67
+    "physical": 67,
+    "photoUrl": "https://cdn.sofifa.net/players/263/908/26_120.png"
   },
   {
     "id": "fc_230427",
@@ -33724,8 +33712,7 @@
     "name": "Manu Sánchez",
     "rating": 75,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Levante UD",
@@ -33781,7 +33768,8 @@
     "name": "E. Nuamah",
     "rating": 75,
     "positions": [
-      "RW"
+      "RW",
+      "RM"
     ],
     "nationality": "Ghana",
     "club": "Olympique Lyonnais",
@@ -34147,19 +34135,18 @@
     "rating": 75,
     "positions": [
       "CB",
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "AS Monaco",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/272/785/26_120.png",
     "pace": 79,
     "shooting": 31,
     "passing": 57,
     "dribbling": 64,
     "defending": 75,
-    "physical": 74
+    "physical": 74,
+    "photoUrl": "https://cdn.sofifa.net/players/272/785/26_120.png"
   },
   {
     "id": "fc_266797",
@@ -35292,8 +35279,7 @@
     "rating": 74,
     "positions": [
       "LB",
-      "CB",
-      "LW"
+      "CB"
     ],
     "nationality": "Switzerland",
     "club": "Real Betis Balompié",
@@ -35311,19 +35297,18 @@
     "name": "R. Perraud",
     "rating": 74,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "Lille OSC",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/231/318/26_120.png",
     "pace": 72,
     "shooting": 75,
     "passing": 76,
     "dribbling": 75,
     "defending": 68,
-    "physical": 71
+    "physical": 71,
+    "photoUrl": "https://cdn.sofifa.net/players/231/318/26_120.png"
   },
   {
     "id": "fc_245138",
@@ -36945,7 +36930,9 @@
     "name": "K. Diatta",
     "rating": 74,
     "positions": [
-      "RW"
+      "RW",
+      "RM",
+      "RB"
     ],
     "nationality": "Senegal",
     "club": "AS Monaco",
@@ -38277,19 +38264,18 @@
     "name": "Abner Vinícius",
     "rating": 74,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Brazil",
     "club": "Olympique Lyonnais",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/263/815/26_120.png",
     "pace": 79,
     "shooting": 58,
     "passing": 72,
     "dribbling": 74,
     "defending": 68,
-    "physical": 65
+    "physical": 65,
+    "photoUrl": "https://cdn.sofifa.net/players/263/815/26_120.png"
   },
   {
     "id": "fc_207791",
@@ -38435,8 +38421,7 @@
     "rating": 74,
     "positions": [
       "RB",
-      "LB",
-      "RW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Deportivo Alavés",
@@ -38782,8 +38767,7 @@
     "name": "G. Suazo",
     "rating": 74,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Chile",
     "club": "Sevilla FC",
@@ -38915,8 +38899,7 @@
     "rating": 74,
     "positions": [
       "RB",
-      "LB",
-      "RW"
+      "LB"
     ],
     "nationality": "France",
     "club": "Valencia CF",
@@ -38973,19 +38956,18 @@
     "rating": 74,
     "positions": [
       "CB",
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "RC Lens",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/229/236/26_120.png",
     "pace": 70,
     "shooting": 52,
     "passing": 65,
     "dribbling": 72,
     "defending": 74,
-    "physical": 74
+    "physical": 74,
+    "photoUrl": "https://cdn.sofifa.net/players/229/236/26_120.png"
   },
   {
     "id": "fc_230392",
@@ -39163,38 +39145,36 @@
     "rating": 74,
     "positions": [
       "CB",
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "France",
     "club": "Toulouse FC",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/201/042/26_120.png",
     "pace": 63,
     "shooting": 55,
     "passing": 69,
     "dribbling": 67,
     "defending": 76,
-    "physical": 73
+    "physical": 73,
+    "photoUrl": "https://cdn.sofifa.net/players/201/042/26_120.png"
   },
   {
     "id": "fc_247124",
     "name": "G. Mensah",
     "rating": 74,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Ghana",
     "club": "AJ Auxerre",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/247/124/26_120.png",
     "pace": 76,
     "shooting": 57,
     "passing": 65,
     "dribbling": 72,
     "defending": 68,
-    "physical": 67
+    "physical": 67,
+    "photoUrl": "https://cdn.sofifa.net/players/247/124/26_120.png"
   },
   {
     "id": "fc_263377",
@@ -39280,7 +39260,8 @@
     "name": "A. Sima",
     "rating": 74,
     "positions": [
-      "LW"
+      "LW",
+      "LM"
     ],
     "nationality": "Senegal",
     "club": "RC Lens",
@@ -40155,8 +40136,7 @@
     "rating": 74,
     "positions": [
       "LB",
-      "CB",
-      "LW"
+      "CB"
     ],
     "nationality": "Spain",
     "club": "FC Barcelona",
@@ -40308,7 +40288,8 @@
     "positions": [
       "ST",
       "LW",
-      "CAM"
+      "CAM",
+      "LM"
     ],
     "nationality": "Mali",
     "club": "AJ Auxerre",
@@ -40590,7 +40571,8 @@
     "name": "R. Ghezzal",
     "rating": 74,
     "positions": [
-      "RW"
+      "RW",
+      "RM"
     ],
     "nationality": "Algeria",
     "club": "Olympique Lyonnais",
@@ -42350,19 +42332,18 @@
     "rating": 74,
     "positions": [
       "CB",
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Côte d'Ivoire",
     "club": "AJ Auxerre",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/277/503/26_120.png",
     "pace": 70,
     "shooting": 42,
     "passing": 61,
     "dribbling": 67,
     "defending": 74,
-    "physical": 72
+    "physical": 72,
+    "photoUrl": "https://cdn.sofifa.net/players/277/503/26_120.png"
   },
   {
     "id": "fc_236109",
@@ -42479,19 +42460,18 @@
     "rating": 74,
     "positions": [
       "CB",
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Ghana",
     "club": "Stade Rennais FC",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/257/946/26_120.png",
     "pace": 61,
     "shooting": 43,
     "passing": 61,
     "dribbling": 70,
     "defending": 75,
-    "physical": 67
+    "physical": 67,
+    "photoUrl": "https://cdn.sofifa.net/players/257/946/26_120.png"
   },
   {
     "id": "fc_241186",
@@ -42684,8 +42664,7 @@
     "rating": 74,
     "positions": [
       "RB",
-      "LB",
-      "RW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Getafe CF",
@@ -43278,8 +43257,7 @@
     "rating": 74,
     "positions": [
       "CB",
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Uruguay",
     "club": "Villarreal CF",
@@ -46384,7 +46362,8 @@
     "rating": 73,
     "positions": [
       "ST",
-      "LW"
+      "LW",
+      "LM"
     ],
     "nationality": "Guinea-Bissau",
     "club": "Stade Brestois 29",
@@ -48627,7 +48606,9 @@
     "rating": 73,
     "positions": [
       "LW",
-      "RW"
+      "RW",
+      "RM",
+      "LM"
     ],
     "nationality": "France",
     "club": "Paris FC",
@@ -48722,8 +48703,7 @@
     "name": "Toni Lato",
     "rating": 73,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "RCD Mallorca",
@@ -49032,8 +49012,7 @@
     "name": "A. Boiro",
     "rating": 73,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Senegal",
     "club": "Athletic Club",
@@ -49090,8 +49069,7 @@
     "name": "M. Ristić",
     "rating": 73,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Serbia",
     "club": "RC Celta",
@@ -50310,7 +50288,8 @@
     "positions": [
       "ST",
       "LW",
-      "CAM"
+      "CAM",
+      "LM"
     ],
     "nationality": "Morocco",
     "club": "Lille OSC",
@@ -51288,8 +51267,7 @@
     "name": "Javi López",
     "rating": 73,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Real Oviedo",
@@ -51348,7 +51326,9 @@
       "ST",
       "RW",
       "LW",
-      "CAM"
+      "CAM",
+      "LM",
+      "RM"
     ],
     "nationality": "Guinea",
     "club": "RC Lens",
@@ -51386,7 +51366,9 @@
     "rating": 73,
     "positions": [
       "RW",
-      "LW"
+      "LW",
+      "LM",
+      "RM"
     ],
     "nationality": "Portugal",
     "club": "OGC Nice",
@@ -51505,7 +51487,8 @@
     "positions": [
       "CAM",
       "RW",
-      "CM"
+      "CM",
+      "RM"
     ],
     "nationality": "Ecuador",
     "club": "RC Strasbourg Alsace",
@@ -52192,7 +52175,9 @@
       "CAM",
       "LW",
       "RW",
-      "ST"
+      "ST",
+      "LM",
+      "RM"
     ],
     "nationality": "Paraguay",
     "club": "RC Strasbourg Alsace",
@@ -56954,7 +56939,8 @@
     "positions": [
       "RW",
       "CM",
-      "RB"
+      "RB",
+      "RM"
     ],
     "nationality": "France",
     "club": "Stade Brestois 29",
@@ -57961,8 +57947,7 @@
     "name": "L. Négo",
     "rating": 72,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Hungary",
     "club": "Le Havre AC",
@@ -58889,19 +58874,18 @@
     "name": "J. Chávez",
     "rating": 72,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Ecuador",
     "club": "RC Lens",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/259/027/26_120.png",
     "pace": 85,
     "shooting": 60,
     "passing": 66,
     "dribbling": 72,
     "defending": 66,
-    "physical": 67
+    "physical": 67,
+    "photoUrl": "https://cdn.sofifa.net/players/259/027/26_120.png"
   },
   {
     "id": "fc_269153",
@@ -59143,7 +59127,8 @@
     "rating": 72,
     "positions": [
       "RW",
-      "RB"
+      "RB",
+      "RM"
     ],
     "nationality": "Spain",
     "club": "Elche CF",
@@ -59435,7 +59420,8 @@
       "CAM",
       "LW",
       "ST",
-      "CM"
+      "CM",
+      "LM"
     ],
     "nationality": "Germany",
     "club": "Le Havre AC",
@@ -60280,7 +60266,8 @@
     "rating": 72,
     "positions": [
       "RW",
-      "CM"
+      "CM",
+      "RM"
     ],
     "nationality": "France",
     "club": "OGC Nice",
@@ -60432,8 +60419,7 @@
     "name": "Altimira",
     "rating": 72,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Spain",
     "club": "Villarreal CF",
@@ -60758,8 +60744,7 @@
     "name": "Salinas",
     "rating": 72,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "RCD Espanyol",
@@ -60931,8 +60916,7 @@
     "name": "W. Kamanzi",
     "rating": 72,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Norway",
     "club": "Toulouse FC",
@@ -61405,8 +61389,7 @@
     "name": "Álvaro Núñez",
     "rating": 72,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Spain",
     "club": "Elche CF",
@@ -61753,19 +61736,18 @@
     "name": "F. Hanin",
     "rating": 72,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "Angers SCO",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/194/846/26_120.png",
     "pace": 73,
     "shooting": 44,
     "passing": 66,
     "dribbling": 68,
     "defending": 69,
-    "physical": 72
+    "physical": 72,
+    "photoUrl": "https://cdn.sofifa.net/players/194/846/26_120.png"
   },
   {
     "id": "fc_234870",
@@ -62214,7 +62196,9 @@
     "rating": 72,
     "positions": [
       "RW",
-      "LW"
+      "LW",
+      "LM",
+      "RM"
     ],
     "nationality": "Gabon",
     "club": "Angers SCO",
@@ -63037,38 +63021,36 @@
     "name": "T. De Smet",
     "rating": 72,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Belgium",
     "club": "Paris FC",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/237/331/26_120.png",
     "pace": 66,
     "shooting": 52,
     "passing": 64,
     "dribbling": 68,
     "defending": 68,
-    "physical": 72
+    "physical": 72,
+    "photoUrl": "https://cdn.sofifa.net/players/237/331/26_120.png"
   },
   {
     "id": "fc_253490",
     "name": "D. Yongwa",
     "rating": 72,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Cameroon",
     "club": "FC Lorient",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/253/490/26_120.png",
     "pace": 85,
     "shooting": 40,
     "passing": 61,
     "dribbling": 69,
     "defending": 67,
-    "physical": 71
+    "physical": 71,
+    "photoUrl": "https://cdn.sofifa.net/players/253/490/26_120.png"
   },
   {
     "id": "fc_269962",
@@ -63869,19 +63851,18 @@
     "name": "K. Ouattara",
     "rating": 72,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "AS Monaco",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/273/933/26_120.png",
     "pace": 77,
     "shooting": 44,
     "passing": 65,
     "dribbling": 69,
     "defending": 66,
-    "physical": 68
+    "physical": 68,
+    "photoUrl": "https://cdn.sofifa.net/players/273/933/26_120.png"
   },
   {
     "id": "fc_235161",
@@ -65043,7 +65024,9 @@
     "rating": 72,
     "positions": [
       "LW",
-      "RW"
+      "RW",
+      "LM",
+      "RM"
     ],
     "nationality": "Ghana",
     "club": "AJ Auxerre",
@@ -65214,7 +65197,8 @@
     "rating": 72,
     "positions": [
       "ST",
-      "RW"
+      "RW",
+      "RM"
     ],
     "nationality": "France",
     "club": "Stade Brestois 29",
@@ -65910,7 +65894,8 @@
     "rating": 72,
     "positions": [
       "LW",
-      "ST"
+      "ST",
+      "LM"
     ],
     "nationality": "Senegal",
     "club": "Le Havre AC",
@@ -70479,19 +70464,18 @@
     "rating": 71,
     "positions": [
       "LB",
-      "CB",
-      "LW"
+      "CB"
     ],
     "nationality": "Indonesia",
     "club": "Lille OSC",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/227/794/26_120.png",
     "pace": 76,
     "shooting": 58,
     "passing": 66,
     "dribbling": 66,
     "defending": 68,
-    "physical": 74
+    "physical": 74,
+    "photoUrl": "https://cdn.sofifa.net/players/227/794/26_120.png"
   },
   {
     "id": "fc_200689",
@@ -72753,19 +72737,18 @@
     "name": "T. Delaine",
     "rating": 71,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "Le Havre AC",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/203/741/26_120.png",
     "pace": 72,
     "shooting": 50,
     "passing": 69,
     "dribbling": 71,
     "defending": 67,
-    "physical": 69
+    "physical": 69,
+    "photoUrl": "https://cdn.sofifa.net/players/203/741/26_120.png"
   },
   {
     "id": "fc_212722",
@@ -74386,7 +74369,8 @@
     "rating": 71,
     "positions": [
       "RW",
-      "CAM"
+      "CAM",
+      "RM"
     ],
     "nationality": "Denmark",
     "club": "Le Havre AC",
@@ -74773,8 +74757,7 @@
     "name": "C. Arcus",
     "rating": 71,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Haiti",
     "club": "Angers SCO",
@@ -75353,7 +75336,8 @@
     "positions": [
       "CAM",
       "RW",
-      "CM"
+      "CM",
+      "RM"
     ],
     "nationality": "Czechia",
     "club": "Olympique Lyonnais",
@@ -75429,7 +75413,8 @@
     "rating": 71,
     "positions": [
       "RW",
-      "ST"
+      "ST",
+      "RM"
     ],
     "nationality": "France",
     "club": "AJ Auxerre",
@@ -75621,7 +75606,8 @@
     "positions": [
       "LW",
       "ST",
-      "CAM"
+      "CAM",
+      "LM"
     ],
     "nationality": "Sweden",
     "club": "OGC Nice",
@@ -77465,7 +77451,8 @@
     "name": "J. Mvuka",
     "rating": 71,
     "positions": [
-      "RW"
+      "RW",
+      "RM"
     ],
     "nationality": "Norway",
     "club": "FC Lorient",
@@ -86454,8 +86441,7 @@
     "name": "Igor Silva",
     "rating": 70,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Brazil",
     "club": "FC Lorient",
@@ -87272,7 +87258,8 @@
     "rating": 70,
     "positions": [
       "RW",
-      "RB"
+      "RB",
+      "RM"
     ],
     "nationality": "Greece",
     "club": "FC Lorient",
@@ -89704,8 +89691,7 @@
     "name": "Jesús Vázquez",
     "rating": 70,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "Spain",
     "club": "Valencia CF",
@@ -90636,19 +90622,18 @@
     "name": "Y. Zouaoui",
     "rating": 70,
     "positions": [
-      "LB",
-      "LW"
+      "LB"
     ],
     "nationality": "France",
     "club": "Le Havre AC",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/072/374/26_120.png",
     "pace": 63,
     "shooting": 52,
     "passing": 65,
     "dribbling": 67,
     "defending": 66,
-    "physical": 64
+    "physical": 64,
+    "photoUrl": "https://cdn.sofifa.net/players/072/374/26_120.png"
   },
   {
     "id": "fc_251469",
@@ -93663,19 +93648,18 @@
     "rating": 70,
     "positions": [
       "CB",
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "Senegal",
     "club": "OGC Nice",
     "league": "Ligue 1",
-    "photoUrl": "https://cdn.sofifa.net/players/272/515/26_120.png",
     "pace": 64,
     "shooting": 41,
     "passing": 55,
     "dribbling": 63,
     "defending": 71,
-    "physical": 72
+    "physical": 72,
+    "photoUrl": "https://cdn.sofifa.net/players/272/515/26_120.png"
   },
   {
     "id": "fc_71351",
@@ -94372,8 +94356,7 @@
     "name": "L. Raolisoa",
     "rating": 70,
     "positions": [
-      "RB",
-      "RW"
+      "RB"
     ],
     "nationality": "France",
     "club": "Angers SCO",
@@ -95556,8 +95539,7 @@
     "rating": 70,
     "positions": [
       "LB",
-      "CB",
-      "LW"
+      "CB"
     ],
     "nationality": "France",
     "club": "Elche CF",
