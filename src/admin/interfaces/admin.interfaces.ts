@@ -13,6 +13,15 @@ export interface AdminPlayer {
   club: string;
   /** Photo URL — may be relative path like /assets/players/photos/gk_001.png */
   photoUrl?: string;
+  /**
+   * Manual admin confirmation that `photoUrl` is a properly-licensed photo
+   * (e.g. an uploaded file whose original source was verified to be CC-
+   * licensed). Only needed for photos the app can't verify automatically —
+   * self-hosted Wikimedia downloads and direct upload.wikimedia.org links are
+   * already recognized without this flag. Not auto-cleared when photoUrl
+   * changes, so re-verify (or uncheck) after swapping in a different upload.
+   */
+  photoLegalOverride?: boolean;
   clubLogoUrl?: string;
   league?: string;
   pace?: number;

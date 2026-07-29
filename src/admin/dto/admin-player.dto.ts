@@ -1,6 +1,7 @@
 import {
   ArrayMinSize,
   IsArray,
+  IsBoolean,
   IsIn,
   IsInt,
   IsNotEmpty,
@@ -59,6 +60,10 @@ export class CreatePlayerDto {
   @IsString()
   @MaxLength(500)
   photoUrl?: string;
+
+  @IsOptional()
+  @IsBoolean()
+  photoLegalOverride?: boolean;
 
   @IsOptional()
   @IsString()
@@ -143,6 +148,10 @@ export class UpdatePlayerDto {
   @IsString()
   @MaxLength(500)
   photoUrl?: string;
+
+  @IsOptional()
+  @IsBoolean()
+  photoLegalOverride?: boolean;
 
   @IsOptional()
   @IsString()
