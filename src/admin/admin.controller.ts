@@ -69,6 +69,12 @@ const ALLOWED_IMAGE_HOSTS = new Set([
   'media.api-sports.io',
   'a.espncdn.com',
   'flagcdn.com',
+  // Wikimedia Commons — the actual image files are served from
+  // upload.wikimedia.org, NOT commons.wikimedia.org (that's the page host,
+  // e.g. the "File:..." page a human browses — pasting that page URL into
+  // the admin's photo field is a common mix-up; only the upload.* host
+  // serves the raw image bytes an <img>/Image.network can load).
+  'upload.wikimedia.org',
 ]);
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
