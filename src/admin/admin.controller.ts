@@ -619,7 +619,14 @@ export class AdminController {
       throw new BadRequestException('only https upstream URLs are allowed');
     }
 
-    const upstreamReq = https.get(url, { timeout: IMAGE_PROXY_TIMEOUT_MS }, (upstream) => {
+    // Wikimedia (and some other hosts) reject requests with no descriptive
+    // User-Agent per their bot-traffic policy, returning a non-image 403
+    // instead of the photo — that 403 previously surfaced to the admin UI as
+    // an opaque 502. A UA identifying this app fixes it.
+    const upstreamReq = https.get(
+      url,
+      { timeout: IMAGE_PROXY_TIMEOUT_MS, headers: { 'User-Agent': 'HiddenEleven-AdminImageProxy/1.0 (+https://hiddeneleven.online)' } },
+      (upstream) => {
       const contentType = upstream.headers['content-type'] ?? 'image/jpeg';
       if (!/^image\//i.test(contentType)) {
         upstream.resume();
