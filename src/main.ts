@@ -55,10 +55,10 @@ async function bootstrap() {
   // contentSecurityPolicy is explicitly disabled — verified live (started
   // the real server, fetched the actual built index.html) that helmet's
   // default CSP (script-src 'self', no 'unsafe-inline'/'wasm-unsafe-eval')
-  // would break the Flutter web app this server serves at `/`: the build's
-  // index.html has a real inline <script> (clears a stale service worker on
-  // load) that a default CSP blocks outright, and Flutter's CanvasKit
-  // renderer needs WASM execution a strict script-src also disallows.
+  // would break the Flutter web app this server serves at `/play`: the
+  // build's index.html has a real inline <script> (clears a stale service
+  // worker on load) that a default CSP blocks outright, and Flutter's
+  // CanvasKit renderer needs WASM execution a strict script-src also disallows.
   // Getting a CSP that's both meaningful and compatible with Flutter web's
   // bootstrap would need careful, browser-verified tuning per renderer mode —
   // a separate, focused piece of work, not a one-line helmet() call. Every
@@ -95,7 +95,17 @@ async function bootstrap() {
   const assetsRoot = join(process.cwd(), 'assets');
   app.useStaticAssets(assetsRoot, { prefix: '/assets' });
 
-  // Serve Flutter web build at root so one port handles everything.
+  // Serve the Flutter web build under /play, not at the root domain.
+  //
+  // Why not root: the game itself is a canvas-rendered SPA — Google's
+  // crawler never sees more than the static loading shell, which is exactly
+  // the "low value content" AdSense flagged the site for. `/`, `/how-to-play`,
+  // and `/faq` are real static HTML (served straight by nginx, see the site
+  // repo's sites-available config) so there's genuine crawlable content at
+  // the domain root; `/play` is where the actual interactive app lives,
+  // linked from those pages' "Play now" buttons. The build itself is built
+  // with `--base-href /play/` so Flutter's own asset/router URLs resolve
+  // correctly under the new prefix.
   //
   // Cache strategy is split to balance "edits show up instantly" against tunnel
   // bandwidth cost:
@@ -109,7 +119,7 @@ async function bootstrap() {
   const immutableAsset =
     /(?:\.(?:wasm|otf|ttf|woff2?|png|jpg|jpeg|webp|gif|symbols)$|\/canvaskit\/|\/fonts\/)/i;
   app.useStaticAssets(webRoot, {
-    prefix: '/',
+    prefix: '/play',
     setHeaders: (res, path) => {
       if (immutableAsset.test(path)) {
         res.setHeader('Cache-Control', 'public, max-age=86400');
@@ -119,17 +129,27 @@ async function bootstrap() {
     },
   });
 
-  // SPA deep-link fallback: the Flutter admin panel is a client-side route
-  // with no matching static file, so a direct browser navigation to /admin
-  // (bookmark, share, refresh) 404s unless we hand it the same index.html
-  // the root route serves and let the client-side router take over from
-  // there. Registered after useStaticAssets so real static files (if any
-  // ever exist under /admin) still take priority.
+  // SPA deep-link fallback: Flutter uses hash-based routing (no
+  // usePathUrlStrategy call), so every in-app route — including the admin
+  // panel — is really just `/play/#/whatever`, a fragment the server never
+  // sees. The only path the server needs to hand index.html to directly is
+  // `/play` itself (first load, or a browser navigation with no fragment);
+  // the client-side router takes it from there. Registered after
+  // useStaticAssets so real static files under /play still take priority.
+  app
+    .getHttpAdapter()
+    .getInstance()
+    .get(['/play', '/play/*path'], (_req: unknown, res: import('express').Response) => {
+      res.sendFile(join(webRoot, 'index.html'));
+    });
+
+  // Legacy bookmark compatibility: the admin panel used to live at bare
+  // `/admin` before the game moved under /play. Redirect rather than 404.
   app
     .getHttpAdapter()
     .getInstance()
     .get(['/admin', '/admin/*path'], (_req: unknown, res: import('express').Response) => {
-      res.sendFile(join(webRoot, 'index.html'));
+      res.redirect(302, '/play/#/admin');
     });
 
   const port = process.env.PORT ?? 3000;
