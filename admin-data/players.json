@@ -29,7 +29,7 @@
     "nationality": "France",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/231/747/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_231747.jpg",
     "pace": 97,
     "shooting": 90,
     "passing": 81,
@@ -144,7 +144,7 @@
     "nationality": "Uruguay",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/239/053/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_239053.jpg",
     "pace": 88,
     "shooting": 84,
     "passing": 84,
@@ -220,7 +220,7 @@
     "nationality": "Brazil",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/233/419/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_233419.jpg",
     "pace": 91,
     "shooting": 84,
     "passing": 85,
@@ -240,7 +240,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/251/854/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_251854.jpg",
     "pace": 77,
     "shooting": 73,
     "passing": 85,
@@ -297,7 +297,7 @@
     "nationality": "Brazil",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/238/794/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_238794.jpg",
     "pace": 95,
     "shooting": 84,
     "passing": 81,
@@ -351,7 +351,7 @@
     "nationality": "Italy",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/230/621/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Norway_Italy_-_June_2025_B_33_-_Gianluigi_Donnarumma_%28close-up%29.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -369,7 +369,7 @@
     "nationality": "Belgium",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/192/119/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_192119.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -389,13 +389,14 @@
     "nationality": "England",
     "club": "Arsenal",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/669/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Bukayo_Saka_England_v_Panama_27_June_26-108_%28cropped%29.jpg",
     "pace": 84,
     "shooting": 82,
     "passing": 85,
     "dribbling": 88,
     "defending": 60,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_231478",
@@ -425,7 +426,7 @@
     "nationality": "Poland",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/188/545/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_188545.jpg",
     "pace": 74,
     "shooting": 89,
     "passing": 79,
@@ -537,13 +538,14 @@
     "nationality": "Argentina",
     "club": "Liverpool",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/239/837/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162.jpg",
     "pace": 66,
     "shooting": 82,
     "passing": 85,
     "dribbling": 85,
     "defending": 78,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_212198",
@@ -574,7 +576,7 @@
     "nationality": "Argentina",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/246/191/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_246191.jpg",
     "pace": 85,
     "shooting": 87,
     "passing": 81,
@@ -612,7 +614,7 @@
     "nationality": "Netherlands",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/228/702/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_228702.jpg",
     "pace": 82,
     "shooting": 71,
     "passing": 85,
@@ -838,13 +840,14 @@
     "nationality": "France",
     "club": "Arsenal",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/243/715/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/William_Saliba_France_v_Senegal_16_June_2026-336_%28cropped%29.jpg",
     "pace": 77,
     "shooting": 39,
     "passing": 68,
     "dribbling": 72,
     "defending": 87,
-    "physical": 83
+    "physical": 83,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_213331",
@@ -987,13 +990,14 @@
     "nationality": "Netherlands",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/240/638/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Manchester_City_2025_06_26_Juventus_%28cropped_to_Reijniders%29.jpg",
     "pace": 79,
     "shooting": 79,
     "passing": 82,
     "dribbling": 85,
     "defending": 77,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_247851",
@@ -1100,7 +1104,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/256/516/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_256516.jpg",
     "pace": 93,
     "shooting": 76,
     "passing": 80,
@@ -1118,7 +1122,7 @@
     "nationality": "Germany",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/205/452/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_205452.jpg",
     "pace": 79,
     "shooting": 55,
     "passing": 72,
@@ -1190,7 +1194,7 @@
     "nationality": "Germany",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/192/448/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_192448.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -1247,7 +1251,7 @@
     "nationality": "France",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/194/765/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_194765.jpg",
     "pace": 77,
     "shooting": 86,
     "passing": 85,
@@ -1363,7 +1367,7 @@
     "nationality": "Spain",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/204/963/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_204963.jpg",
     "pace": 80,
     "shooting": 58,
     "passing": 79,
@@ -1595,7 +1599,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/244/260/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_244260.jpg",
     "pace": 73,
     "shooting": 79,
     "passing": 83,
@@ -1632,7 +1636,7 @@
     "nationality": "Brazil",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/243/812/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_243812.jpg",
     "pace": 88,
     "shooting": 80,
     "passing": 79,
@@ -1722,13 +1726,14 @@
     "nationality": "Argentina",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/202/811/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-338_%28cropped%29.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_230869",
@@ -1740,7 +1745,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/230/869/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_230869.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -1815,7 +1820,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/244/675/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_244675.jpg",
     "pace": 76,
     "shooting": 83,
     "passing": 80,
@@ -1856,7 +1861,7 @@
     "nationality": "Spain",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/226/161/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_226161.jpg",
     "pace": 89,
     "shooting": 79,
     "passing": 78,
@@ -2032,13 +2037,14 @@
     "nationality": "Croatia",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/251/517/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Josko_Gvardiol_Croatia_v_Portugal_2_July_2026-262.jpg",
     "pace": 78,
     "shooting": 71,
     "passing": 75,
     "dribbling": 78,
     "defending": 84,
-    "physical": 82
+    "physical": 82,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_226851",
@@ -2070,7 +2076,7 @@
     "nationality": "Spain",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/257/279/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_257279.jpg",
     "pace": 79,
     "shooting": 76,
     "passing": 84,
@@ -2147,7 +2153,7 @@
     "nationality": "France",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/241/637/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_241637.jpg",
     "pace": 71,
     "shooting": 69,
     "passing": 79,
@@ -2184,13 +2190,15 @@
     "nationality": "England",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/220/697/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/James_Maddison_pre-match_training_%28cropped%29.jpg",
     "pace": 67,
     "shooting": 81,
     "passing": 86,
     "dribbling": 85,
     "defending": 58,
-    "physical": 64
+    "physical": 64,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_245367",
@@ -2204,13 +2212,14 @@
     "nationality": "Netherlands",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/245/367/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/2023-10-04_Fu%C3%9Fball%2C_M%C3%A4nner%2C_UEFA_Champions_League%2C_RB_Leipzig_-_Manchester_City_FC_1DX_2672_%28Xavi_Simons%29.jpg",
     "pace": 77,
     "shooting": 77,
     "passing": 80,
     "dribbling": 87,
     "defending": 61,
-    "physical": 70
+    "physical": 70,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_227796",
@@ -2243,7 +2252,7 @@
     "nationality": "Netherlands",
     "club": "Liverpool",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_242516.jpg",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Austria_U-18_vs._Netherlands_U-18_2017-03-23_%28078%29.jpg",
     "pace": 83,
     "shooting": 82,
     "passing": 80,
@@ -2281,7 +2290,7 @@
     "nationality": "Spain",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/197/781/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_197781.jpg",
     "pace": 66,
     "shooting": 79,
     "passing": 85,
@@ -2392,7 +2401,7 @@
     "nationality": "Brazil",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/240/130/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_240130.jpg",
     "pace": 82,
     "shooting": 50,
     "passing": 69,
@@ -2450,7 +2459,7 @@
     "nationality": "Norway",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/216/549/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_216549.jpg",
     "pace": 77,
     "shooting": 82,
     "passing": 71,
@@ -2576,7 +2585,7 @@
     "nationality": "Poland",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/186/153/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_186153.png",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -2630,13 +2639,14 @@
     "nationality": "Georgia",
     "club": "Liverpool",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/262/621/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Liverpool_Players_04012026_%285%29_-_Mamardashvili.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_210008",
@@ -2669,13 +2679,14 @@
     "nationality": "Hungary",
     "club": "Liverpool",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/236/772/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Dominik_Szoboszlai_2025%E5%B9%B4%E5%B0%8D%E6%88%B0%E5%9C%8B%E9%9A%9B%E7%B1%B3%E8%98%AD%E5%B0%84%E5%85%A512%E7%A2%BC%E5%A5%A0%E5%8B%9D.jpg",
     "pace": 79,
     "shooting": 82,
     "passing": 84,
     "dribbling": 82,
     "defending": 67,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_192883",
@@ -2807,13 +2818,15 @@
     "nationality": "Sweden",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/247/394/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Sweden-Slovenia_Nations_League_2022-09-27_17_Kulusevski_%28cropped%29.jpg",
     "pace": 74,
     "shooting": 79,
     "passing": 84,
     "dribbling": 85,
     "defending": 62,
-    "physical": 81
+    "physical": 81,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_215590",
@@ -2826,7 +2839,7 @@
     "nationality": "Spain",
     "club": "Villarreal CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/215/590/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_215590.jpg",
     "pace": 86,
     "shooting": 83,
     "passing": 80,
@@ -2923,7 +2936,7 @@
     "nationality": "Ghana",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/216/201/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_216201.jpg",
     "pace": 94,
     "shooting": 81,
     "passing": 74,
@@ -3162,13 +3175,14 @@
     "nationality": "Netherlands",
     "club": "Liverpool",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/253/149/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Jeremie_Frimpong_04012026_%284%29.jpg",
     "pace": 94,
     "shooting": 62,
     "passing": 74,
     "dribbling": 84,
     "defending": 72,
-    "physical": 63
+    "physical": 63,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_264240",
@@ -3181,7 +3195,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/264/240/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_264240.jpg",
     "pace": 76,
     "shooting": 66,
     "passing": 78,
@@ -3200,7 +3214,7 @@
     "nationality": "Spain",
     "club": "RC Celta",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/192/629/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_192629.jpg",
     "pace": 77,
     "shooting": 84,
     "passing": 80,
@@ -3258,7 +3272,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/241/461/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_241461.jpg",
     "pace": 83,
     "shooting": 81,
     "passing": 79,
@@ -3333,13 +3347,14 @@
     "nationality": "France",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/236/987/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/Lens_-_Marseille_%2822-01-2022%29_17.jpg",
     "pace": 64,
     "shooting": 55,
     "passing": 74,
     "dribbling": 75,
     "defending": 83,
-    "physical": 80
+    "physical": 80,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_207421",
@@ -3371,13 +3386,14 @@
     "nationality": "Brazil",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/278/016/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Paulista_Sub-20-_S%C3%A3o_Caetano_1_x_0_Corinthians_-_Murillo.jpg",
     "pace": 80,
     "shooting": 48,
     "passing": 67,
     "dribbling": 71,
     "defending": 83,
-    "physical": 83
+    "physical": 83,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_242458",
@@ -3407,7 +3423,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/263/578/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_263578.jpg",
     "pace": 91,
     "shooting": 50,
     "passing": 75,
@@ -3538,13 +3554,14 @@
     "nationality": "England",
     "club": "Arsenal",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/231/936/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Ben_White_2018.jpg",
     "pace": 70,
     "shooting": 35,
     "passing": 75,
     "dribbling": 75,
     "defending": 83,
-    "physical": 78
+    "physical": 78,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_216460",
@@ -3610,13 +3627,14 @@
     "nationality": "Serbia",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/238/095/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Nikola_Milenkovi%C4%87_2018.jpg",
     "pace": 57,
     "shooting": 46,
     "passing": 63,
     "dribbling": 62,
     "defending": 84,
-    "physical": 86
+    "physical": 86,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_233486",
@@ -3646,7 +3664,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/227/127/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_227127.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -3682,7 +3700,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/259/532/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_259532.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -3757,7 +3775,7 @@
     "nationality": "Austria",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/197/445/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_197445.jpg",
     "pace": 68,
     "shooting": 71,
     "passing": 82,
@@ -3914,7 +3932,7 @@
     "nationality": "Argentina",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/226/226/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_226226.jpg",
     "pace": 68,
     "shooting": 81,
     "passing": 82,
@@ -4302,7 +4320,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/230/142/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_230142.jpg",
     "pace": 77,
     "shooting": 83,
     "passing": 81,
@@ -4433,13 +4451,14 @@
     "nationality": "Japan",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/255/565/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/KAORU_MITOMA_-_BRIGHTON_vs_ESPANYOL_-_Friendly_match_2022.jpg",
     "pace": 87,
     "shooting": 73,
     "passing": 76,
     "dribbling": 86,
     "defending": 57,
-    "physical": 64
+    "physical": 64,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_210935",
@@ -4489,13 +4508,14 @@
     "nationality": "United States",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/229/348/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Antonee_Robinson_USMNT_v_Belgium_Mar_28_2026-174.jpg",
     "pace": 88,
     "shooting": 46,
     "passing": 75,
     "dribbling": 77,
     "defending": 78,
-    "physical": 80
+    "physical": 80,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_244778",
@@ -4607,7 +4627,7 @@
     "nationality": "Japan",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/237/681/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_237681.png",
     "pace": 86,
     "shooting": 77,
     "passing": 78,
@@ -4739,13 +4759,14 @@
     "nationality": "England",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/203/574/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/John_Stones_2018-06-24_1.jpg",
     "pace": 64,
     "shooting": 58,
     "passing": 74,
     "dribbling": 75,
     "defending": 84,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_236461",
@@ -4794,7 +4815,7 @@
     "nationality": "Congo DR",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/234/824/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Yoane_Wissa_-_DR_Congo.jpg",
     "pace": 85,
     "shooting": 82,
     "passing": 70,
@@ -4958,7 +4979,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/212/218/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_212218.jpg",
     "pace": 51,
     "shooting": 50,
     "passing": 74,
@@ -5032,7 +5053,7 @@
     "nationality": "Morocco",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/231/410/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_231410.jpg",
     "pace": 82,
     "shooting": 74,
     "passing": 79,
@@ -5128,7 +5149,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/278/046/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_278046.jpg",
     "pace": 70,
     "shooting": 42,
     "passing": 66,
@@ -5436,13 +5457,14 @@
     "nationality": "England",
     "club": "Chelsea",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/238/074/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Reece_James_Club_World_Cup_Final.jpg",
     "pace": 76,
     "shooting": 71,
     "passing": 82,
     "dribbling": 77,
     "defending": 81,
-    "physical": 81
+    "physical": 81,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_208574",
@@ -5572,7 +5594,7 @@
     "nationality": "Spain",
     "club": "RCD Mallorca",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/202/648/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_202648.jpg",
     "pace": 77,
     "shooting": 76,
     "passing": 81,
@@ -5648,7 +5670,7 @@
     "nationality": "Spain",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/193/747/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_193747.jpg",
     "pace": 61,
     "shooting": 72,
     "passing": 83,
@@ -5746,7 +5768,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/235/944/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_235944.jpg",
     "pace": 70,
     "shooting": 80,
     "passing": 82,
@@ -5842,7 +5864,7 @@
     "nationality": "United States",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/259/516/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_259516.jpg",
     "pace": 72,
     "shooting": 67,
     "passing": 76,
@@ -5878,13 +5900,14 @@
     "nationality": "Colombia",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/237/646/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Daniel_Mu%C3%B1oz%2C_Colombia_NT_presidential_send-off%2C_Jun_2026.jpg",
     "pace": 75,
     "shooting": 69,
     "passing": 72,
     "dribbling": 76,
     "defending": 79,
-    "physical": 81
+    "physical": 81,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_239301",
@@ -5896,13 +5919,14 @@
     "nationality": "Argentina",
     "club": "Manchester United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/239/301/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Lisandro_Martinez_Argentina_v_Egypt_7_July_2026-343_%28cropped%29.jpg",
     "pace": 67,
     "shooting": 59,
     "passing": 75,
     "dribbling": 75,
     "defending": 81,
-    "physical": 80
+    "physical": 80,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_211688",
@@ -5914,7 +5938,7 @@
     "nationality": "Spain",
     "club": "Valencia CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/211/688/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_211688.jpg",
     "pace": 80,
     "shooting": 61,
     "passing": 76,
@@ -6010,7 +6034,7 @@
     "nationality": "Spain",
     "club": "Villarreal CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/208/093/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_208093.jpg",
     "pace": 77,
     "shooting": 82,
     "passing": 77,
@@ -6029,13 +6053,14 @@
     "nationality": "England",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/206/085/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Jacob_Murphy.jpg",
     "pace": 82,
     "shooting": 77,
     "passing": 78,
     "dribbling": 80,
     "defending": 61,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_222509",
@@ -6048,7 +6073,7 @@
     "nationality": "Spain",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/222/509/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_222509.jpg",
     "pace": 61,
     "shooting": 71,
     "passing": 80,
@@ -6104,13 +6129,14 @@
     "nationality": "Algeria",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/242/641/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Rayan_A%C3%AFt-Nouri_playing_for_Algeria_in_2024_%28cropped%29.jpg",
     "pace": 84,
     "shooting": 53,
     "passing": 76,
     "dribbling": 84,
     "defending": 77,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_255475",
@@ -6122,7 +6148,7 @@
     "nationality": "Brazil",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/255/475/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_255475.jpg",
     "pace": 84,
     "shooting": 78,
     "passing": 78,
@@ -6262,7 +6288,7 @@
     "nationality": "Argentina",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/253/396/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_253396.jpg",
     "pace": 91,
     "shooting": 73,
     "passing": 72,
@@ -6342,7 +6368,7 @@
     "nationality": "Türkiye",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/264/309/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_264309.jpg",
     "pace": 70,
     "shooting": 77,
     "passing": 83,
@@ -6893,7 +6919,7 @@
     "nationality": "Spain",
     "club": "Getafe CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/223/952/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_223952.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -6911,13 +6937,15 @@
     "nationality": "Brazil",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/230/670/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Lucas_Perri.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_203841",
@@ -7001,7 +7029,7 @@
     "nationality": "Ukraine",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/243/952/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_243952.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -7251,13 +7279,14 @@
     "nationality": "England",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/186/345/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Kieran_Trippier_2018.jpg",
     "pace": 66,
     "shooting": 65,
     "passing": 83,
     "dribbling": 77,
     "defending": 80,
-    "physical": 71
+    "physical": 71,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_233927",
@@ -7311,7 +7340,7 @@
     "nationality": "Uruguay",
     "club": "Getafe CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/232/665/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_232665.jpg",
     "pace": 65,
     "shooting": 79,
     "passing": 76,
@@ -7330,13 +7359,14 @@
     "nationality": "England",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/254/243/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Elliot_Anderson_England_v_Ghana_23_June_2026-059.jpg",
     "pace": 71,
     "shooting": 68,
     "passing": 79,
     "dribbling": 81,
     "defending": 77,
-    "physical": 78
+    "physical": 78,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_200458",
@@ -7464,7 +7494,7 @@
     "nationality": "Spain",
     "club": "RC Celta",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/259/694/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_259694.jpg",
     "pace": 80,
     "shooting": 66,
     "passing": 77,
@@ -7504,13 +7534,14 @@
     "nationality": "Brazil",
     "club": "Chelsea",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/273/018/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Santos_asse_rcsa_2425.jpg",
     "pace": 74,
     "shooting": 69,
     "passing": 74,
     "dribbling": 78,
     "defending": 77,
-    "physical": 80
+    "physical": 80,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_210406",
@@ -7541,13 +7572,14 @@
     "nationality": "Denmark",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_241508.jpg",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Mikkel_Damsgaard%2C_Brentford_F.C._footballer%2C_November_2025.jpg",
     "pace": 68,
     "shooting": 73,
     "passing": 82,
     "dribbling": 81,
     "defending": 66,
-    "physical": 67
+    "physical": 67,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_225126",
@@ -7580,13 +7612,14 @@
     "nationality": "England",
     "club": "Liverpool",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/242/434/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Curtis_Jones_in_2022.jpg",
     "pace": 74,
     "shooting": 74,
     "passing": 76,
     "dribbling": 82,
     "defending": 72,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_223273",
@@ -7618,7 +7651,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/205/157/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_205157.jpg",
     "pace": 69,
     "shooting": 65,
     "passing": 77,
@@ -7636,13 +7669,15 @@
     "nationality": "Italy",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/259/583/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Norway_Italy_-_June_2025_A_37_%28cropped%29.jpg",
     "pace": 88,
     "shooting": 64,
     "passing": 73,
     "dribbling": 78,
     "defending": 76,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_227535",
@@ -7655,13 +7690,15 @@
     "nationality": "Uruguay",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/227/535/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/20171114_AUT_URU_4518_-_Rodrigo_Bentancur_%28cropped%29_2.jpg",
     "pace": 64,
     "shooting": 68,
     "passing": 78,
     "dribbling": 79,
     "defending": 78,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_266127",
@@ -7673,13 +7710,14 @@
     "nationality": "England",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/266/127/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Lewis_Hall_and_Oscar_Bobb_24052026_%281%29.jpg",
     "pace": 77,
     "shooting": 62,
     "passing": 78,
     "dribbling": 79,
     "defending": 77,
-    "physical": 64
+    "physical": 64,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_268889",
@@ -7691,7 +7729,7 @@
     "nationality": "Spain",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/268/889/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_268889.jpg",
     "pace": 85,
     "shooting": 65,
     "passing": 75,
@@ -7752,13 +7790,14 @@
     "nationality": "Ghana",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_245155.jpg",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/GAE_-_Ajax_-_52788309814_%28Mohammed_Kudus%29.jpg",
     "pace": 89,
     "shooting": 76,
     "passing": 72,
     "dribbling": 86,
     "defending": 60,
-    "physical": 74
+    "physical": 74,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_236401",
@@ -7772,13 +7811,14 @@
     "nationality": "Morocco",
     "club": "Manchester United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/236/401/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Noussair_Mazraoui_at_2026_FIFA_World_Cup_by_YantsImages_%28cropped%29.jpg",
     "pace": 75,
     "shooting": 66,
     "passing": 76,
     "dribbling": 80,
     "defending": 77,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_220876",
@@ -7885,13 +7925,14 @@
     "nationality": "Nigeria",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/224/656/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Ola_Aina-Nigeria.jpg",
     "pace": 88,
     "shooting": 63,
     "passing": 71,
     "dribbling": 75,
     "defending": 78,
-    "physical": 75
+    "physical": 75,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_213655",
@@ -7927,13 +7968,14 @@
     "nationality": "England",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/206/517/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/ManCity20240722-017_%28cropped%29.jpg",
     "pace": 72,
     "shooting": 76,
     "passing": 80,
     "dribbling": 85,
     "defending": 53,
-    "physical": 67
+    "physical": 67,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_200145",
@@ -8118,13 +8160,14 @@
     "nationality": "Denmark",
     "club": "Arsenal",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/210/697/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/1_Christian_N%C3%B8rgaard_2026.jpg",
     "pace": 49,
     "shooting": 65,
     "passing": 74,
     "dribbling": 71,
     "defending": 79,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_212096",
@@ -8195,7 +8238,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/277/179/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_277179.jpg",
     "pace": 74,
     "shooting": 75,
     "passing": 75,
@@ -8272,7 +8315,7 @@
     "nationality": "England",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/231/677/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_231677.jpg",
     "pace": 87,
     "shooting": 82,
     "passing": 77,
@@ -8483,13 +8526,14 @@
     "nationality": "England",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/234/742/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Dan_Burn_and_Harvey_Barnes_24052026_%281%29.jpg",
     "pace": 83,
     "shooting": 80,
     "passing": 75,
     "dribbling": 81,
     "defending": 43,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_238900",
@@ -8649,7 +8693,7 @@
     "nationality": "Spain",
     "club": "RC Celta",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/224/179/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_224179.jpg",
     "pace": 62,
     "shooting": 82,
     "passing": 71,
@@ -8780,7 +8824,7 @@
     "nationality": "Spain",
     "club": "Rayo Vallecano",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/216/447/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_216447.png",
     "pace": 88,
     "shooting": 70,
     "passing": 77,
@@ -8798,7 +8842,7 @@
     "nationality": "Brazil",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/256/612/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Evanilson_2024.jpg",
     "pace": 76,
     "shooting": 79,
     "passing": 66,
@@ -8875,13 +8919,14 @@
     "nationality": "Netherlands",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/258/908/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/BHA_5_v_Espanyol_1_pre_season_30_07_2022_154_%28Jan_Paul_van_Hecke%29_%28cropped1%29.jpg",
     "pace": 67,
     "shooting": 46,
     "passing": 72,
     "dribbling": 70,
     "defending": 80,
-    "physical": 78
+    "physical": 78,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_246420",
@@ -8896,13 +8941,14 @@
     "nationality": "Belgium",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/420/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/2023-10-04_Fu%C3%9Fball%2C_M%C3%A4nner%2C_UEFA_Champions_League%2C_RB_Leipzig_-_Manchester_City_FC_1DX_2767_%28J%C3%A9r%C3%A9my_Doku%29.jpg",
     "pace": 91,
     "shooting": 71,
     "passing": 72,
     "dribbling": 87,
     "defending": 32,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_246172",
@@ -8915,13 +8961,14 @@
     "nationality": "Nigeria",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/172/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Samu_Chukwueze.jpg",
     "pace": 88,
     "shooting": 74,
     "passing": 74,
     "dribbling": 83,
     "defending": 36,
-    "physical": 57
+    "physical": 57,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_262138",
@@ -9032,7 +9079,7 @@
     "nationality": "France",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/220/440/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_220440.jpg",
     "pace": 54,
     "shooting": 45,
     "passing": 69,
@@ -9070,13 +9117,14 @@
     "nationality": "England",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/202/695/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/James_Tarkowski_%28Oct_2017%29.jpg",
     "pace": 45,
     "shooting": 47,
     "passing": 64,
     "dribbling": 59,
     "defending": 81,
-    "physical": 82
+    "physical": 82,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_212602",
@@ -9160,7 +9208,7 @@
     "nationality": "Denmark",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/213/661/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_213661.jpg",
     "pace": 64,
     "shooting": 32,
     "passing": 67,
@@ -9268,7 +9316,7 @@
     "nationality": "Croatia",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/241/671/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_241671.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -9322,13 +9370,14 @@
     "nationality": "Serbia",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/269/626/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Petrovic_asse_rcsa_2425.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_230204",
@@ -9526,7 +9575,7 @@
     "nationality": "Spain",
     "club": "RC Celta",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/192/638/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_192638.jpg",
     "pace": 57,
     "shooting": 74,
     "passing": 80,
@@ -9621,7 +9670,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/183/512/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_183512.jpg",
     "pace": 79,
     "shooting": 68,
     "passing": 74,
@@ -9658,13 +9707,15 @@
     "nationality": "England",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/188/377/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Kyle_Walker.jpg",
     "pace": 80,
     "shooting": 64,
     "passing": 75,
     "dribbling": 76,
     "defending": 77,
-    "physical": 78
+    "physical": 78,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_253124",
@@ -9718,7 +9769,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/241/811/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_241811.jpg",
     "pace": 73,
     "shooting": 74,
     "passing": 80,
@@ -9757,13 +9808,14 @@
     "nationality": "England",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/183/711/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Jordan_Henderson_England_v_Ghana_23_June_2026-063.jpg",
     "pace": 65,
     "shooting": 71,
     "passing": 80,
     "dribbling": 74,
     "defending": 75,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_258966",
@@ -9836,13 +9888,14 @@
     "nationality": "Scotland",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/213/884/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Ryan_Christie_Scotland_v_Bolivia_6_June_2026-33.jpg",
     "pace": 69,
     "shooting": 70,
     "passing": 77,
     "dribbling": 78,
     "defending": 74,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_226456",
@@ -10050,13 +10103,15 @@
     "nationality": "Senegal",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/259/868/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Pape_Matar_Sarr_France_v_Senegal_16_June_2026-227.jpg",
     "pace": 68,
     "shooting": 66,
     "passing": 76,
     "dribbling": 78,
     "defending": 77,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_257191",
@@ -10089,13 +10144,14 @@
     "nationality": "England",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/224/294/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Lewis_Cook_Leeds.jpg",
     "pace": 69,
     "shooting": 63,
     "passing": 77,
     "dribbling": 77,
     "defending": 75,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_248465",
@@ -10109,13 +10165,14 @@
     "nationality": "Netherlands",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/248/465/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/St._Louis_City_vs_Aston_Villa_%28Jul_2025%29_06_%28Ian_Maatsen%29.jpg",
     "pace": 87,
     "shooting": 65,
     "passing": 75,
     "dribbling": 81,
     "defending": 73,
-    "physical": 63
+    "physical": 63,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_255069",
@@ -10284,7 +10341,7 @@
     "nationality": "Argentina",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/233/084/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_233084.jpg",
     "pace": 82,
     "shooting": 67,
     "passing": 73,
@@ -10303,13 +10360,14 @@
     "nationality": "England",
     "club": "Manchester United",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_205988.jpg",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Luke_Shaw%2C_Manchester_United_v_Newcastle_United%2C_11_September_2021_%2844%29_%28cropped%29.jpg",
     "pace": 69,
     "shooting": 57,
     "passing": 78,
     "dribbling": 75,
     "defending": 79,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_248165",
@@ -10381,13 +10439,14 @@
     "nationality": "Switzerland",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/257/980/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Lens_-_Nice_%2823-01-2021%29_52.jpg",
     "pace": 89,
     "shooting": 72,
     "passing": 70,
     "dribbling": 81,
     "defending": 62,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_188350",
@@ -10742,13 +10801,14 @@
     "nationality": "United States",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/232/999/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Tyler_Adams_Australia_v_USA_19_June_2026-271_%28cropped%29.jpg",
     "pace": 79,
     "shooting": 56,
     "passing": 71,
     "dribbling": 75,
     "defending": 79,
-    "physical": 75
+    "physical": 75,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_215270",
@@ -10838,13 +10898,14 @@
     "nationality": "Belgium",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/257/057/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Amadou_Onana_USMNT_v_Belgium_Mar_28_2026-96_%28cropped%29.jpg",
     "pace": 74,
     "shooting": 62,
     "passing": 72,
     "dribbling": 73,
     "defending": 78,
-    "physical": 81
+    "physical": 81,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_259307",
@@ -10877,13 +10938,14 @@
     "nationality": "Netherlands",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/236/920/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Justin_Kluivert_2018.jpg",
     "pace": 87,
     "shooting": 78,
     "passing": 76,
     "dribbling": 81,
     "defending": 38,
-    "physical": 62
+    "physical": 62,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_236045",
@@ -10896,14 +10958,15 @@
     "nationality": "Mozambique",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/236/045/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Reinildo_Mandava_%28cropped%29.jpg",
     "pace": 81,
     "shooting": 55,
     "passing": 68,
     "dribbling": 74,
     "defending": 77,
     "physical": 78,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_268804",
@@ -10975,7 +11038,7 @@
     "nationality": "Netherlands",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/231/447/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/DONYELL_MALEN_%E2%80%93_2023.08.12.jpg",
     "pace": 86,
     "shooting": 78,
     "passing": 72,
@@ -11034,13 +11097,14 @@
     "nationality": "Senegal",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/193/474/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Finales_CAN_2021_%289%29.jpg",
     "pace": 60,
     "shooting": 59,
     "passing": 70,
     "dribbling": 73,
     "defending": 80,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_272600",
@@ -11053,7 +11117,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/272/600/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_272600.jpg",
     "pace": 57,
     "shooting": 64,
     "passing": 72,
@@ -11089,13 +11153,14 @@
     "nationality": "France",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/225/863/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Olivier_Boscagli_24012026_%281%29_%28cropped%29.jpg",
     "pace": 65,
     "shooting": 50,
     "passing": 77,
     "dribbling": 77,
     "defending": 79,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_210021",
@@ -11163,7 +11228,7 @@
     "nationality": "Ukraine",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/244/369/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_244369.jpg",
     "pace": 82,
     "shooting": 75,
     "passing": 79,
@@ -11199,7 +11264,7 @@
     "nationality": "Spain",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/198/141/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_198141.jpg",
     "pace": 64,
     "shooting": 59,
     "passing": 70,
@@ -11350,7 +11415,7 @@
     "nationality": "Germany",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/205/431/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/NiclasF%C3%BCllkrug_%28cropped%29.jpg",
     "pace": 57,
     "shooting": 82,
     "passing": 71,
@@ -11465,13 +11530,14 @@
     "nationality": "Senegal",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/261/188/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Iliman_Ndiaye_France_v_Senegal_16_June_2026-492.jpg",
     "pace": 84,
     "shooting": 76,
     "passing": 70,
     "dribbling": 84,
     "defending": 40,
-    "physical": 63
+    "physical": 63,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_226166",
@@ -11484,14 +11550,15 @@
     "nationality": "France",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/226/166/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/2020-03-10_Fu%C3%9Fball%2C_M%C3%A4nner%2C_UEFA_Champions_League_Achtelfinale%2C_RB_Leipzig_-_Tottenham_Hotspur_1DX_3670_by_Stepro.jpg",
     "pace": 72,
     "shooting": 49,
     "passing": 67,
     "dribbling": 71,
     "defending": 80,
     "physical": 77,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_237221",
@@ -11560,13 +11627,14 @@
     "nationality": "Senegal",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/235/353/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Ismaila_Sarr_France_v_Senegal_16_June_2026-425_%28cropped%29.jpg",
     "pace": 91,
     "shooting": 78,
     "passing": 76,
     "dribbling": 78,
     "defending": 28,
-    "physical": 69
+    "physical": 69,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_258444",
@@ -11579,13 +11647,14 @@
     "nationality": "Côte d'Ivoire",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/258/444/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Evann_Guessand_Cote_D%27Ivoire_v_Ecuador_14_June_2026-28_%28cropped%29.jpg",
     "pace": 83,
     "shooting": 76,
     "passing": 73,
     "dribbling": 79,
     "defending": 36,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_251421",
@@ -11600,13 +11669,15 @@
     "nationality": "Wales",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/251/421/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Brennan_Johnson_%28cropped%29.jpg",
     "pace": 86,
     "shooting": 76,
     "passing": 72,
     "dribbling": 78,
     "defending": 43,
-    "physical": 59
+    "physical": 59,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_277846",
@@ -11771,13 +11842,14 @@
     "nationality": "France",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/565/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bafod%C3%A9_Diakit%C3%A9_asse_losc_2425_%28cropped%29.jpg",
     "pace": 72,
     "shooting": 46,
     "passing": 65,
     "dribbling": 71,
     "defending": 79,
-    "physical": 80
+    "physical": 80,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_230498",
@@ -11846,7 +11918,7 @@
     "nationality": "Germany",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/254/022/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Nick_Woltemade_Ecuador_v_Germany_25_June_2026-069.jpg",
     "pace": 67,
     "shooting": 78,
     "passing": 65,
@@ -11882,13 +11954,14 @@
     "nationality": "Côte d'Ivoire",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/258/575/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Emmanuel_Agbadou_Cote_D%27Ivoire_v_Ecuador_14_June_2026-52.jpg",
     "pace": 80,
     "shooting": 50,
     "passing": 64,
     "dribbling": 66,
     "defending": 78,
-    "physical": 83
+    "physical": 83,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_226710",
@@ -11920,7 +11993,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/245/037/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_245037.jpg",
     "pace": 63,
     "shooting": 48,
     "passing": 70,
@@ -11974,13 +12047,14 @@
     "nationality": "France",
     "club": "Chelsea",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/248/695/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Wesley_Fofana_2022.jpg",
     "pace": 74,
     "shooting": 41,
     "passing": 62,
     "dribbling": 71,
     "defending": 80,
-    "physical": 78
+    "physical": 78,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_277797",
@@ -12032,13 +12106,14 @@
     "nationality": "England",
     "club": "Liverpool",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/225/100/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/LFC_Parade_2019_01_Joe_Gomez.jpg",
     "pace": 74,
     "shooting": 29,
     "passing": 70,
     "dribbling": 71,
     "defending": 79,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_258781",
@@ -12104,13 +12179,14 @@
     "nationality": "Nigeria",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/258/911/26_120.png",
+    "photoUrl": "/assets/players/photos/t-arokodare-64d6d6a7.jpg",
     "pace": 75,
     "shooting": 80,
     "passing": 57,
     "dribbling": 70,
     "defending": 31,
-    "physical": 81
+    "physical": 81,
+    "photoLegalOverride": true
   },
   {
     "id": "fc_197655",
@@ -12158,13 +12234,15 @@
     "nationality": "Austria",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/237/985/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Austria_national_under-21_football_team_-_Teamcamp_October_2019_%2836%29_%28cropped%29.jpg",
     "pace": 73,
     "shooting": 32,
     "passing": 57,
     "dribbling": 62,
     "defending": 78,
-    "physical": 83
+    "physical": 83,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_243976",
@@ -12248,13 +12326,14 @@
     "nationality": "Republic of Ireland",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/248/484/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Nathan_Collins%2C_Brentford_F.C._footballer%2C_August_2025.jpg",
     "pace": 62,
     "shooting": 31,
     "passing": 58,
     "dribbling": 63,
     "defending": 80,
-    "physical": 81
+    "physical": 81,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_205186",
@@ -12302,7 +12381,7 @@
     "nationality": "Spain",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/221/087/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_221087.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -12518,13 +12597,14 @@
     "nationality": "Argentina",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/215/223/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/RC_Lens_-_OGC_Nice_%2810-04-2022%29_1.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_211348",
@@ -12536,7 +12616,7 @@
     "nationality": "North Macedonia",
     "club": "Valencia CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/211/348/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_211348.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -12554,7 +12634,7 @@
     "nationality": "Argentina",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/214/979/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_214979.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -13184,7 +13264,7 @@
     "nationality": "Morocco",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/224/158/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_224158.jpg",
     "pace": 61,
     "shooting": 70,
     "passing": 73,
@@ -13261,13 +13341,14 @@
     "nationality": "Serbia",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/236/699/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sa%C5%A1a_Luki%C4%87_WC2022.jpg",
     "pace": 60,
     "shooting": 69,
     "passing": 76,
     "dribbling": 74,
     "defending": 76,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_206591",
@@ -13377,13 +13458,14 @@
     "nationality": "England",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/923/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Jacob_Ramsey_24052026_%282%29.jpg",
     "pace": 77,
     "shooting": 75,
     "passing": 73,
     "dribbling": 80,
     "defending": 68,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_202884",
@@ -13414,7 +13496,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/233/738/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_233738.jpg",
     "pace": 76,
     "shooting": 63,
     "passing": 73,
@@ -13433,13 +13515,14 @@
     "nationality": "England",
     "club": "Arsenal",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_278773.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/1_Myles_Lewis-Skelly_arsenal_2025_%28cropped%29.jpg",
     "pace": 76,
     "shooting": 60,
     "passing": 74,
     "dribbling": 77,
     "defending": 75,
-    "physical": 78
+    "physical": 78,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_243631",
@@ -13509,13 +13592,14 @@
     "nationality": "Brazil",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_231943.jpg",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Richarlison_de_Andrade_2017.jpg",
     "pace": 76,
     "shooting": 78,
     "passing": 72,
     "dribbling": 78,
     "defending": 53,
-    "physical": 75
+    "physical": 75,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_268896",
@@ -13566,13 +13650,14 @@
     "nationality": "Italy",
     "club": "Arsenal",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/257/711/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/2024_Emirates_Cup_-_Riccardo_Calafiori_%282%29_%28cropped2%29.jpg",
     "pace": 72,
     "shooting": 66,
     "passing": 71,
     "dribbling": 75,
     "defending": 77,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_224031",
@@ -13624,7 +13709,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/279/604/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_279604.jpg",
     "pace": 71,
     "shooting": 70,
     "passing": 75,
@@ -13643,13 +13728,14 @@
     "nationality": "Czechia",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/252/064/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Ladislav_Krej%C4%8D%C3%AD%2C_CZE-NIR_2019-10-14_%286%29_%28cropped%29.jpg",
     "pace": 72,
     "shooting": 68,
     "passing": 68,
     "dribbling": 69,
     "defending": 76,
-    "physical": 84
+    "physical": 84,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_220746",
@@ -13759,7 +13845,7 @@
     "nationality": "Senegal",
     "club": "Villarreal CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/241/707/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_241707.jpg",
     "pace": 67,
     "shooting": 65,
     "passing": 75,
@@ -13778,13 +13864,14 @@
     "nationality": "Brazil",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/273/463/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Joao_Gomes.png",
     "pace": 54,
     "shooting": 68,
     "passing": 72,
     "dribbling": 75,
     "defending": 77,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_201455",
@@ -13955,13 +14042,14 @@
     "nationality": "England",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/243/282/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Dwight_McNeil_controls_the_ball.jpg",
     "pace": 67,
     "shooting": 76,
     "passing": 79,
     "dribbling": 79,
     "defending": 55,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_244622",
@@ -14051,7 +14139,7 @@
     "nationality": "Spain",
     "club": "RC Celta",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/235/997/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_235997.jpg",
     "pace": 56,
     "shooting": 67,
     "passing": 76,
@@ -14110,7 +14198,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/263/617/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_263617.jpg",
     "pace": 68,
     "shooting": 61,
     "passing": 72,
@@ -14358,7 +14446,7 @@
     "nationality": "Morocco",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/255/223/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/AmineAdli.jpg",
     "pace": 84,
     "shooting": 76,
     "passing": 70,
@@ -14453,7 +14541,7 @@
     "nationality": "Spain",
     "club": "Sevilla FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/184/432/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_184432.jpg",
     "pace": 52,
     "shooting": 55,
     "passing": 75,
@@ -14589,13 +14677,14 @@
     "nationality": "Belgium",
     "club": "Chelsea",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/263/620/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Rom%C3%A9o_Lavia_20042025_%281%29_cropped.jpg",
     "pace": 69,
     "shooting": 52,
     "passing": 72,
     "dribbling": 77,
     "defending": 77,
-    "physical": 75
+    "physical": 75,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_247495",
@@ -14667,13 +14756,14 @@
     "nationality": "Brazil",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/074/866/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Andr%C3%A9_01112025_%284%29.jpg",
     "pace": 58,
     "shooting": 58,
     "passing": 74,
     "dribbling": 77,
     "defending": 75,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_234678",
@@ -14709,13 +14799,14 @@
     "nationality": "Colombia",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/241/602/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Jhon_Arias_en_Palmeiras_-_Copa_Libertadores_2026.jpg",
     "pace": 85,
     "shooting": 75,
     "passing": 74,
     "dribbling": 79,
     "defending": 42,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_227055",
@@ -14843,13 +14934,14 @@
     "nationality": "Ukraine",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/244/380/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/%D0%9B%D0%B8%D0%B3%D0%B0_%D0%BD%D0%B0%D1%86%D0%B8%D0%B9_%D0%A3%D0%95%D0%A4%D0%90._%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F_%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B_-_%D0%A1%D0%B1%D0%BE%D1%80%D0%BD%D0%B0%D1%8F_%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8_1-0._13_%D0%BE%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8F_2020_%D0%B3%D0%BE%D0%B4_%E2%80%94_1151467.jpg",
     "pace": 74,
     "shooting": 55,
     "passing": 71,
     "dribbling": 71,
     "defending": 77,
-    "physical": 71
+    "physical": 71,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_224415",
@@ -15076,13 +15168,14 @@
     "nationality": "England",
     "club": "Chelsea",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/202/652/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Raheem_Sterling_2018.jpg",
     "pace": 82,
     "shooting": 74,
     "passing": 74,
     "dribbling": 82,
     "defending": 42,
-    "physical": 48
+    "physical": 48,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_243057",
@@ -15095,13 +15188,14 @@
     "nationality": "Wales",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/243/057/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2824%29_%28cropped%29.jpg",
     "pace": 72,
     "shooting": 49,
     "passing": 71,
     "dribbling": 74,
     "defending": 77,
-    "physical": 69
+    "physical": 69,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_230440",
@@ -15192,7 +15286,7 @@
     "nationality": "Argentina",
     "club": "RCD Mallorca",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/221/342/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_221342.jpg",
     "pace": 81,
     "shooting": 52,
     "passing": 70,
@@ -15309,13 +15403,14 @@
     "nationality": "England",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/174/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Harvey_Elliott_in_2022.jpg",
     "pace": 72,
     "shooting": 70,
     "passing": 77,
     "dribbling": 81,
     "defending": 53,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_264348",
@@ -15366,13 +15461,14 @@
     "nationality": "Germany",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/260/926/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Kevin_Schade_29112025_%281%29.jpg",
     "pace": 92,
     "shooting": 75,
     "passing": 70,
     "dribbling": 78,
     "defending": 30,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_240359",
@@ -15384,13 +15480,15 @@
     "nationality": "Paraguay",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/240/359/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Omar_Alderete_2019_%28cropped%29.jpg",
     "pace": 60,
     "shooting": 61,
     "passing": 62,
     "dribbling": 69,
     "defending": 79,
-    "physical": 78
+    "physical": 78,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
   },
   {
     "id": "fc_241788",
@@ -15457,7 +15555,7 @@
     "nationality": "England",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/196/978/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Callum_Wilson_in_2021.jpg",
     "pace": 73,
     "shooting": 79,
     "passing": 67,
@@ -15515,13 +15613,15 @@
     "nationality": "England",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/243/702/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Djed_Spence_25_England_v_Ghana_at_2026_Fifa_World_Cup_by_YantsImages_02_%28cropped%29.jpg",
     "pace": 88,
     "shooting": 44,
     "passing": 71,
     "dribbling": 79,
     "defending": 74,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_230406",
@@ -15760,7 +15860,7 @@
     "nationality": "Spain",
     "club": "Valencia CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/264/238/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_264238.png",
     "pace": 81,
     "shooting": 75,
     "passing": 72,
@@ -15779,13 +15879,14 @@
     "nationality": "Netherlands",
     "club": "Chelsea",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/272/978/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Qaraba%C4%9F_vs_Ajax_%2824.10.2024%29_%284%29_%28Jorrel_Hato%29.jpg",
     "pace": 85,
     "shooting": 41,
     "passing": 70,
     "dribbling": 74,
     "defending": 75,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_259031",
@@ -15797,7 +15898,7 @@
     "nationality": "England",
     "club": "Chelsea",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/259/031/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Liam_Delap_in_2025.jpg",
     "pace": 79,
     "shooting": 80,
     "passing": 60,
@@ -15854,13 +15955,14 @@
     "nationality": "England",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/240/947/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Tyrick_Mitchell%2C_Manchester_United_v_Crystal_Palace%2C_5_December_2021_%28cropped%29.jpg",
     "pace": 75,
     "shooting": 41,
     "passing": 68,
     "dribbling": 73,
     "defending": 76,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_237055",
@@ -15893,13 +15995,14 @@
     "nationality": "France",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/250/789/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Bakwa_asse_rcsa_2425.jpg",
     "pace": 88,
     "shooting": 72,
     "passing": 73,
     "dribbling": 81,
     "defending": 30,
-    "physical": 66
+    "physical": 66,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_224221",
@@ -15911,13 +16014,14 @@
     "nationality": "Denmark",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/224/221/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Joachim_Andersen_21032026_%282%29.jpg",
     "pace": 39,
     "shooting": 57,
     "passing": 71,
     "dribbling": 65,
     "defending": 78,
-    "physical": 82
+    "physical": 82,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_243558",
@@ -15930,7 +16034,7 @@
     "nationality": "Spain",
     "club": "Rayo Vallecano",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/243/558/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_243558.png",
     "pace": 64,
     "shooting": 50,
     "passing": 67,
@@ -15967,13 +16071,14 @@
     "nationality": "Netherlands",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/208/004/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Jo%C3%ABl_Veltman_2022_%28cropped%29_%282%29.jpg",
     "pace": 63,
     "shooting": 49,
     "passing": 68,
     "dribbling": 70,
     "defending": 80,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_230460",
@@ -16171,13 +16276,14 @@
     "nationality": "Argentina",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/236/506/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Marcos_Senesi_Argentina_v_Egypt_7_July_2026-024.jpg",
     "pace": 56,
     "shooting": 42,
     "passing": 70,
     "dribbling": 72,
     "defending": 79,
-    "physical": 75
+    "physical": 75,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_266096",
@@ -16302,7 +16408,7 @@
     "nationality": "Spain",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/246/785/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_246785.jpg",
     "pace": 84,
     "shooting": 70,
     "passing": 75,
@@ -16486,13 +16592,14 @@
     "nationality": "England",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/212/419/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Tyron_Mings_2021.jpg",
     "pace": 58,
     "shooting": 44,
     "passing": 67,
     "dribbling": 64,
     "defending": 78,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_222104",
@@ -16540,13 +16647,14 @@
     "nationality": "France",
     "club": "Manchester United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/269/087/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/RC_Lens_-_Lille_OSC_%2808-10-2023%29_28.jpg",
     "pace": 69,
     "shooting": 41,
     "passing": 60,
     "dribbling": 64,
     "defending": 79,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_238160",
@@ -16613,7 +16721,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/259/524/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_259524.jpg",
     "pace": 68,
     "shooting": 39,
     "passing": 51,
@@ -16667,7 +16775,7 @@
     "nationality": "Brazil",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/277/537/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_277537.jpg",
     "pace": 56,
     "shooting": 33,
     "passing": 55,
@@ -16919,13 +17027,14 @@
     "nationality": "Netherlands",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/200/110/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Bizot_asse_sb_2425.png",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_215069",
@@ -17135,13 +17244,14 @@
     "nationality": "Belgium",
     "club": "Manchester United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/254/803/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Senne_Lammens_USMNT_v_Belgium_Mar_28_2026-98.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_221610",
@@ -17290,13 +17400,14 @@
     "nationality": "Argentina",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/226/162/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/St._Louis_City_vs_Aston_Villa_%28Jul_2025%29_05_%28Emiliano_Buend%C3%ADa%29.jpg",
     "pace": 66,
     "shooting": 74,
     "passing": 78,
     "dribbling": 81,
     "defending": 66,
-    "physical": 66
+    "physical": 66,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_213565",
@@ -17309,7 +17420,7 @@
     "nationality": "France",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/213/565/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_213565.jpg",
     "pace": 72,
     "shooting": 75,
     "passing": 79,
@@ -17329,13 +17440,14 @@
     "nationality": "Colombia",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/213/991/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Jefferson_Lerma.jpg",
     "pace": 68,
     "shooting": 71,
     "passing": 70,
     "dribbling": 74,
     "defending": 76,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_236477",
@@ -17427,7 +17539,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/234/153/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_234153.png",
     "pace": 70,
     "shooting": 75,
     "passing": 78,
@@ -17466,13 +17578,14 @@
     "nationality": "England",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/237/386/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Kiernan_Dewsbury-Hall_FIFA_Club_World_Cup_final_extraction.jpg",
     "pace": 66,
     "shooting": 72,
     "passing": 77,
     "dribbling": 78,
     "defending": 70,
-    "physical": 71
+    "physical": 71,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_211361",
@@ -17601,13 +17714,14 @@
     "nationality": "France",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/245/637/26_120.png",
+    "photoUrl": "/assets/players/photos/g-rutter-76fb3f8a.jpg",
     "pace": 77,
     "shooting": 75,
     "passing": 75,
     "dribbling": 80,
     "defending": 60,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": true
   },
   {
     "id": "fc_241867",
@@ -17735,13 +17849,14 @@
     "nationality": "England",
     "club": "Manchester United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/269/136/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Kobbie_Mainoo_England_v_Ghana_23_June_2026-042.jpg",
     "pace": 68,
     "shooting": 69,
     "passing": 74,
     "dribbling": 81,
     "defending": 73,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_239810",
@@ -17890,13 +18005,14 @@
     "nationality": "England",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/205/569/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/James_Ward-Prowse_in_2024.jpeg",
     "pace": 42,
     "shooting": 74,
     "passing": 83,
     "dribbling": 74,
     "defending": 66,
-    "physical": 64
+    "physical": 64,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_178562",
@@ -18027,13 +18143,14 @@
     "nationality": "England",
     "club": "Manchester United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/233/064/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/2022_FIFA_World_Cup_England_6%E2%80%932_Iran_-_%2838%29_%28cropped%29.jpg",
     "pace": 67,
     "shooting": 76,
     "passing": 79,
     "dribbling": 78,
     "defending": 62,
-    "physical": 61
+    "physical": 61,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_221125",
@@ -18389,7 +18506,7 @@
     "nationality": "Netherlands",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/190/815/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_190815.jpg",
     "pace": 36,
     "shooting": 62,
     "passing": 85,
@@ -18428,7 +18545,7 @@
     "nationality": "Spain",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/246/928/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_246928.jpg",
     "pace": 71,
     "shooting": 71,
     "passing": 78,
@@ -18448,13 +18565,15 @@
     "nationality": "Sweden",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/272/926/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Sweden_-_Greece6_%28cropped%29.jpg",
     "pace": 75,
     "shooting": 63,
     "passing": 76,
     "dribbling": 77,
     "defending": 71,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_212476",
@@ -18659,13 +18778,15 @@
     "nationality": "Netherlands",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/271/121/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Quilindschy_hartman-1680550566.jpeg",
     "pace": 78,
     "shooting": 55,
     "passing": 75,
     "dribbling": 74,
     "defending": 73,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_228708",
@@ -18907,13 +19028,14 @@
     "nationality": "Mexico",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/204/838/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Ra%C3%BAl_Jim%C3%A9nez_2025.png",
     "pace": 57,
     "shooting": 79,
     "passing": 74,
     "dribbling": 75,
     "defending": 46,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_236822",
@@ -18926,14 +19048,15 @@
     "nationality": "Sweden",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/236/822/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Gabriel_Gudmundsson_%28Sweden_vs_Moldova%2C_12_October_2023%29_%28cropped%29.jpg",
     "pace": 87,
     "shooting": 64,
     "passing": 71,
     "dribbling": 75,
     "defending": 70,
     "physical": 75,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_259075",
@@ -19002,7 +19125,7 @@
     "nationality": "Spain",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/217/036/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_217036.jpg",
     "pace": 76,
     "shooting": 62,
     "passing": 72,
@@ -19057,13 +19180,15 @@
     "nationality": "Senegal",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/264/293/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Diarra_asse_rcsa_2425.jpg",
     "pace": 70,
     "shooting": 68,
     "passing": 71,
     "dribbling": 77,
     "defending": 71,
-    "physical": 71
+    "physical": 71,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
   },
   {
     "id": "fc_234730",
@@ -19174,13 +19299,14 @@
     "nationality": "Côte d'Ivoire",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/235/173/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Ibrahim_Sangare_Piero_Hincapie_Cote_D%27Ivoire_v_Ecuador_14_June_2026-245_%28Ibrahim_Sangare%29.jpg",
     "pace": 58,
     "shooting": 65,
     "passing": 72,
     "dribbling": 71,
     "defending": 77,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_230625",
@@ -19252,13 +19378,14 @@
     "nationality": "England",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/206/516/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Will_Hughes.jpg",
     "pace": 51,
     "shooting": 62,
     "passing": 76,
     "dribbling": 75,
     "defending": 73,
-    "physical": 67
+    "physical": 67,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_236918",
@@ -19444,13 +19571,14 @@
     "nationality": "Netherlands",
     "club": "Manchester United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/250/961/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Joshua_Zirkzee_2019.jpg",
     "pace": 71,
     "shooting": 76,
     "passing": 72,
     "dribbling": 82,
     "defending": 41,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_259265",
@@ -19632,7 +19760,7 @@
     "nationality": "Uruguay",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/186/537/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_186537.jpg",
     "pace": 61,
     "shooting": 79,
     "passing": 69,
@@ -19942,13 +20070,14 @@
     "nationality": "England",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/240/273/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Emile_Smith_Rowe_04032026_%281%29.jpg",
     "pace": 72,
     "shooting": 72,
     "passing": 75,
     "dribbling": 80,
     "defending": 52,
-    "physical": 61
+    "physical": 61,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_257540",
@@ -20062,7 +20191,7 @@
     "nationality": "Belgium",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/177/413/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_177413.jpg",
     "pace": 31,
     "shooting": 63,
     "passing": 76,
@@ -20159,13 +20288,14 @@
     "nationality": "Burkina Faso",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/265/552/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Dango_Ouattara_2023.jpg",
     "pace": 85,
     "shooting": 70,
     "passing": 70,
     "dribbling": 78,
     "defending": 53,
-    "physical": 59
+    "physical": 59,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_271574",
@@ -20273,7 +20403,7 @@
     "nationality": "Venezuela",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/259/848/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_259848.jpg",
     "pace": 69,
     "shooting": 48,
     "passing": 70,
@@ -20330,13 +20460,14 @@
     "nationality": "England",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/235/642/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Ryan_Yates.jpg",
     "pace": 50,
     "shooting": 62,
     "passing": 68,
     "dribbling": 67,
     "defending": 76,
-    "physical": 82
+    "physical": 82,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_228635",
@@ -20348,7 +20479,7 @@
     "nationality": "Spain",
     "club": "Getafe CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/228/635/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_228635.png",
     "pace": 65,
     "shooting": 79,
     "passing": 71,
@@ -20386,13 +20517,14 @@
     "nationality": "Mali",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/242/619/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Cheick_Doucour%C3%A9.jpg",
     "pace": 61,
     "shooting": 55,
     "passing": 69,
     "dribbling": 74,
     "defending": 74,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_268421",
@@ -20407,13 +20539,14 @@
     "nationality": "France",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_268421.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/FRA-SRB_2025_012_Mathys_Tel.jpg",
     "pace": 86,
     "shooting": 80,
     "passing": 67,
     "dribbling": 78,
     "defending": 29,
-    "physical": 64
+    "physical": 64,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_212219",
@@ -20445,13 +20578,14 @@
     "nationality": "Argentina",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/225/659/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Guido_Rodr%C3%ADguez_WC2022.jpg",
     "pace": 45,
     "shooting": 58,
     "passing": 70,
     "dribbling": 69,
     "defending": 77,
-    "physical": 75
+    "physical": 75,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_245977",
@@ -20483,13 +20617,14 @@
     "nationality": "Netherlands",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/216/266/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/20160604_AUT_NED_8892.jpg",
     "pace": 73,
     "shooting": 47,
     "passing": 67,
     "dribbling": 69,
     "defending": 76,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_272505",
@@ -20502,7 +20637,7 @@
     "nationality": "Brazil",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/272/505/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_272505.jpg",
     "pace": 87,
     "shooting": 77,
     "passing": 62,
@@ -20597,7 +20732,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/241/049/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_241049.jpg",
     "pace": 78,
     "shooting": 48,
     "passing": 70,
@@ -20676,13 +20811,15 @@
     "nationality": "Slovenia",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/244/238/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Cska-sm18_%288%29.jpg",
     "pace": 64,
     "shooting": 59,
     "passing": 65,
     "dribbling": 62,
     "defending": 77,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_208596",
@@ -20752,13 +20889,14 @@
     "nationality": "Gambia",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/271/800/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Go_Ahead_Eagles_-_Feyenoord_-_53679350805_%28Yankuba_Minteh%29.jpg",
     "pace": 94,
     "shooting": 67,
     "passing": 66,
     "dribbling": 81,
     "defending": 55,
-    "physical": 57
+    "physical": 57,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_239367",
@@ -21027,7 +21165,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/246/672/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_246672.jpg",
     "pace": 81,
     "shooting": 72,
     "passing": 72,
@@ -21084,7 +21222,7 @@
     "nationality": "Spain",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/201/505/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_201505.jpg",
     "pace": 40,
     "shooting": 60,
     "passing": 71,
@@ -21158,13 +21296,15 @@
     "nationality": "Netherlands",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/251/810/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/GAE_-_Ajax_-_52788469380_%28Brobbey%29.jpg",
     "pace": 84,
     "shooting": 73,
     "passing": 56,
     "dribbling": 72,
     "defending": 30,
-    "physical": 80
+    "physical": 80,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
   },
   {
     "id": "fc_276295",
@@ -21176,13 +21316,14 @@
     "nationality": "France",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/276/295/26_120.png",
+    "photoUrl": "/assets/players/photos/t-barry-c5bf3382.webp",
     "pace": 80,
     "shooting": 75,
     "passing": 65,
     "dribbling": 75,
     "defending": 25,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": true
   },
   {
     "id": "fc_226777",
@@ -21232,7 +21373,7 @@
     "nationality": "Morocco",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/264/432/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_264432.jpg",
     "pace": 87,
     "shooting": 69,
     "passing": 70,
@@ -21470,13 +21611,14 @@
     "nationality": "Netherlands",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/242/453/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Sepp_van_den_Berg_LFC_U19_2019.jpg",
     "pace": 72,
     "shooting": 36,
     "passing": 63,
     "dribbling": 66,
     "defending": 78,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_264846",
@@ -21525,13 +21667,14 @@
     "nationality": "England",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/245/336/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Maximilian_Kilman_of_West_Ham_United.jpeg",
     "pace": 60,
     "shooting": 42,
     "passing": 66,
     "dribbling": 64,
     "defending": 77,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_75605",
@@ -21544,7 +21687,7 @@
     "nationality": "Spain",
     "club": "Real Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/075/605/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_75605.jpg",
     "pace": 74,
     "shooting": 37,
     "passing": 55,
@@ -21563,7 +21706,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/226/221/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_226221.jpg",
     "pace": 62,
     "shooting": 39,
     "passing": 63,
@@ -21689,13 +21832,14 @@
     "nationality": "Jamaica",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/238/717/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Ethan_Pinnock%2C_footballer%2C_February_2015.jpg",
     "pace": 60,
     "shooting": 36,
     "passing": 56,
     "dribbling": 61,
     "defending": 78,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_245426",
@@ -21725,13 +21869,14 @@
     "nationality": "United States",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/250/954/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Chris_Richards_Australia_v_USA_19_June_2026-54_%28cropped%29.jpg",
     "pace": 66,
     "shooting": 27,
     "passing": 58,
     "dribbling": 62,
     "defending": 78,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_220523",
@@ -21887,13 +22032,14 @@
     "nationality": "Portugal",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/212/442/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Mex-por-109_%28cropped%29.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_167948",
@@ -22103,7 +22249,7 @@
     "nationality": "Spain",
     "club": "Villarreal CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/258/534/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_258534.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -22751,13 +22897,14 @@
     "nationality": "England",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/237/329/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Joe_Willock_24052026_%286%29.jpg",
     "pace": 75,
     "shooting": 72,
     "passing": 73,
     "dribbling": 79,
     "defending": 72,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_243606",
@@ -22791,13 +22938,14 @@
     "nationality": "Nigeria",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/073/374/26_120.png",
+    "photoUrl": "/assets/players/photos/c-uche-5a26b309.webp",
     "pace": 68,
     "shooting": 73,
     "passing": 69,
     "dribbling": 73,
     "defending": 68,
-    "physical": 83
+    "physical": 83,
+    "photoLegalOverride": true
   },
   {
     "id": "fc_261616",
@@ -22828,7 +22976,7 @@
     "nationality": "Netherlands",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/221/363/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_221363.jpg",
     "pace": 59,
     "shooting": 75,
     "passing": 74,
@@ -23372,13 +23520,15 @@
     "nationality": "Republic of Ireland",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/228/151/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Josh_Cullen_-_RSCA_%282022%29_%28cropped%29.jpg",
     "pace": 61,
     "shooting": 61,
     "passing": 75,
     "dribbling": 73,
     "defending": 72,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_237477",
@@ -23394,13 +23544,14 @@
     "nationality": "England",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/237/477/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Marcus_Tavernier_2022.jpg",
     "pace": 75,
     "shooting": 74,
     "passing": 73,
     "dribbling": 78,
     "defending": 60,
-    "physical": 64
+    "physical": 64,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_227884",
@@ -23625,13 +23776,14 @@
     "nationality": "England",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/243/657/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/James_Garner_2025.jpg",
     "pace": 58,
     "shooting": 66,
     "passing": 78,
     "dribbling": 72,
     "defending": 71,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_240915",
@@ -23663,13 +23815,14 @@
     "nationality": "Wales",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/220/710/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Harry_Wilson_24052026_%281%29.jpg",
     "pace": 75,
     "shooting": 78,
     "passing": 75,
     "dribbling": 76,
     "defending": 46,
-    "physical": 56
+    "physical": 56,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_235432",
@@ -23684,13 +23837,14 @@
     "nationality": "Zimbabwe",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/235/432/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Munetsi_asse_sr_2425.png",
     "pace": 67,
     "shooting": 69,
     "passing": 71,
     "dribbling": 72,
     "defending": 74,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_252711",
@@ -24008,14 +24162,15 @@
     "nationality": "Wales",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/232/104/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2841%29_%28Daniel_James%29.jpg",
     "pace": 94,
     "shooting": 71,
     "passing": 68,
     "dribbling": 76,
     "defending": 50,
     "physical": 68,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_228352",
@@ -24088,7 +24243,7 @@
     "nationality": "Argentina",
     "club": "Valencia CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/246/258/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_246258.jpg",
     "pace": 71,
     "shooting": 76,
     "passing": 68,
@@ -24568,7 +24723,7 @@
     "nationality": "Morocco",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/255/125/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_255125.jpg",
     "pace": 64,
     "shooting": 66,
     "passing": 73,
@@ -24739,14 +24894,15 @@
     "nationality": "France",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/350/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Enzo_Le_F%C3%A9e_SAFC_August_2025.jpg",
     "pace": 63,
     "shooting": 61,
     "passing": 76,
     "dribbling": 80,
     "defending": 62,
     "physical": 56,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_216275",
@@ -24816,13 +24972,15 @@
     "nationality": "Switzerland",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/242/530/26_120.png",
+    "photoUrl": "/assets/players/photos/n-okafor-5192b13d.webp",
     "pace": 86,
     "shooting": 76,
     "passing": 71,
     "dribbling": 80,
     "defending": 31,
-    "physical": 69
+    "physical": 69,
+    "photoLegalOverride": true,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_236593",
@@ -24910,13 +25068,15 @@
     "nationality": "Germany",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/230/084/26_120.png",
+    "photoUrl": "/assets/players/photos/l-nmecha-6e65d962.webp",
     "pace": 74,
     "shooting": 76,
     "passing": 66,
     "dribbling": 75,
     "defending": 40,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": true,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_226579",
@@ -25042,13 +25202,14 @@
     "nationality": "Spain",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_213956.jpg",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Adama_Traore_%28cropped%29_Wolves_vs_West_Ham_United_Full_Time.jpg",
     "pace": 94,
     "shooting": 65,
     "passing": 67,
     "dribbling": 81,
     "defending": 37,
-    "physical": 82
+    "physical": 82,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_235889",
@@ -25080,13 +25241,14 @@
     "nationality": "England",
     "club": "Arsenal",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/271/807/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Ethan_Nwaneri.png",
     "pace": 82,
     "shooting": 70,
     "passing": 74,
     "dribbling": 78,
     "defending": 50,
-    "physical": 54
+    "physical": 54,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_73398",
@@ -25390,7 +25552,7 @@
     "nationality": "Spain",
     "club": "Deportivo Alavés",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/240/458/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_240458.jpg",
     "pace": 41,
     "shooting": 63,
     "passing": 72,
@@ -25557,13 +25719,14 @@
     "nationality": "England",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/224/494/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Rico_Henry%2C_Brentford_F.C._footballer%2C_December_2025.jpg",
     "pace": 86,
     "shooting": 41,
     "passing": 62,
     "dribbling": 75,
     "defending": 74,
-    "physical": 67
+    "physical": 67,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_230208",
@@ -25595,13 +25758,15 @@
     "nationality": "Wales",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/235/735/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Ethan_Ampadu_With_Wales_2020_%28cropped%29.jpg",
     "pace": 67,
     "shooting": 51,
     "passing": 64,
     "dribbling": 70,
     "defending": 76,
-    "physical": 78
+    "physical": 78,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_207715",
@@ -25634,13 +25799,14 @@
     "nationality": "Republic of Ireland",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/253/510/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Jake_O%27Brien_in_2024.png",
     "pace": 77,
     "shooting": 49,
     "passing": 64,
     "dribbling": 61,
     "defending": 75,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_279027",
@@ -25680,7 +25846,8 @@
     "passing": 70,
     "dribbling": 80,
     "defending": 33,
-    "physical": 61
+    "physical": 61,
+    "photoLegalOverride": true
   },
   {
     "id": "fc_219932",
@@ -26020,7 +26187,7 @@
     "nationality": "Spain",
     "club": "RCD Espanyol",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/192/678/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_192678.jpg",
     "pace": 42,
     "shooting": 80,
     "passing": 65,
@@ -26076,7 +26243,7 @@
     "nationality": "Ukraine",
     "club": "Girona FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/271/541/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_271541.jpg",
     "pace": 79,
     "shooting": 77,
     "passing": 60,
@@ -26135,13 +26302,15 @@
     "nationality": "England",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/235/619/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Marcus_Edwards_26042025_%283%29_%28cropped%29.jpg",
     "pace": 84,
     "shooting": 69,
     "passing": 70,
     "dribbling": 81,
     "defending": 30,
-    "physical": 48
+    "physical": 48,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_260779",
@@ -26156,14 +26325,15 @@
     "nationality": "Côte d'Ivoire",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/260/779/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Simon_Adingra_Cote_D%27Ivoire_v_Ecuador_14_June_2026-60.jpg",
     "pace": 87,
     "shooting": 70,
     "passing": 70,
     "dribbling": 80,
     "defending": 30,
     "physical": 52,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_240777",
@@ -26468,13 +26638,15 @@
     "nationality": "France",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/262/042/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maxime_Esteve_2021.jpg",
     "pace": 75,
     "shooting": 40,
     "passing": 57,
     "dribbling": 63,
     "defending": 76,
-    "physical": 82
+    "physical": 82,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_256476",
@@ -26709,13 +26881,14 @@
     "nationality": "Brazil",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/241/585/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/FC_Liefering_gegen_SV_Horn_%2822._Juli_2016%29_50.jpg",
     "pace": 64,
     "shooting": 37,
     "passing": 57,
     "dribbling": 58,
     "defending": 75,
-    "physical": 83
+    "physical": 83,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_229266",
@@ -26727,13 +26900,15 @@
     "nationality": "Wales",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/229/266/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Wales-Switzerland_match_at_Euro_2020_in_Baku_5_%28cropped%29.jpg",
     "pace": 76,
     "shooting": 32,
     "passing": 51,
     "dribbling": 60,
     "defending": 76,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_230388",
@@ -26838,13 +27013,14 @@
     "nationality": "Brazil",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/256/008/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Morato_2020.jpg",
     "pace": 53,
     "shooting": 37,
     "passing": 57,
     "dribbling": 60,
     "defending": 76,
-    "physical": 80
+    "physical": 80,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_244206",
@@ -27180,13 +27356,14 @@
     "nationality": "England",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/263/063/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Queen_Park_Rangers_v_Burnley_26042025_%2825%29_%28James_Trafford%29.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_222464",
@@ -27324,13 +27501,14 @@
     "nationality": "Denmark",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/158/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Mads_Hermansen_2021.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_206003",
@@ -27396,13 +27574,14 @@
     "nationality": "England",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/206/075/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Sam_Johnstone_%28cropped%29.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_242879",
@@ -27432,7 +27611,7 @@
     "nationality": "Norway",
     "club": "Sevilla FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/185/427/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_185427.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -27558,7 +27737,7 @@
     "nationality": "Spain",
     "club": "Elche CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/246/139/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_246139.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -27960,13 +28139,14 @@
     "nationality": "Haiti",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/235/456/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Entra%C3%AEnement_RC_Lens_-_2_mai_2018_75.jpg",
     "pace": 78,
     "shooting": 63,
     "passing": 72,
     "dribbling": 78,
     "defending": 70,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_245054",
@@ -27998,7 +28178,7 @@
     "nationality": "Spain",
     "club": "Villarreal CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/228/302/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_228302.jpg",
     "pace": 77,
     "shooting": 71,
     "passing": 72,
@@ -28016,14 +28196,15 @@
     "nationality": "Congo DR",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/212/491/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Arthur_Masuaku%2C_2023_%28cropped%29.jpg",
     "pace": 79,
     "shooting": 62,
     "passing": 74,
     "dribbling": 78,
     "defending": 68,
     "physical": 79,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_224425",
@@ -28382,13 +28563,14 @@
     "nationality": "Senegal",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/274/915/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/El_Hadji_Malick_Diouf_France_v_Senegal_16_June_2026-384_%28cropped%29.jpg",
     "pace": 80,
     "shooting": 67,
     "passing": 68,
     "dribbling": 74,
     "defending": 70,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_253162",
@@ -28517,7 +28699,7 @@
     "nationality": "Belgium",
     "club": "Real Oviedo",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/212/501/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_212501.jpg",
     "pace": 52,
     "shooting": 69,
     "passing": 76,
@@ -28653,13 +28835,14 @@
     "nationality": "England",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/277/283/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Jack_Hinshelwood_24012026_%282%29.jpg",
     "pace": 66,
     "shooting": 65,
     "passing": 73,
     "dribbling": 73,
     "defending": 74,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_228595",
@@ -28882,13 +29065,14 @@
     "nationality": "England",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/235/883/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/2020-03-10_Fu%C3%9Fball%2C_M%C3%A4nner%2C_UEFA_Champions_League_Achtelfinale%2C_RB_Leipzig_-_Tottenham_Hotspur_1DX_3696_by_Stepro.jpg",
     "pace": 78,
     "shooting": 67,
     "passing": 72,
     "dribbling": 77,
     "defending": 71,
-    "physical": 65
+    "physical": 65,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_245538",
@@ -29054,7 +29238,7 @@
     "nationality": "Spain",
     "club": "Real Oviedo",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/146/562/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_146562.jpg",
     "pace": 53,
     "shooting": 72,
     "passing": 80,
@@ -29073,7 +29257,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/225/523/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_225523.jpg",
     "pace": 79,
     "shooting": 62,
     "passing": 70,
@@ -29404,7 +29588,7 @@
     "nationality": "Netherlands",
     "club": "Valencia CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/236/276/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_236276.jpg",
     "pace": 83,
     "shooting": 73,
     "passing": 71,
@@ -29517,13 +29701,15 @@
     "nationality": "Wales",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/225/147/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Connor_Roberts_%28footballer%2C_born_1995%29%2C_cropped_image%2C_Turkey_vs_Wales_EURO_2020.jpg",
     "pace": 76,
     "shooting": 61,
     "passing": 71,
     "dribbling": 72,
     "defending": 71,
-    "physical": 75
+    "physical": 75,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_270208",
@@ -29537,13 +29723,15 @@
     "nationality": "England",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/270/208/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Rangers_v_Tottenham_Hotspur_-_54202663229_%28Archie_Gray%29.jpg",
     "pace": 71,
     "shooting": 60,
     "passing": 71,
     "dribbling": 73,
     "defending": 73,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_246055",
@@ -29911,13 +30099,14 @@
     "nationality": "Argentina",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/256/402/26_120.png",
+    "photoUrl": "/assets/players/photos/c-alcaraz-525af8ac.jpg",
     "pace": 80,
     "shooting": 71,
     "passing": 71,
     "dribbling": 78,
     "defending": 46,
-    "physical": 65
+    "physical": 65,
+    "photoLegalOverride": true
   },
   {
     "id": "fc_242342",
@@ -29991,13 +30180,14 @@
     "nationality": "Portugal",
     "club": "Chelsea",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/261/530/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Dario_Essugo_Chelsea_VisitMalta_trophy.jpg",
     "pace": 76,
     "shooting": 58,
     "passing": 64,
     "dribbling": 73,
     "defending": 74,
-    "physical": 81
+    "physical": 81,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_245622",
@@ -30068,13 +30258,14 @@
     "nationality": "England",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/206/594/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Solly_March_2018.jpg",
     "pace": 69,
     "shooting": 70,
     "passing": 75,
     "dribbling": 77,
     "defending": 65,
-    "physical": 54
+    "physical": 54,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_239704",
@@ -30106,13 +30297,15 @@
     "nationality": "England",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/237/161/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Sean_Longstaff_2021-08-07_1.jpg",
     "pace": 56,
     "shooting": 67,
     "passing": 73,
     "dribbling": 73,
     "defending": 71,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_235134",
@@ -30340,13 +30533,14 @@
     "nationality": "England",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/260/145/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Omari_Hutchinson%2C_Ipswich_Town.jpg",
     "pace": 80,
     "shooting": 73,
     "passing": 70,
     "dribbling": 79,
     "defending": 55,
-    "physical": 59
+    "physical": 59,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_207948",
@@ -30359,14 +30553,15 @@
     "nationality": "Burkina Faso",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/207/948/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Capitain_du_bourkina_%28cropped%29.jpg",
     "pace": 73,
     "shooting": 72,
     "passing": 72,
     "dribbling": 80,
     "defending": 47,
     "physical": 64,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_215443",
@@ -30457,7 +30652,7 @@
     "nationality": "Equatorial Guinea",
     "club": "RCD Mallorca",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/208/620/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_208620.jpg",
     "pace": 47,
     "shooting": 64,
     "passing": 71,
@@ -30534,7 +30729,7 @@
     "nationality": "Portugal",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/224/411/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_224411.jpg",
     "pace": 76,
     "shooting": 76,
     "passing": 70,
@@ -30684,13 +30879,15 @@
     "nationality": "Switzerland",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/262/642/26_120.png",
+    "photoUrl": "/assets/players/photos/z-amdouni-af01f1ae.webp",
     "pace": 71,
     "shooting": 76,
     "passing": 69,
     "dribbling": 76,
     "defending": 46,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": true,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_189860",
@@ -30703,7 +30900,7 @@
     "nationality": "Spain",
     "club": "Getafe CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/189/860/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_189860.jpg",
     "pace": 68,
     "shooting": 56,
     "passing": 70,
@@ -30987,7 +31184,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/246/748/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_246748.jpg",
     "pace": 75,
     "shooting": 54,
     "passing": 70,
@@ -31268,14 +31465,15 @@
     "nationality": "England",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/244/591/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Jayden_Bogle_13092025_%283%29.jpg",
     "pace": 81,
     "shooting": 55,
     "passing": 70,
     "dribbling": 75,
     "defending": 70,
     "physical": 70,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_233125",
@@ -31383,13 +31581,15 @@
     "nationality": "Wales",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/205/923/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/AUT_vs._WAL_2016-10-06_%28118%29.jpg",
     "pace": 53,
     "shooting": 58,
     "passing": 71,
     "dribbling": 71,
     "defending": 77,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_239770",
@@ -31478,13 +31678,14 @@
     "nationality": "Wales",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/220/196/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/David_Brooks_in_2024.png",
     "pace": 70,
     "shooting": 69,
     "passing": 74,
     "dribbling": 77,
     "defending": 48,
-    "physical": 58
+    "physical": 58,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_226385",
@@ -32068,7 +32269,7 @@
     "nationality": "Croatia",
     "club": "Real Oviedo",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/234/711/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_234711.jpg",
     "pace": 75,
     "shooting": 72,
     "passing": 74,
@@ -32143,13 +32344,14 @@
     "nationality": "Brazil",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/264/337/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Rodrigo_Muniz_24052026_%281%29.jpg",
     "pace": 68,
     "shooting": 74,
     "passing": 59,
     "dribbling": 71,
     "defending": 42,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_215292",
@@ -32348,13 +32550,14 @@
     "nationality": "Portugal",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/258/607/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Tote_Gomes_%28cropped%29_Wolves_vs_West_Ham_United_Full_Time.jpg",
     "pace": 77,
     "shooting": 47,
     "passing": 65,
     "dribbling": 66,
     "defending": 75,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_232610",
@@ -32404,13 +32607,14 @@
     "nationality": "Norway",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/224/258/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Kristoffer_Ajer_Morocco_v_Norway_7_June_2026-57.jpg",
     "pace": 67,
     "shooting": 56,
     "passing": 65,
     "dribbling": 68,
     "defending": 74,
-    "physical": 81
+    "physical": 81,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_268573",
@@ -32743,13 +32947,14 @@
     "nationality": "England",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/227/927/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Kyle_Walker_Peters_at_Avatar_fire_and_ash_premiere_London_2025.jpg",
     "pace": 76,
     "shooting": 47,
     "passing": 68,
     "dribbling": 76,
     "defending": 71,
-    "physical": 64
+    "physical": 64,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_263268",
@@ -33161,13 +33366,14 @@
     "nationality": "England",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/231/448/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/1_reiss_nelson_arsenal_2025.jpg",
     "pace": 76,
     "shooting": 67,
     "passing": 71,
     "dribbling": 78,
     "defending": 36,
-    "physical": 54
+    "physical": 54,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_260290",
@@ -33309,13 +33515,15 @@
     "nationality": "Netherlands",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/247/249/26_120.png",
+    "photoUrl": "/assets/players/photos/j-piroe-56a01693.jpg",
     "pace": 64,
     "shooting": 78,
     "passing": 65,
     "dribbling": 72,
     "defending": 29,
-    "physical": 71
+    "physical": 71,
+    "photoLegalOverride": true,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_259139",
@@ -33510,13 +33718,14 @@
     "nationality": "Nigeria",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/230/978/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/2022-04-20_Fu%C3%9Fball%2C_M%C3%A4nner%2C_DFB-Pokal%2C_RB_Leipzig_-_1._FC_Union_Berlin_1DX_8274_by_Stepro.jpg",
     "pace": 71,
     "shooting": 75,
     "passing": 60,
     "dribbling": 69,
     "defending": 32,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_269495",
@@ -33551,13 +33760,15 @@
     "nationality": "France",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/270/579/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Wilson_Odobert_2022.jpg",
     "pace": 86,
     "shooting": 70,
     "passing": 68,
     "dribbling": 78,
     "defending": 30,
-    "physical": 49
+    "physical": 49,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_253108",
@@ -34029,7 +34240,7 @@
     "nationality": "Brazil",
     "club": "Sevilla FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/234/426/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_234426.png",
     "pace": 59,
     "shooting": 36,
     "passing": 59,
@@ -34121,13 +34332,15 @@
     "nationality": "Romania",
     "club": "Tottenham Hotspur",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/260/105/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Radu_Dragusin_-_Frosinone_vs_Genoa_14_May_2023.jpg",
     "pace": 67,
     "shooting": 37,
     "passing": 53,
     "dribbling": 65,
     "defending": 75,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
   },
   {
     "id": "fc_272785",
@@ -34268,7 +34481,7 @@
     "nationality": "Italy",
     "club": "Rayo Vallecano",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/236/355/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_236355.jpg",
     "pace": 68,
     "shooting": 29,
     "passing": 61,
@@ -34451,13 +34664,14 @@
     "nationality": "England",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/207/616/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Adam_Webster_2022.jpg",
     "pace": 54,
     "shooting": 31,
     "passing": 60,
     "dribbling": 67,
     "defending": 76,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_73466",
@@ -35752,13 +35966,15 @@
     "nationality": "Tunisia",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/258/171/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Hannibal_Mejbri_21032026_%282%29.jpg",
     "pace": 76,
     "shooting": 63,
     "passing": 73,
     "dribbling": 76,
     "defending": 68,
-    "physical": 82
+    "physical": 82,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_238072",
@@ -36995,13 +37211,14 @@
     "nationality": "England",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/261/299/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Alex_Scott_Interview_2023.jpg",
     "pace": 71,
     "shooting": 62,
     "passing": 73,
     "dribbling": 79,
     "defending": 65,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_269276",
@@ -37172,13 +37389,15 @@
     "nationality": "Denmark",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/227/503/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Jacob_Bruun_Larsen%2C_Dinamarca_x_%C3%81frica_do_Sul_-_Olimp%C3%ADadas_Rio_2016_%28cropped%29.jpg",
     "pace": 78,
     "shooting": 72,
     "passing": 70,
     "dribbling": 74,
     "defending": 55,
-    "physical": 67
+    "physical": 67,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_235569",
@@ -37576,13 +37795,15 @@
     "nationality": "Congo DR",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/269/230/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Noah_Sadiki_versus_Real_Betis_2nd_August_2025.jpg",
     "pace": 77,
     "shooting": 65,
     "passing": 68,
     "dribbling": 76,
     "defending": 68,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
   },
   {
     "id": "fc_277432",
@@ -37787,13 +38008,14 @@
     "nationality": "Cameroon",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/262/937/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Jackson_Tchatchoua_01112025_%281%29.jpg",
     "pace": 89,
     "shooting": 59,
     "passing": 63,
     "dribbling": 74,
     "defending": 66,
-    "physical": 78
+    "physical": 78,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_225014",
@@ -38000,13 +38222,14 @@
     "nationality": "Scotland",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/195/202/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Tom_Cairney_2016.jpg",
     "pace": 52,
     "shooting": 71,
     "passing": 76,
     "dribbling": 73,
     "defending": 66,
-    "physical": 62
+    "physical": 62,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_266071",
@@ -38136,13 +38359,14 @@
     "nationality": "England",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/224/081/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Kalvin_Phillips_2022-11-21_1.jpg",
     "pace": 54,
     "shooting": 65,
     "passing": 73,
     "dribbling": 70,
     "defending": 72,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_266844",
@@ -38194,7 +38418,7 @@
     "nationality": "Russia",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/264/701/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_264701.jpg",
     "pace": 78,
     "shooting": 71,
     "passing": 74,
@@ -38464,13 +38688,15 @@
     "nationality": "United States",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/247/361/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Brenden_Aaronson_USMNT_v_Belgium_Mar_28_2026-58.jpg",
     "pace": 80,
     "shooting": 66,
     "passing": 70,
     "dribbling": 78,
     "defending": 57,
-    "physical": 61
+    "physical": 61,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_225733",
@@ -38503,13 +38729,14 @@
     "nationality": "Netherlands",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/763/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Ki-Jana_Hoever_LFCU19_2019.jpg",
     "pace": 73,
     "shooting": 55,
     "passing": 69,
     "dribbling": 71,
     "defending": 70,
-    "physical": 71
+    "physical": 71,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_225779",
@@ -38561,7 +38788,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/234/035/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_234035.jpg",
     "pace": 72,
     "shooting": 55,
     "passing": 69,
@@ -38866,13 +39093,15 @@
     "nationality": "Brazil",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/277/068/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Lucas_Pires_Silva_26042025_%281%29.jpg",
     "pace": 79,
     "shooting": 49,
     "passing": 69,
     "dribbling": 72,
     "defending": 70,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_205401",
@@ -39093,13 +39322,14 @@
     "nationality": "France",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/277/909/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Eli_Junior_Kroupi.jpg",
     "pace": 80,
     "shooting": 74,
     "passing": 68,
     "dribbling": 78,
     "defending": 47,
-    "physical": 57
+    "physical": 57,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_146947",
@@ -39112,7 +39342,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/146/947/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_146947.jpg",
     "pace": 40,
     "shooting": 74,
     "passing": 69,
@@ -39341,7 +39571,7 @@
     "nationality": "Spain",
     "club": "Deportivo Alavés",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/205/192/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_205192.jpg",
     "pace": 55,
     "shooting": 70,
     "passing": 77,
@@ -39514,7 +39744,7 @@
     "nationality": "Spain",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/203/747/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_203747.jpg",
     "pace": 78,
     "shooting": 51,
     "passing": 68,
@@ -39533,14 +39763,15 @@
     "nationality": "England",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/231/554/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/James_Justin_24082024.jpg",
     "pace": 79,
     "shooting": 52,
     "passing": 69,
     "dribbling": 70,
     "defending": 71,
     "physical": 70,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_248808",
@@ -39552,13 +39783,14 @@
     "nationality": "Scotland",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/248/808/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Aaron_Hickey_Scotland_v_Bolivia_6_June_2026-87_%28cropped%29.jpg",
     "pace": 71,
     "shooting": 54,
     "passing": 70,
     "dribbling": 73,
     "defending": 74,
-    "physical": 64
+    "physical": 64,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_204060",
@@ -39745,14 +39977,15 @@
     "nationality": "England",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/232/080/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Jack_Harrison_13092025_%289%29.jpg",
     "pace": 76,
     "shooting": 69,
     "passing": 71,
     "dribbling": 75,
     "defending": 47,
     "physical": 66,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_242655",
@@ -39804,13 +40037,15 @@
     "nationality": "Bulgaria",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/248/384/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Iliya_Gruev_jr.jpg",
     "pace": 67,
     "shooting": 55,
     "passing": 71,
     "dribbling": 71,
     "defending": 70,
-    "physical": 69
+    "physical": 69,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_215247",
@@ -39898,7 +40133,7 @@
     "nationality": "Spain",
     "club": "Deportivo Alavés",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/238/126/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_238126.jpg",
     "pace": 60,
     "shooting": 69,
     "passing": 72,
@@ -40141,7 +40376,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/074/462/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_74462.jpg",
     "pace": 71,
     "shooting": 52,
     "passing": 70,
@@ -40519,7 +40754,7 @@
     "nationality": "Spain",
     "club": "RCD Mallorca",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/267/976/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_267976.png",
     "pace": 72,
     "shooting": 64,
     "passing": 76,
@@ -40828,13 +41063,15 @@
     "nationality": "England",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/243/669/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Jaidon_Anthony_26042025_%282%29.jpg",
     "pace": 79,
     "shooting": 67,
     "passing": 70,
     "dribbling": 75,
     "defending": 39,
-    "physical": 67
+    "physical": 67,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_268116",
@@ -40922,13 +41159,14 @@
     "nationality": "Mexico",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/247/678/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Julian_Araujo.jpg",
     "pace": 83,
     "shooting": 35,
     "passing": 64,
     "dribbling": 70,
     "defending": 71,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_276528",
@@ -41021,13 +41259,14 @@
     "nationality": "England",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_221479.jpg",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Dominic_Calvert-Lewin_2017.png",
     "pace": 72,
     "shooting": 72,
     "passing": 63,
     "dribbling": 70,
     "defending": 38,
-    "physical": 75
+    "physical": 75,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_258316",
@@ -41174,7 +41413,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/253/130/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_253130.jpg",
     "pace": 74,
     "shooting": 69,
     "passing": 70,
@@ -41195,14 +41434,15 @@
     "nationality": "Italy",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/258/906/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Wilfried_Gnonto_and_Ao_Tanaka_13092025_%281%29_%28Wilfried_Gnonto_cropped%29.jpg",
     "pace": 88,
     "shooting": 72,
     "passing": 65,
     "dribbling": 79,
     "defending": 31,
     "physical": 67,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_259563",
@@ -41728,7 +41968,7 @@
     "nationality": "Venezuela",
     "club": "Real Oviedo",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/189/250/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_189250.jpg",
     "pace": 51,
     "shooting": 75,
     "passing": 66,
@@ -41860,7 +42100,7 @@
     "nationality": "Belgium",
     "club": "Sevilla FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/208/330/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_208330.jpg",
     "pace": 70,
     "shooting": 69,
     "passing": 76,
@@ -42224,13 +42464,14 @@
     "nationality": "Portugal",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/256/725/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/2022-07-21_Fabio_Carvalho_%28cropped%29.jpg",
     "pace": 75,
     "shooting": 68,
     "passing": 68,
     "dribbling": 77,
     "defending": 46,
-    "physical": 46
+    "physical": 46,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_185144",
@@ -42409,13 +42650,15 @@
     "nationality": "Germany",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/242/660/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/2022128171555_2022-05-08_Fussball_Eintracht_Frankfurt_vs_Borussia_M%C3%B6nchengladbach_-_Sven_-_1D_X_MK_II_-_0415_-_AK8I7150_%28cropped%29.jpg",
     "pace": 72,
     "shooting": 34,
     "passing": 63,
     "dribbling": 69,
     "defending": 74,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_248602",
@@ -43112,13 +43355,15 @@
     "nationality": "Belgium",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/242/663/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Sebastiaan_Bornauw_2021.jpg",
     "pace": 69,
     "shooting": 45,
     "passing": 59,
     "dribbling": 55,
     "defending": 74,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_226129",
@@ -43185,13 +43430,14 @@
     "nationality": "Brazil",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/079/629/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Jair_Cunha_18-11-2024.png",
     "pace": 67,
     "shooting": 38,
     "passing": 59,
     "dribbling": 58,
     "defending": 73,
-    "physical": 80
+    "physical": 80,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_214169",
@@ -43461,13 +43707,14 @@
     "nationality": "Italy",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/269/181/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Diego_Coppola_24012026_%284%29.jpg",
     "pace": 52,
     "shooting": 40,
     "passing": 56,
     "dribbling": 60,
     "defending": 75,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_258782",
@@ -43533,7 +43780,7 @@
     "nationality": "Croatia",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/225/263/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_225263.jpg",
     "pace": 58,
     "shooting": 39,
     "passing": 55,
@@ -44218,7 +44465,7 @@
     "nationality": "Spain",
     "club": "Villarreal CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/259/065/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_259065.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -44470,13 +44717,14 @@
     "nationality": "France",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/200/726/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/BHA_5_v_Espanyol_1_pre_season_30_07_2022_173_%28cropped%29.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_236515",
@@ -45469,13 +45717,15 @@
     "nationality": "Netherlands",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/239/373/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Queen_Park_Rangers_v_Burnley_26042025_%287%29_%28Zian_Flemming%29.jpg",
     "pace": 70,
     "shooting": 74,
     "passing": 71,
     "dribbling": 72,
     "defending": 54,
-    "physical": 79
+    "physical": 79,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_258890",
@@ -45647,13 +45897,15 @@
     "nationality": "England",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/217/826/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Josh_Laurent_21032026_%282%29.jpg",
     "pace": 78,
     "shooting": 61,
     "passing": 64,
     "dribbling": 70,
     "defending": 71,
-    "physical": 87
+    "physical": 87,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_256051",
@@ -45860,13 +46112,14 @@
     "nationality": "England",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/277/427/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Nico_O%27Reilly_England_v_Ghana_23_June_2026-043_%28cropped%29.jpg",
     "pace": 73,
     "shooting": 66,
     "passing": 72,
     "dribbling": 73,
     "defending": 69,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_269278",
@@ -47395,7 +47648,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/262/510/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_262510.jpg",
     "pace": 65,
     "shooting": 62,
     "passing": 72,
@@ -48284,7 +48537,7 @@
     "nationality": "Spain",
     "club": "RC Celta",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/264/095/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_264095.png",
     "pace": 69,
     "shooting": 66,
     "passing": 70,
@@ -48302,13 +48555,14 @@
     "nationality": "England",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/190/885/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Chelsea_0_Bournemouth_1_%284%29_-_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
     "pace": 60,
     "shooting": 59,
     "passing": 70,
     "dribbling": 70,
     "defending": 73,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_269305",
@@ -48340,7 +48594,7 @@
     "nationality": "Spain",
     "club": "Atlético Madrid",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/266/039/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_266039.jpg",
     "pace": 79,
     "shooting": 55,
     "passing": 66,
@@ -48708,7 +48962,7 @@
     "nationality": "Spain",
     "club": "RCD Mallorca",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/232/008/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_232008.png",
     "pace": 76,
     "shooting": 56,
     "passing": 70,
@@ -49227,13 +49481,15 @@
     "nationality": "France",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/257/084/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Lesley_Ugochukwu_2023_Luton.jpg",
     "pace": 64,
     "shooting": 58,
     "passing": 68,
     "dribbling": 68,
     "defending": 71,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_202331",
@@ -49284,7 +49540,7 @@
     "nationality": "Spain",
     "club": "Real Sociedad",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/272/455/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_272455.jpg",
     "pace": 67,
     "shooting": 68,
     "passing": 71,
@@ -49397,13 +49653,14 @@
     "nationality": "Norway",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/262/135/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/David_Moller_Wolfe_France_v_Norway_26_June_26-017_%28cropped%29.jpg",
     "pace": 78,
     "shooting": 53,
     "passing": 65,
     "dribbling": 69,
     "defending": 67,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_206083",
@@ -50045,7 +50302,7 @@
     "nationality": "Spain",
     "club": "FC Barcelona",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/074/463/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_74463.png",
     "pace": 61,
     "shooting": 53,
     "passing": 71,
@@ -50083,7 +50340,7 @@
     "nationality": "Spain",
     "club": "Real Oviedo",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/238/305/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_238305.jpg",
     "pace": 73,
     "shooting": 57,
     "passing": 68,
@@ -50160,13 +50417,15 @@
     "nationality": "Belgium",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/253/150/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/MikeTresor2018.jpg",
     "pace": 81,
     "shooting": 67,
     "passing": 72,
     "dribbling": 75,
     "defending": 38,
-    "physical": 56
+    "physical": 56,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_205590",
@@ -51290,13 +51549,14 @@
     "nationality": "Italy",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/277/869/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Michael_Kayode_27122025_%281%29.jpg",
     "pace": 74,
     "shooting": 41,
     "passing": 63,
     "dribbling": 72,
     "defending": 72,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_236518",
@@ -51431,7 +51691,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/277/708/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_277708.jpg",
     "pace": 67,
     "shooting": 66,
     "passing": 72,
@@ -51530,13 +51790,15 @@
     "nationality": "Congo DR",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/231/485/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Manchester_United_v_Wigan_Athletic%2C_January_2017_%2833%29.JPG",
     "pace": 76,
     "shooting": 36,
     "passing": 64,
     "dribbling": 68,
     "defending": 73,
-    "physical": 75
+    "physical": 75,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_263518",
@@ -51951,13 +52213,14 @@
     "nationality": "England",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/264/349/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/James_McAtee_in_2024.jpg",
     "pace": 72,
     "shooting": 69,
     "passing": 70,
     "dribbling": 75,
     "defending": 41,
-    "physical": 59
+    "physical": 59,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_230482",
@@ -52048,13 +52311,14 @@
     "nationality": "France",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/275/102/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Magassa_asse_asm_2425.png",
     "pace": 54,
     "shooting": 49,
     "passing": 66,
     "dribbling": 64,
     "defending": 72,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_244685",
@@ -52278,14 +52542,15 @@
     "nationality": "Morocco",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/275/048/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Chemsdine_Talbi_warming_up_with_Morocco_%28cropped%29.jpg",
     "pace": 90,
     "shooting": 59,
     "passing": 64,
     "dribbling": 79,
     "defending": 47,
     "physical": 57,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_265577",
@@ -52388,7 +52653,7 @@
     "nationality": "Morocco",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/076/945/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_76945.jpg",
     "pace": 69,
     "shooting": 71,
     "passing": 59,
@@ -52575,13 +52840,14 @@
     "nationality": "Spain",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/075/628/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Gran_Pe%C3%B1a_-_R%C3%A1pido_de_Bouzas%2C_no_Estadio_Municipal_de_Barreiro_58.jpg",
     "pace": 66,
     "shooting": 68,
     "passing": 73,
     "dribbling": 74,
     "defending": 39,
-    "physical": 52
+    "physical": 52,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_253073",
@@ -52869,7 +53135,7 @@
     "nationality": "Spain",
     "club": "Levante UD",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/233/588/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_233588.jpg",
     "pace": 58,
     "shooting": 50,
     "passing": 58,
@@ -53592,13 +53858,14 @@
     "nationality": "England",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/207/599/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Michael_Keane_2017.jpg",
     "pace": 40,
     "shooting": 49,
     "passing": 62,
     "dribbling": 58,
     "defending": 73,
-    "physical": 74
+    "physical": 74,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_212002",
@@ -53682,7 +53949,7 @@
     "nationality": "Spain",
     "club": "Real Oviedo",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/219/180/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_219180.jpg",
     "pace": 51,
     "shooting": 46,
     "passing": 53,
@@ -54319,13 +54586,15 @@
     "nationality": "Northern Ireland",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/243/908/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Oliver_Younger.jpg",
     "pace": 60,
     "shooting": 30,
     "passing": 53,
     "dribbling": 57,
     "defending": 72,
-    "physical": 81
+    "physical": 81,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
   },
   {
     "id": "fc_261281",
@@ -54392,13 +54661,14 @@
     "nationality": "Côte d'Ivoire",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/202/750/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Willy_Boly%2C_Nottingham_Forest%2C_2025_%28cropped%29.jpg",
     "pace": 34,
     "shooting": 36,
     "passing": 59,
     "dribbling": 55,
     "defending": 74,
-    "physical": 71
+    "physical": 71,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_264401",
@@ -54608,13 +54878,14 @@
     "nationality": "England",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/203/487/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Jamaal_Lascelles_2014.jpg",
     "pace": 37,
     "shooting": 35,
     "passing": 51,
     "dribbling": 50,
     "defending": 74,
-    "physical": 71
+    "physical": 71,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_229901",
@@ -54644,13 +54915,15 @@
     "nationality": "England",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/230/708/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Joe_Worrall.jpg",
     "pace": 48,
     "shooting": 25,
     "passing": 51,
     "dribbling": 45,
     "defending": 75,
-    "physical": 76
+    "physical": 76,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_228290",
@@ -54806,13 +55079,14 @@
     "nationality": "England",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/188/836/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Jason_Steele_24012026_%282%29.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_194911",
@@ -54824,7 +55098,7 @@
     "nationality": "Spain",
     "club": "Real Betis Balompié",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/194/911/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_194911.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -55094,13 +55368,15 @@
     "nationality": "England",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/246/417/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Anthonypaterson.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
   },
   {
     "id": "fc_219836",
@@ -55382,7 +55658,7 @@
     "nationality": "Spain",
     "club": "RC Celta",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/222/572/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_222572.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -56426,13 +56702,15 @@
     "nationality": "England",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/215/700/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Luke_O%27nien%2C_Play-off_Semi_FInals_2025.jpg",
     "pace": 72,
     "shooting": 58,
     "passing": 65,
     "dribbling": 68,
     "defending": 70,
-    "physical": 82
+    "physical": 82,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
   },
   {
     "id": "fc_208535",
@@ -60174,13 +60452,14 @@
     "nationality": "England",
     "club": "Newcastle United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/274/246/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Lewis_Miley.png",
     "pace": 65,
     "shooting": 61,
     "passing": 72,
     "dribbling": 73,
     "defending": 64,
-    "physical": 66
+    "physical": 66,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_267685",
@@ -60768,13 +61047,14 @@
     "nationality": "England",
     "club": "Fulham FC",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/205/990/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Harrison_Reed_and_Youri_Tielemans_%28cropped%29.jpg",
     "pace": 53,
     "shooting": 60,
     "passing": 71,
     "dribbling": 68,
     "defending": 71,
-    "physical": 63
+    "physical": 63,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_200630",
@@ -61149,13 +61429,14 @@
     "nationality": "Greece",
     "club": "Brighton & Hove Albion",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/073/885/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Charalampos_Kostoulas_24012026_%283%29.jpg",
     "pace": 86,
     "shooting": 68,
     "passing": 61,
     "dribbling": 71,
     "defending": 41,
-    "physical": 77
+    "physical": 77,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_277794",
@@ -62051,7 +62332,7 @@
     "nationality": "Spain",
     "club": "Real Oviedo",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/219/848/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_219848.jpg",
     "pace": 69,
     "shooting": 46,
     "passing": 63,
@@ -62545,13 +62826,15 @@
     "nationality": "France",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/247/335/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Wilson_Isidor_in_2022.jpg",
     "pace": 81,
     "shooting": 71,
     "passing": 60,
     "dribbling": 70,
     "defending": 31,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
   },
   {
     "id": "fc_230367",
@@ -62889,7 +63172,7 @@
     "nationality": "Switzerland",
     "club": "Valencia CF",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/233/885/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_233885.jpg",
     "pace": 66,
     "shooting": 49,
     "passing": 61,
@@ -62910,13 +63193,15 @@
     "nationality": "South Africa",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/241/173/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Lyle_Foster_21032026_%281%29.jpg",
     "pace": 81,
     "shooting": 72,
     "passing": 61,
     "dribbling": 69,
     "defending": 36,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_78784",
@@ -63892,7 +64177,7 @@
     "nationality": "Uruguay",
     "club": "Real Oviedo",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/253/385/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_253385.jpg",
     "pace": 73,
     "shooting": 72,
     "passing": 56,
@@ -65127,13 +65412,14 @@
     "nationality": "Norway",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/277/295/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Oscar_Bobb_France_v_Norway_26_June_26-045.jpg",
     "pace": 79,
     "shooting": 65,
     "passing": 71,
     "dribbling": 77,
     "defending": 33,
-    "physical": 41
+    "physical": 41,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_223593",
@@ -65165,7 +65451,7 @@
     "nationality": "Spain",
     "club": "RCD Espanyol",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/260/546/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_260546.jpg",
     "pace": 56,
     "shooting": 45,
     "passing": 64,
@@ -65733,13 +66019,14 @@
     "nationality": "Albania",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "/assets/players/photos/wikimedia/fc_256268.jpg",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Armando_Broja_October_2019.jpg",
     "pace": 69,
     "shooting": 72,
     "passing": 54,
     "dribbling": 71,
     "defending": 30,
-    "physical": 71
+    "physical": 71,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_261495",
@@ -66287,13 +66574,14 @@
     "nationality": "Morocco",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/258/490/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Chadi_Riad_Brazil_V_Morocco_13_June_2026-162.jpg",
     "pace": 60,
     "shooting": 32,
     "passing": 57,
     "dribbling": 61,
     "defending": 71,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_225161",
@@ -66850,13 +67138,14 @@
     "nationality": "Colombia",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/256/666/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Yerson_Mosquera.jpg",
     "pace": 80,
     "shooting": 30,
     "passing": 50,
     "dribbling": 52,
     "defending": 71,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_220140",
@@ -67806,13 +68095,15 @@
     "nationality": "Wales",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/193/331/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Paul_Trophy_%28cropped%29.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_219941",
@@ -67932,13 +68223,14 @@
     "nationality": "Scotland",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/216/325/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Angus_Gunn_Scotland_v_Bolivia_6_June_2026-42.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_232645",
@@ -68022,13 +68314,15 @@
     "nationality": "France",
     "club": "Leeds United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/242/656/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Illan_Meslier_13092025_%2810%29_%28cropped%29.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
   },
   {
     "id": "fc_211990",
@@ -68040,7 +68334,7 @@
     "nationality": "Greece",
     "club": "Sevilla FC",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/211/990/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_211990.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
@@ -68130,13 +68424,14 @@
     "nationality": "Republic of Ireland",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/232/284/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mark_Travers_2019.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_246236",
@@ -68892,7 +69187,7 @@
     "nationality": "Argentina",
     "club": "Rayo Vallecano",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/173/030/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_173030.jpg",
     "pace": 58,
     "shooting": 71,
     "passing": 73,
@@ -69339,7 +69634,7 @@
     "nationality": "Spain",
     "club": "Levante UD",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/247/328/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_247328.jpg",
     "pace": 62,
     "shooting": 67,
     "passing": 70,
@@ -70235,7 +70530,7 @@
     "nationality": "Congo DR",
     "club": "RCD Espanyol",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/233/884/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_233884.jpg",
     "pace": 63,
     "shooting": 63,
     "passing": 68,
@@ -70276,13 +70571,14 @@
     "nationality": "Northern Ireland",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/073/895/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Fredrikstad_Fotballklubb_v_Crystal_Palace_FC%2C_28_August_2025_B28_%28Justin_Devenny%29.jpg",
     "pace": 65,
     "shooting": 67,
     "passing": 72,
     "dribbling": 71,
     "defending": 63,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_244428",
@@ -71048,13 +71344,14 @@
     "nationality": "Ukraine",
     "club": "Brentford",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/270/608/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/%D0%9C%D0%B0%D1%82%D1%87_%C2%AB%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE%C2%BB_-_%D0%A1%D0%9A_%C2%AB%D0%94%D0%BD%D0%B5%D0%BF%D1%80-1%C2%BB_2-0._24_%D0%BE%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8F_2021_%D0%B3%D0%BE%D0%B4%D0%B0._II_%E2%80%94_1285477_%28Yehor_Yarmolyuk%29.jpg",
     "pace": 66,
     "shooting": 65,
     "passing": 70,
     "dribbling": 72,
     "defending": 67,
-    "physical": 68
+    "physical": 68,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_222388",
@@ -75552,7 +75849,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/074/317/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_74317.jpg",
     "pace": 68,
     "shooting": 72,
     "passing": 62,
@@ -75570,13 +75867,14 @@
     "nationality": "Scotland",
     "club": "Everton",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/257/896/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Nathan_Patterson_Scotland_v_Bolivia_6_June_2026-58.jpg",
     "pace": 71,
     "shooting": 46,
     "passing": 63,
     "dribbling": 70,
     "defending": 70,
-    "physical": 69
+    "physical": 69,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_278928",
@@ -75591,13 +75889,14 @@
     "nationality": "Spain",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/278/928/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Alex_Jimenez_00-02-07.99.png",
     "pace": 84,
     "shooting": 52,
     "passing": 61,
     "dribbling": 71,
     "defending": 67,
-    "physical": 55
+    "physical": 55,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_252960",
@@ -76146,13 +76445,14 @@
     "nationality": "Netherlands",
     "club": "Aston Villa",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/264/209/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Lamare_Bogarde_July_2025.jpg",
     "pace": 67,
     "shooting": 48,
     "passing": 65,
     "dribbling": 67,
     "defending": 69,
-    "physical": 69
+    "physical": 69,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_274465",
@@ -77231,13 +77531,14 @@
     "nationality": "England",
     "club": "Chelsea",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/071/998/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Tyrique_George_chelsea_gent_2024_warm_up.jpg",
     "pace": 79,
     "shooting": 66,
     "passing": 66,
     "dribbling": 73,
     "defending": 36,
-    "physical": 55
+    "physical": 55,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_193532",
@@ -77876,13 +78177,14 @@
     "nationality": "Scotland",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/266/815/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Ben_Gannon-Doak_Scotland_v_Bolivia_6_June_2026-68_%28cropped%29.jpg",
     "pace": 89,
     "shooting": 61,
     "passing": 63,
     "dribbling": 75,
     "defending": 28,
-    "physical": 60
+    "physical": 60,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_262587",
@@ -78069,13 +78371,14 @@
     "nationality": "Brazil",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/072/754/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Luis-Guilherme-Palmeiras-Liverpool-abr24_%28cropped%29.jpg",
     "pace": 76,
     "shooting": 62,
     "passing": 64,
     "dribbling": 75,
     "defending": 33,
-    "physical": 58
+    "physical": 58,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_274046",
@@ -78926,13 +79229,14 @@
     "nationality": "England",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/248/492/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/James_Hill_2022.jpg",
     "pace": 66,
     "shooting": 39,
     "passing": 59,
     "dribbling": 62,
     "defending": 71,
-    "physical": 72
+    "physical": 72,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_246298",
@@ -79002,13 +79306,14 @@
     "nationality": "Italy",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/074/310/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Nicol%C3%B2_Savona_22122025_%281%29.jpg",
     "pace": 68,
     "shooting": 44,
     "passing": 58,
     "dribbling": 63,
     "defending": 70,
-    "physical": 69
+    "physical": 69,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_267481",
@@ -79513,13 +79818,15 @@
     "nationality": "Belgium",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/237/440/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/FC_Red_Bull_Salzburg_gegen_RSC_Anderlecht_%28Testspiel_7._Juli_2017%29_43.jpg",
     "pace": 66,
     "shooting": 35,
     "passing": 61,
     "dribbling": 61,
     "defending": 71,
-    "physical": 70
+    "physical": 70,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_278403",
@@ -81272,13 +81579,14 @@
     "nationality": "England",
     "club": "Wolverhampton Wanderers",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/198/350/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Daniel_Bentley_22-02-2014_1.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_229444",
@@ -81308,13 +81616,14 @@
     "nationality": "England",
     "club": "Liverpool",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/222/514/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Freddie_Woodman_2021-08-07_1.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_191628",
@@ -82082,13 +82391,14 @@
     "nationality": "Brazil",
     "club": "Nottingham Forest",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/234/724/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/JohnPe%C3%B1arolxBotafogo2024.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_256156",
@@ -82972,13 +83282,14 @@
     "nationality": "Scotland",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/242/271/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_RB_Salzburg_gegen_SK_Austria_Klagenfurt_%282023-05-28%29_32_%28Andy_Irving%29.jpg",
     "pace": 54,
     "shooting": 71,
     "passing": 71,
     "dribbling": 71,
     "defending": 63,
-    "physical": 71
+    "physical": 71,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_233851",
@@ -86658,13 +86969,14 @@
     "nationality": "England",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/186/905/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ashley_Barnes_Brighton_vs_Spurs.jpg",
     "pace": 41,
     "shooting": 71,
     "passing": 68,
     "dribbling": 69,
     "defending": 46,
-    "physical": 78
+    "physical": 78,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_259101",
@@ -87998,13 +88310,14 @@
     "nationality": "England",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/190/456/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Nathaniel_Clyne_2018_%28cropped%29.jpg",
     "pace": 60,
     "shooting": 60,
     "passing": 65,
     "dribbling": 69,
     "defending": 72,
-    "physical": 56
+    "physical": 56,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_273459",
@@ -89811,13 +90124,14 @@
     "nationality": "England",
     "club": "West Ham United",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/274/102/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Oliver_Scarles_04032026_%281%29.jpg",
     "pace": 72,
     "shooting": 48,
     "passing": 64,
     "dribbling": 67,
     "defending": 67,
-    "physical": 64
+    "physical": 64,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_263397",
@@ -90173,14 +90487,15 @@
     "nationality": "France",
     "club": "Sunderland",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/257/270/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Lens_-_PSG_%2810-09-2020%29_28_%28cropped%29.jpg",
     "pace": 79,
     "shooting": 49,
     "passing": 63,
     "dribbling": 71,
     "defending": 66,
     "physical": 62,
-    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+    "photoLegalOverride": false
   },
   {
     "id": "fc_239875",
@@ -91319,13 +91634,15 @@
     "nationality": "Peru",
     "club": "Burnley",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/262/794/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Oliver_Sonne_26042025_%287%29.jpg",
     "pace": 77,
     "shooting": 48,
     "passing": 63,
     "dribbling": 67,
     "defending": 63,
-    "physical": 66
+    "physical": 66,
+    "photoLegalOverride": false,
+    "clubLogoUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
   },
   {
     "id": "fc_261011",
@@ -94926,7 +95243,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/259/422/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_259422.jpg",
     "pace": 83,
     "shooting": 63,
     "passing": 63,
@@ -96320,13 +96637,14 @@
     "nationality": "France",
     "club": "Crystal Palace",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/074/133/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Canvot_asse_tfc_2425.png",
     "pace": 70,
     "shooting": 32,
     "passing": 56,
     "dribbling": 57,
     "defending": 69,
-    "physical": 73
+    "physical": 73,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_246873",
@@ -96503,13 +96821,14 @@
     "nationality": "Serbia",
     "club": "AFC Bournemouth",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/081/319/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Veljko_Milosavljevi%C4%87_with_AFC_Bournemouth.png",
     "pace": 53,
     "shooting": 39,
     "passing": 54,
     "dribbling": 55,
     "defending": 69,
-    "physical": 75
+    "physical": 75,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_277519",
@@ -97320,7 +97639,7 @@
     "nationality": "Spain",
     "club": "Athletic Club",
     "league": "La Liga",
-    "photoUrl": "https://cdn.sofifa.net/players/278/408/26_120.png",
+    "photoUrl": "/assets/players/photos/wikimedia/fc_278408.jpg",
     "pace": 58,
     "shooting": 40,
     "passing": 46,
@@ -98656,13 +98975,14 @@
     "nationality": "England",
     "club": "Manchester City",
     "league": "Premier League",
-    "photoUrl": "https://cdn.sofifa.net/players/204/246/26_120.png",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Marcus_Bettinelli_12-04-2014_1.jpg",
     "pace": 50,
     "shooting": 50,
     "passing": 50,
     "dribbling": 50,
     "defending": 50,
-    "physical": 50
+    "physical": 50,
+    "photoLegalOverride": false
   },
   {
     "id": "fc_227560",
