@@ -58,6 +58,8 @@ const ADMIN_DATA_DIR = path.resolve(process.cwd(), 'admin-data');
 interface ClubMeta {
   league?: string;
   logoUrl?: string;
+  primaryColor?: string;
+  secondaryColor?: string;
 }
 
 /**
@@ -132,10 +134,19 @@ function loadClubMetaMap(): Record<string, ClubMeta> {
         name?: string;
         league?: string;
         logoUrl?: string;
+        primaryColor?: string;
+        secondaryColor?: string;
       }[];
       const map: Record<string, ClubMeta> = {};
       for (const c of clubs) {
-        if (c.name) map[c.name] = { league: c.league, logoUrl: c.logoUrl };
+        if (c.name) {
+          map[c.name] = {
+            league: c.league,
+            logoUrl: c.logoUrl,
+            primaryColor: c.primaryColor,
+            secondaryColor: c.secondaryColor,
+          };
+        }
       }
       return map;
     } catch {
@@ -259,6 +270,10 @@ function loadPlayerPool(): PlayerCardDefinition[] {
       // An admin-set club logo wins; otherwise keep whatever the player had
       // (often empty → client falls back to its name-based lookup).
       clubLogoUrl: meta?.logoUrl ?? p.clubLogoUrl,
+      // Kit colors for the jersey-back player card — client falls back to a
+      // deterministic per-club-name color when these are unset.
+      primaryColor: meta?.primaryColor,
+      secondaryColor: meta?.secondaryColor,
     };
   });
   _enrichedPoolCache = { raw: players, clubMeta, result };
@@ -793,6 +808,8 @@ export class GameService implements OnModuleDestroy {
             nationality:      card.nationality ?? null,
             club:             card.club ?? null,
             clubLogoUrl:      card.clubLogoUrl ?? null,
+            primaryColor:     card.primaryColor ?? null,
+            secondaryColor:   card.secondaryColor ?? null,
             altPositions:     card.altPositions ?? [],
             naturalPositions: card.naturalPositions ?? [card.basePositionType, ...(card.altPositions ?? [])],
             imageUrl:         card.imageUrl ?? null,
@@ -814,6 +831,8 @@ export class GameService implements OnModuleDestroy {
         nationality:      card.nationality ?? null,
         club:             card.club ?? null,
         clubLogoUrl:      card.clubLogoUrl ?? null,
+        primaryColor:     card.primaryColor ?? null,
+        secondaryColor:   card.secondaryColor ?? null,
         altPositions:     card.altPositions ?? [],
         naturalPositions: card.naturalPositions ?? [card.basePositionType, ...(card.altPositions ?? [])],
         imageUrl:         card.imageUrl ?? null,
@@ -2493,6 +2512,8 @@ export class GameService implements OnModuleDestroy {
       benchedImageUrl: current?.imageUrl ?? null,
       benchedClub: current?.club ?? null,
       benchedClubLogoUrl: current?.clubLogoUrl ?? null,
+      benchedPrimaryColor: current?.primaryColor ?? null,
+      benchedSecondaryColor: current?.secondaryColor ?? null,
       benchedNationality: current?.nationality ?? null,
       benchedPace: current?.pace ?? null,
       benchedShooting: current?.shooting ?? null,
@@ -2549,6 +2570,8 @@ export class GameService implements OnModuleDestroy {
       benchedImageUrl:       current?.imageUrl         ?? null,
       benchedClub:           current?.club             ?? null,
       benchedClubLogoUrl:    current?.clubLogoUrl      ?? null,
+      benchedPrimaryColor:   current?.primaryColor     ?? null,
+      benchedSecondaryColor: current?.secondaryColor   ?? null,
       benchedNationality:    current?.nationality      ?? null,
       benchedPace:           current?.pace             ?? null,
       benchedShooting:       current?.shooting         ?? null,
@@ -2704,6 +2727,8 @@ export class GameService implements OnModuleDestroy {
             imageUrl:         card.imageUrl         ?? null,
             club:             card.club,
             clubLogoUrl:      card.clubLogoUrl       ?? null,
+            primaryColor:     card.primaryColor      ?? null,
+            secondaryColor:   card.secondaryColor    ?? null,
             nationality:      card.nationality       ?? null,
             altPositions:     card.altPositions,
             naturalPositions: card.naturalPositions,
@@ -4408,6 +4433,8 @@ export class GameService implements OnModuleDestroy {
       naturalPositions:  [...player.positions],
       imageUrl:          player.photoUrl ?? undefined,
       clubLogoUrl:       player.clubLogoUrl,
+      primaryColor:      player.primaryColor,
+      secondaryColor:    player.secondaryColor,
       league:            (player as any).league ?? CLUB_LEAGUE[player.club] ?? undefined,
       chemistryBonuses,
     };

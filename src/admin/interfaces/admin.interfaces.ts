@@ -45,6 +45,12 @@ export interface AdminClub {
   name: string;
   league: string;
   logoUrl?: string;
+  /** Kit colors (hex, e.g. "#0B1E3D") — drive the jersey-back player card
+   *  design (see JerseyBack client widget). Optional: clubs without a set
+   *  color fall back to a deterministic per-name color client-side, same
+   *  pattern as the player-photo initials avatar it replaced. */
+  primaryColor?: string;
+  secondaryColor?: string;
 }
 
 export interface AdminNation {

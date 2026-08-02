@@ -30,6 +30,14 @@ export class CreateClubDto {
   @IsString()
   @MaxLength(500)
   logoUrl?: string;
+
+  @IsOptional()
+  @Matches(HEX_COLOR)
+  primaryColor?: string;
+
+  @IsOptional()
+  @Matches(HEX_COLOR)
+  secondaryColor?: string;
 }
 
 /** PUT /api/admin/clubs/:slug */
@@ -50,6 +58,14 @@ export class UpdateClubDto {
   @IsString()
   @MaxLength(500)
   logoUrl?: string;
+
+  @IsOptional()
+  @Matches(HEX_COLOR)
+  primaryColor?: string;
+
+  @IsOptional()
+  @Matches(HEX_COLOR)
+  secondaryColor?: string;
 }
 
 /** POST /api/admin/nations */

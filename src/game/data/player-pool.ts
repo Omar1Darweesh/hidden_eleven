@@ -10,8 +10,14 @@ export interface PlayerCardDefinition {
   club: string;
   /** Club badge URL. Populated when real assets are available; clients fall back to name-based lookup. */
   clubLogoUrl?: string;
-  /** Player photo URL (relative path, e.g. /assets/players/photos/...). */
+  /** Player photo URL (relative path, e.g. /assets/players/photos/...). Kept
+   *  for admin/back-office data completeness — no longer displayed in-game;
+   *  see JerseyBack (client) for the jersey-based player card design. */
   photoUrl?: string;
+  /** Kit colors carried from the club, e.g. "#0B1E3D" — drive the jersey-back
+   *  player card design. */
+  primaryColor?: string;
+  secondaryColor?: string;
   /** League the player's club belongs to (carried in admin-data/players.json). */
   league?: string;
   // Real per-attribute ratings (from the dataset). When absent the server

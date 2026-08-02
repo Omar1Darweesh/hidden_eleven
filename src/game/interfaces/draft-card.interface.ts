@@ -20,10 +20,14 @@ export interface DraftCard {
    *  which slot the card currently occupies. Used to validate placements when
    *  freely rearranging the lineup. */
   naturalPositions: BasePositionType[];
-  /** Player photo URL. Null until real assets are available. */
+  /** Player photo URL. No longer displayed in-game (see JerseyBack client
+   *  widget) — kept for admin/back-office data completeness only. */
   imageUrl?: string;
   /** Club badge/logo URL. Populated when real assets are available. */
   clubLogoUrl?: string;
+  /** Club kit colors (hex), drive the jersey-back player card design. */
+  primaryColor?: string;
+  secondaryColor?: string;
   /** League the club belongs to — used for chemistry bonus. */
   league?: string;
   /** 3 chemistry bonus slots assigned at session creation, deterministic per player+room. */
