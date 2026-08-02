@@ -71,6 +71,12 @@ export class CreatePlayerDto {
   clubLogoUrl?: string;
 
   @IsOptional()
+  @IsInt()
+  @Min(1)
+  @Max(99)
+  kitNumber?: number;
+
+  @IsOptional()
   @IsString()
   @MaxLength(80)
   league?: string;
@@ -157,6 +163,12 @@ export class UpdatePlayerDto {
   @IsString()
   @MaxLength(500)
   clubLogoUrl?: string;
+
+  @IsOptional()
+  @IsInt()
+  @Min(1)
+  @Max(99)
+  kitNumber?: number;
 
   @IsOptional()
   @IsString()

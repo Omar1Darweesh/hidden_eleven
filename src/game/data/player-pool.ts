@@ -18,6 +18,9 @@ export interface PlayerCardDefinition {
    *  player card design. */
   primaryColor?: string;
   secondaryColor?: string;
+  /** Shirt number shown on the jersey-back card. Unset players get a
+   *  generated 1-99 number instead (deterministic per player, client-side). */
+  kitNumber?: number;
   /** League the player's club belongs to (carried in admin-data/players.json). */
   league?: string;
   // Real per-attribute ratings (from the dataset). When absent the server

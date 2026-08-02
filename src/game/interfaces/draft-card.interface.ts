@@ -28,6 +28,8 @@ export interface DraftCard {
   /** Club kit colors (hex), drive the jersey-back player card design. */
   primaryColor?: string;
   secondaryColor?: string;
+  /** Shirt number on the jersey-back card. Unset → client generates one. */
+  kitNumber?: number;
   /** League the club belongs to — used for chemistry bonus. */
   league?: string;
   /** 3 chemistry bonus slots assigned at session creation, deterministic per player+room. */

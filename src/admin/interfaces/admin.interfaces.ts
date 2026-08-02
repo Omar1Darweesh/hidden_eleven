@@ -23,6 +23,10 @@ export interface AdminPlayer {
    */
   photoLegalOverride?: boolean;
   clubLogoUrl?: string;
+  /** Shirt number shown on the jersey-back player card. Unset players get a
+   *  generated 1-99 number instead (deterministic per player, see the
+   *  client's squadNumberFor), so this is optional polish, not required. */
+  kitNumber?: number;
   league?: string;
   pace?: number;
   shooting?: number;
