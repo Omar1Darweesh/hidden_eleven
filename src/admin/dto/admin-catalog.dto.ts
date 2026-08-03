@@ -2,6 +2,7 @@ import {
   ArrayMinSize,
   IsArray,
   IsBoolean,
+  IsIn,
   IsInt,
   IsNotEmpty,
   IsOptional,
@@ -13,6 +14,7 @@ import {
 } from 'class-validator';
 
 const HEX_COLOR = /^#[0-9A-Fa-f]{6}$/;
+const KIT_PATTERNS = ['solid', 'stripes', 'hoops', 'halves', 'sleeves'];
 
 /** POST /api/admin/clubs */
 export class CreateClubDto {
@@ -38,6 +40,10 @@ export class CreateClubDto {
   @IsOptional()
   @Matches(HEX_COLOR)
   secondaryColor?: string;
+
+  @IsOptional()
+  @IsIn(KIT_PATTERNS)
+  kitPattern?: string;
 }
 
 /** PUT /api/admin/clubs/:slug */
@@ -66,6 +72,10 @@ export class UpdateClubDto {
   @IsOptional()
   @Matches(HEX_COLOR)
   secondaryColor?: string;
+
+  @IsOptional()
+  @IsIn(KIT_PATTERNS)
+  kitPattern?: string;
 }
 
 /** POST /api/admin/nations */

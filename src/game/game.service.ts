@@ -60,6 +60,7 @@ interface ClubMeta {
   logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
+  kitPattern?: string;
 }
 
 /**
@@ -136,6 +137,7 @@ function loadClubMetaMap(): Record<string, ClubMeta> {
         logoUrl?: string;
         primaryColor?: string;
         secondaryColor?: string;
+        kitPattern?: string;
       }[];
       const map: Record<string, ClubMeta> = {};
       for (const c of clubs) {
@@ -145,6 +147,7 @@ function loadClubMetaMap(): Record<string, ClubMeta> {
             logoUrl: c.logoUrl,
             primaryColor: c.primaryColor,
             secondaryColor: c.secondaryColor,
+            kitPattern: c.kitPattern,
           };
         }
       }
@@ -274,6 +277,7 @@ function loadPlayerPool(): PlayerCardDefinition[] {
       // deterministic per-club-name color when these are unset.
       primaryColor: meta?.primaryColor,
       secondaryColor: meta?.secondaryColor,
+      kitPattern: meta?.kitPattern,
     };
   });
   _enrichedPoolCache = { raw: players, clubMeta, result };
@@ -810,6 +814,7 @@ export class GameService implements OnModuleDestroy {
             clubLogoUrl:      card.clubLogoUrl ?? null,
             primaryColor:     card.primaryColor ?? null,
             secondaryColor:   card.secondaryColor ?? null,
+            kitPattern:       card.kitPattern ?? null,
             kitNumber:        card.kitNumber ?? null,
             altPositions:     card.altPositions ?? [],
             naturalPositions: card.naturalPositions ?? [card.basePositionType, ...(card.altPositions ?? [])],
@@ -834,6 +839,7 @@ export class GameService implements OnModuleDestroy {
         clubLogoUrl:      card.clubLogoUrl ?? null,
         primaryColor:     card.primaryColor ?? null,
         secondaryColor:   card.secondaryColor ?? null,
+        kitPattern:       card.kitPattern ?? null,
         kitNumber:        card.kitNumber ?? null,
         altPositions:     card.altPositions ?? [],
         naturalPositions: card.naturalPositions ?? [card.basePositionType, ...(card.altPositions ?? [])],
@@ -2516,6 +2522,7 @@ export class GameService implements OnModuleDestroy {
       benchedClubLogoUrl: current?.clubLogoUrl ?? null,
       benchedPrimaryColor: current?.primaryColor ?? null,
       benchedSecondaryColor: current?.secondaryColor ?? null,
+      benchedKitPattern: current?.kitPattern ?? null,
       benchedKitNumber: current?.kitNumber ?? null,
       benchedNationality: current?.nationality ?? null,
       benchedPace: current?.pace ?? null,
@@ -2575,6 +2582,7 @@ export class GameService implements OnModuleDestroy {
       benchedClubLogoUrl:    current?.clubLogoUrl      ?? null,
       benchedPrimaryColor:   current?.primaryColor     ?? null,
       benchedSecondaryColor: current?.secondaryColor   ?? null,
+      benchedKitPattern:     current?.kitPattern       ?? null,
       benchedKitNumber:      current?.kitNumber        ?? null,
       benchedNationality:    current?.nationality      ?? null,
       benchedPace:           current?.pace             ?? null,
@@ -2733,6 +2741,7 @@ export class GameService implements OnModuleDestroy {
             clubLogoUrl:      card.clubLogoUrl       ?? null,
             primaryColor:     card.primaryColor      ?? null,
             secondaryColor:   card.secondaryColor    ?? null,
+            kitPattern:       card.kitPattern        ?? null,
             kitNumber:        card.kitNumber         ?? null,
             nationality:      card.nationality       ?? null,
             altPositions:     card.altPositions,
@@ -4440,6 +4449,7 @@ export class GameService implements OnModuleDestroy {
       clubLogoUrl:       player.clubLogoUrl,
       primaryColor:      player.primaryColor,
       secondaryColor:    player.secondaryColor,
+      kitPattern:        player.kitPattern,
       kitNumber:         player.kitNumber,
       league:            (player as any).league ?? CLUB_LEAGUE[player.club] ?? undefined,
       chemistryBonuses,

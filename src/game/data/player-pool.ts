@@ -18,6 +18,8 @@ export interface PlayerCardDefinition {
    *  player card design. */
   primaryColor?: string;
   secondaryColor?: string;
+  /** Kit pattern — one of the client's KitPattern enum names. */
+  kitPattern?: string;
   /** Shirt number shown on the jersey-back card. Unset players get a
    *  generated 1-99 number instead (deterministic per player, client-side). */
   kitNumber?: number;
