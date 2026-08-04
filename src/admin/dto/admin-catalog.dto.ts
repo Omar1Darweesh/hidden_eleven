@@ -14,7 +14,22 @@ import {
 } from 'class-validator';
 
 const HEX_COLOR = /^#[0-9A-Fa-f]{6}$/;
-const KIT_PATTERNS = ['solid', 'stripes', 'hoops', 'halves', 'sleeves'];
+// Must stay in sync with the client's KitPattern enum names (jersey_back.dart).
+const KIT_PATTERNS = [
+  'solid',
+  'tonal',
+  'stripes',
+  'pinstripes',
+  'hoops',
+  'halves',
+  'quarters',
+  'sash',
+  'centerBand',
+  'chestBand',
+  'checkered',
+  'sleeves',
+  'gradient',
+];
 
 /** POST /api/admin/clubs */
 export class CreateClubDto {
