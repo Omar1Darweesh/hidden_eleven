@@ -28,6 +28,7 @@ export interface DraftCard {
   /** Club kit colors (hex), drive the jersey-back player card design. */
   primaryColor?: string;
   secondaryColor?: string;
+  tertiaryColor?: string;
   kitPattern?: string;
   /** Shirt number on the jersey-back card. Unset → client generates one. */
   kitNumber?: number;

@@ -57,6 +57,10 @@ export class CreateClubDto {
   secondaryColor?: string;
 
   @IsOptional()
+  @Matches(HEX_COLOR)
+  tertiaryColor?: string;
+
+  @IsOptional()
   @IsIn(KIT_PATTERNS)
   kitPattern?: string;
 }
@@ -87,6 +91,10 @@ export class UpdateClubDto {
   @IsOptional()
   @Matches(HEX_COLOR)
   secondaryColor?: string;
+
+  @IsOptional()
+  @Matches(HEX_COLOR)
+  tertiaryColor?: string;
 
   @IsOptional()
   @IsIn(KIT_PATTERNS)

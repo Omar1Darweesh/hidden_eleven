@@ -55,6 +55,7 @@ export interface AdminClub {
    *  pattern as the player-photo initials avatar it replaced. */
   primaryColor?: string;
   secondaryColor?: string;
+  tertiaryColor?: string;
   /** Kit pattern — one of the client's KitPattern enum names (e.g. "stripes",
    *  "hoops"). Optional: unset clubs get one assigned deterministically by
    *  name client-side, same as the colors above. */
