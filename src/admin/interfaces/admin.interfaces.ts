@@ -60,6 +60,10 @@ export interface AdminClub {
    *  "hoops"). Optional: unset clubs get one assigned deterministically by
    *  name client-side, same as the colors above. */
   kitPattern?: string;
+  /** When false, players from this club are excluded from every draft pool
+   *  (games, sub spins, AI lineups) — same "allowed to play with or not"
+   *  gate as AdminLeague.active. Absent/undefined counts as true. */
+  active?: boolean;
 }
 
 export interface AdminNation {

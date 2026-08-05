@@ -62,6 +62,7 @@ interface ClubMeta {
   secondaryColor?: string;
   tertiaryColor?: string;
   kitPattern?: string;
+  active?: boolean;
 }
 
 /**
@@ -140,6 +141,7 @@ function loadClubMetaMap(): Record<string, ClubMeta> {
         secondaryColor?: string;
         tertiaryColor?: string;
         kitPattern?: string;
+        active?: boolean;
       }[];
       const map: Record<string, ClubMeta> = {};
       for (const c of clubs) {
@@ -151,6 +153,7 @@ function loadClubMetaMap(): Record<string, ClubMeta> {
             secondaryColor: c.secondaryColor,
             tertiaryColor: c.tertiaryColor,
             kitPattern: c.kitPattern,
+            active: c.active,
           };
         }
       }
@@ -268,22 +271,29 @@ function loadPlayerPool(): PlayerCardDefinition[] {
     return _enrichedPoolCache.result;
   }
 
-  const result = players.map((p) => {
-    const meta = clubMeta[p.club];
-    return {
-      ...p,
-      league: meta?.league ?? (p as any).league ?? CLUB_LEAGUE[p.club],
-      // An admin-set club logo wins; otherwise keep whatever the player had
-      // (often empty → client falls back to its name-based lookup).
-      clubLogoUrl: meta?.logoUrl ?? p.clubLogoUrl,
-      // Kit colors for the jersey-back player card — client falls back to a
-      // deterministic per-club-name color when these are unset.
-      primaryColor: meta?.primaryColor,
-      secondaryColor: meta?.secondaryColor,
-      tertiaryColor: meta?.tertiaryColor,
-      kitPattern: meta?.kitPattern,
-    };
-  });
+  const result = players
+    // A club toggled off in the admin ("allowed to play with or not", the
+    // same gate as AdminLeague.active) drops every one of its players from
+    // every draft pool, sub spin, and AI lineup — not just hidden in the UI.
+    // Undefined/missing `active` (every club that predates this field)
+    // counts as active, same default as AdminLeague.active.
+    .filter((p) => clubMeta[p.club]?.active !== false)
+    .map((p) => {
+      const meta = clubMeta[p.club];
+      return {
+        ...p,
+        league: meta?.league ?? (p as any).league ?? CLUB_LEAGUE[p.club],
+        // An admin-set club logo wins; otherwise keep whatever the player had
+        // (often empty → client falls back to its name-based lookup).
+        clubLogoUrl: meta?.logoUrl ?? p.clubLogoUrl,
+        // Kit colors for the jersey-back player card — client falls back to a
+        // deterministic per-club-name color when these are unset.
+        primaryColor: meta?.primaryColor,
+        secondaryColor: meta?.secondaryColor,
+        tertiaryColor: meta?.tertiaryColor,
+        kitPattern: meta?.kitPattern,
+      };
+    });
   _enrichedPoolCache = { raw: players, clubMeta, result };
   return result;
 }
