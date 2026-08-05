@@ -13,6 +13,15 @@ export const DEF_POSITIONS = new Set<string>(['GK', 'LB', 'CB', 'RB']);
 export const MID_POSITIONS = new Set<string>(['CDM', 'CM', 'CAM', 'LM', 'RM']);
 export const ATK_POSITIONS = new Set<string>(['LW', 'RW', 'CF', 'ST']);
 
+/**
+ * Clubs whose cards always carry full chemistry, the same "Icons/Heroes
+ * never lose chemistry" mechanic real FIFA/FC uses — every one of their own
+ * 3 tiered challenges (see computeCardChemTotal) counts as satisfied no
+ * matter what else is on the pitch. Mirrored client-side in
+ * chemistry_evaluator.dart; keep both lists in sync.
+ */
+export const CHEMISTRY_EXEMPT_CLUBS = new Set<string>(['Icons', 'Heroes']);
+
 // ── Club → League mapping ─────────────────────────────────────────────────────
 
 export const CLUB_LEAGUE: Record<string, string> = {
@@ -335,8 +344,9 @@ export function computeCardChemTotal(
   for (const slot of slots) {
     if (!slot.card) continue;
     const bonuses = bonusCache.get(slot.card.cardId) ?? [];
+    const exempt = CHEMISTRY_EXEMPT_CLUBS.has(slot.card.club);
     for (const b of bonuses) {
-      if (evaluateCardBonus(b, slots, thresholds)) total += b.reward ?? 0;
+      if (exempt || evaluateCardBonus(b, slots, thresholds)) total += b.reward ?? 0;
     }
   }
   return total;
@@ -470,9 +480,10 @@ function computeCardChemWithCaptain(
   for (const slot of slots) {
     if (!slot.card) continue;
     const bonuses = bonusCache.get(slot.card.cardId) ?? [];
+    const exempt = CHEMISTRY_EXEMPT_CLUBS.has(slot.card.club);
     let earned = 0;
     for (const b of bonuses) {
-      if (evaluateCardBonus(b, slots, thresholds)) earned += b.reward ?? 0;
+      if (exempt || evaluateCardBonus(b, slots, thresholds)) earned += b.reward ?? 0;
     }
     total += earned;
     if (captainSlotIndex != null && slot.index === captainSlotIndex) {
