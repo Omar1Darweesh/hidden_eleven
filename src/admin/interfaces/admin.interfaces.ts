@@ -64,6 +64,10 @@ export interface AdminClub {
    *  (games, sub spins, AI lineups) — same "allowed to play with or not"
    *  gate as AdminLeague.active. Absent/undefined counts as true. */
   active?: boolean;
+  /** Special card frame overriding the normal rating-tier band — 'icon'
+   *  (gold/brown) or 'hero' (blue/purple), matching real FIFA/FC's special
+   *  card treatments. Unset/unrecognized = normal rating-tier frame. */
+  cardStyle?: string;
 }
 
 export interface AdminNation {

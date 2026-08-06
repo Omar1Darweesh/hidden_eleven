@@ -21,6 +21,9 @@ export interface PlayerCardDefinition {
   tertiaryColor?: string;
   /** Kit pattern — one of the client's KitPattern enum names. */
   kitPattern?: string;
+  /** Special card frame ('icon' | 'hero' | undefined = normal rating-tier
+   *  frame), carried from the club. See CardTier.forCard on the client. */
+  cardStyle?: string;
   /** Shirt number shown on the jersey-back card. Unset players get a
    *  generated 1-99 number instead (deterministic per player, client-side). */
   kitNumber?: number;

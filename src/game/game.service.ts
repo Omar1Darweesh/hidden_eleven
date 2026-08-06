@@ -63,6 +63,9 @@ interface ClubMeta {
   tertiaryColor?: string;
   kitPattern?: string;
   active?: boolean;
+  /** Special card frame ('icon' | 'hero' | undefined = normal rating-tier
+   *  frame). See CardTier.forCard on the client. */
+  cardStyle?: string;
 }
 
 /**
@@ -142,6 +145,7 @@ function loadClubMetaMap(): Record<string, ClubMeta> {
         tertiaryColor?: string;
         kitPattern?: string;
         active?: boolean;
+        cardStyle?: string;
       }[];
       const map: Record<string, ClubMeta> = {};
       for (const c of clubs) {
@@ -152,6 +156,7 @@ function loadClubMetaMap(): Record<string, ClubMeta> {
             primaryColor: c.primaryColor,
             secondaryColor: c.secondaryColor,
             tertiaryColor: c.tertiaryColor,
+            cardStyle: c.cardStyle,
             kitPattern: c.kitPattern,
             active: c.active,
           };
@@ -292,6 +297,9 @@ function loadPlayerPool(): PlayerCardDefinition[] {
         secondaryColor: meta?.secondaryColor,
         tertiaryColor: meta?.tertiaryColor,
         kitPattern: meta?.kitPattern,
+        // Special card frame ('icon' | 'hero' | undefined) — client falls
+        // back to the normal rating-tier frame when unset.
+        cardStyle: meta?.cardStyle,
       };
     });
   _enrichedPoolCache = { raw: players, clubMeta, result };
@@ -830,6 +838,7 @@ export class GameService implements OnModuleDestroy {
             secondaryColor:   card.secondaryColor ?? null,
             tertiaryColor:    card.tertiaryColor ?? null,
             kitPattern:       card.kitPattern ?? null,
+            cardStyle:        card.cardStyle ?? null,
             kitNumber:        card.kitNumber ?? null,
             altPositions:     card.altPositions ?? [],
             naturalPositions: card.naturalPositions ?? [card.basePositionType, ...(card.altPositions ?? [])],
@@ -856,6 +865,7 @@ export class GameService implements OnModuleDestroy {
         secondaryColor:   card.secondaryColor ?? null,
         tertiaryColor:    card.tertiaryColor ?? null,
         kitPattern:       card.kitPattern ?? null,
+        cardStyle:        card.cardStyle ?? null,
         kitNumber:        card.kitNumber ?? null,
         altPositions:     card.altPositions ?? [],
         naturalPositions: card.naturalPositions ?? [card.basePositionType, ...(card.altPositions ?? [])],
@@ -2540,6 +2550,7 @@ export class GameService implements OnModuleDestroy {
       benchedSecondaryColor: current?.secondaryColor ?? null,
       benchedTertiaryColor: current?.tertiaryColor ?? null,
       benchedKitPattern: current?.kitPattern ?? null,
+      benchedCardStyle: current?.cardStyle ?? null,
       benchedKitNumber: current?.kitNumber ?? null,
       benchedNationality: current?.nationality ?? null,
       benchedPace: current?.pace ?? null,
@@ -2601,6 +2612,7 @@ export class GameService implements OnModuleDestroy {
       benchedSecondaryColor: current?.secondaryColor   ?? null,
       benchedTertiaryColor:  current?.tertiaryColor    ?? null,
       benchedKitPattern:     current?.kitPattern       ?? null,
+      benchedCardStyle:      current?.cardStyle        ?? null,
       benchedKitNumber:      current?.kitNumber        ?? null,
       benchedNationality:    current?.nationality      ?? null,
       benchedPace:           current?.pace             ?? null,
@@ -2761,6 +2773,7 @@ export class GameService implements OnModuleDestroy {
             secondaryColor:   card.secondaryColor    ?? null,
             tertiaryColor:    card.tertiaryColor     ?? null,
             kitPattern:       card.kitPattern        ?? null,
+            cardStyle:        card.cardStyle         ?? null,
             kitNumber:        card.kitNumber         ?? null,
             nationality:      card.nationality       ?? null,
             altPositions:     card.altPositions,
@@ -4470,6 +4483,7 @@ export class GameService implements OnModuleDestroy {
       secondaryColor:    player.secondaryColor,
       tertiaryColor:     player.tertiaryColor,
       kitPattern:        player.kitPattern,
+      cardStyle:         player.cardStyle,
       kitNumber:         player.kitNumber,
       league:            (player as any).league ?? CLUB_LEAGUE[player.club] ?? undefined,
       chemistryBonuses,

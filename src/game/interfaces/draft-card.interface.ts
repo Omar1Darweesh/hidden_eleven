@@ -30,6 +30,9 @@ export interface DraftCard {
   secondaryColor?: string;
   tertiaryColor?: string;
   kitPattern?: string;
+  /** Special card frame ('icon' | 'hero' | undefined = normal rating-tier
+   *  frame). See CardTier.forCard on the client. */
+  cardStyle?: string;
   /** Shirt number on the jersey-back card. Unset → client generates one. */
   kitNumber?: number;
   /** League the club belongs to — used for chemistry bonus. */
