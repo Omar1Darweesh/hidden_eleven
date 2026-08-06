@@ -66,8 +66,10 @@ export interface AdminClub {
   active?: boolean;
   /** Special card frame overriding the normal rating-tier band — 'icon'
    *  (gold/brown) or 'hero' (blue/purple), matching real FIFA/FC's special
-   *  card treatments. Unset/unrecognized = normal rating-tier frame. */
-  cardStyle?: string;
+   *  card treatments. Unset/null/unrecognized = normal rating-tier frame.
+   *  `null` is a valid update payload (not just absent) — it's how the
+   *  admin clears a previously-set style back to "Auto". */
+  cardStyle?: string | null;
 }
 
 export interface AdminNation {

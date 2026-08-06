@@ -30,6 +30,8 @@ const KIT_PATTERNS = [
   'sleeves',
   'gradient',
 ];
+// Must stay in sync with CardTier's `_specialStyles` map (card_details_modal.dart).
+const CARD_STYLES = ['icon', 'hero'];
 
 /** POST /api/admin/clubs */
 export class CreateClubDto {
@@ -63,6 +65,14 @@ export class CreateClubDto {
   @IsOptional()
   @IsIn(KIT_PATTERNS)
   kitPattern?: string;
+
+  @IsOptional()
+  @IsBoolean()
+  active?: boolean;
+
+  @IsOptional()
+  @IsIn(CARD_STYLES)
+  cardStyle?: string;
 }
 
 /** PUT /api/admin/clubs/:slug */
@@ -99,6 +109,18 @@ export class UpdateClubDto {
   @IsOptional()
   @IsIn(KIT_PATTERNS)
   kitPattern?: string;
+
+  @IsOptional()
+  @IsBoolean()
+  active?: boolean;
+
+  // @IsOptional() treats both `undefined` and explicit `null` as "skip
+  // validation" (class-validator), so this also accepts the admin sending
+  // `cardStyle: null` to clear a previously-set style back to "Auto" — see
+  // clubs_tab.dart's unconditional `'cardStyle': _cardStyle.value`.
+  @IsOptional()
+  @IsIn(CARD_STYLES)
+  cardStyle?: string | null;
 }
 
 /** POST /api/admin/nations */
