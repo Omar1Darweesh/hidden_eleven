@@ -4,6 +4,7 @@ import { InjectPinoLogger, PinoLogger } from 'nestjs-pino';
 import * as fs from 'fs';
 import * as path from 'path';
 import { Room } from '../rooms/interfaces/room.interface';
+import { resolveAbilityLayers, fizzleReason, abilityTakesEffect } from './ability-resolution.js';
 import {
   GameSession,
   GamePlayer,
@@ -95,10 +96,15 @@ function loadActiveFormations(): Formation[] {
 
 /**
  * The ability types the admin left enabled (admin-data/abilities.json). Falls
- * back to all 5 originals when the file is missing or unreadable. May return an
- * empty list if the admin disabled every ability — callers then skip the draft.
+ * back to all originals when the file is missing or unreadable, and
+ * self-heals any type present in `ABILITY_ORIGINALS` but absent from an
+ * existing file — the scenario hit when `protect`/`freeze` were added to an
+ * already-deployed server. May return an empty list if the admin explicitly
+ * disabled every ability — callers then skip the draft.
+ *
+ * Exported for testing only; every real caller goes through the module.
  */
-function loadEnabledAbilityTypes(): AbilityType[] {
+export function loadEnabledAbilityTypes(): AbilityType[] {
   return getCached('abilities.json', () => {
     const file = path.join(ADMIN_DATA_DIR, 'abilities.json');
     if (!fs.existsSync(file)) return [...ABILITY_ORIGINALS];
@@ -113,6 +119,15 @@ function loadEnabledAbilityTypes(): AbilityType[] {
       // that count and let the "unique slice" branch pick the same type twice
       // (e.g. two `sub` entries → 2 players could both draw sub even though two
       // distinct abilities appear enabled). Uniqueness here guarantees it.
+      // Self-heal: a type absent from the file entirely (new ability added
+      // after this admin-data file was already written to disk — exactly
+      // what happened when `protect`/`freeze` were introduced) defaults to
+      // enabled, same as the admin panel's own getAbilities() self-heal.
+      // Without this, ABILITY_ORIGINALS gaining a new entry would never
+      // actually reach real games until an admin visited the Abilities page
+      // and saved something — dead on arrival for anyone who doesn't know
+      // that step is required.
+      const seen = new Set(raw.map((a) => a.type));
       const enabled = [
         ...new Set(
           raw
@@ -123,6 +138,7 @@ function loadEnabledAbilityTypes(): AbilityType[] {
             )
             .map((a) => a.type as AbilityType),
         ),
+        ...ABILITY_ORIGINALS.filter((t) => !seen.has(t)),
       ];
       return enabled;
     } catch {
@@ -429,6 +445,7 @@ export class GameService implements OnModuleDestroy {
         displayName: p.displayName,
         isHost: p.isHost,
         isConnected: p.isConnected,
+        isBot: p.isBot,
       }));
 
     const pitches = this.buildPitches(players.map((p) => p.id), formation);
@@ -2017,6 +2034,36 @@ export class GameService implements OnModuleDestroy {
         summary = `Yellow Card on ${this._displayName(session, payload.targetUserId)} (−20)`;
         break;
       }
+      case 'protect': {
+        // Self-targeting: there is nothing to choose. Any target supplied by a
+        // malformed client is rejected rather than silently ignored, so the
+        // payload can never imply a protection aimed at someone else.
+        if (
+          payload.targetUserId != null ||
+          payload.ownSlotIndex != null ||
+          payload.targetSlotIndex != null
+        ) {
+          return { error: 'INVALID_TARGET' };
+        }
+        summary = 'Protection — shielded from all attacks';
+        break;
+      }
+      case 'freeze': {
+        // Targets another user and disables whatever they chose. Self-freeze
+        // is rejected: it would be a pure self-own with no counterplay, and
+        // `resolveAbilityLayers` guards against it a second time in case a
+        // malformed payload ever slips through.
+        if (
+          payload.targetUserId == null ||
+          payload.targetUserId === playerId ||
+          !session.players.some((p) => p.id === payload.targetUserId)
+        ) {
+          return { error: 'INVALID_TARGET' };
+        }
+        ability.targetUserId = payload.targetUserId;
+        summary = `Freeze on ${this._displayName(session, payload.targetUserId)} — ability disabled`;
+        break;
+      }
       case 'red': {
         const rivalUid = payload.targetUserId;
         const benchGroup = asAbilityBenchGroup(payload.targetBenchGroup);
@@ -2178,11 +2225,43 @@ export class GameService implements OnModuleDestroy {
     // that fires against an already-fully-resolved phase.
     session.abilityActivationDeadlineAt = null;
 
+    // Layers 0/1 first, from the original declarations, so every board
+    // mutation below already knows who was frozen and who is protected. The
+    // same pure resolver runs again at scoring time, so the two can never
+    // disagree about what actually happened.
+    const resolution = resolveAbilityLayers(session);
+
     for (const playerId of session.baseTurnOrder) {
       const ability = session.playerAbilities[playerId];
       if (!ability || ability.status !== 'used') continue;
 
       let summary = ability.pendingSummary ?? '';
+
+      // A frozen caster does nothing at all; a hostile ability aimed at a
+      // protected user fizzles. Reported honestly rather than silently
+      // dropped — a player who spent their card needs to see why it failed.
+      const fizzle = fizzleReason(
+        playerId,
+        ability.type,
+        ability.targetUserId,
+        resolution,
+      );
+      if (fizzle !== null) {
+        const why = fizzle === 'frozen'
+          ? 'frozen by an opponent'
+          : 'blocked by Protection';
+        session.abilityActivations.push({
+          byPlayerId: playerId,
+          byName: this._displayName(session, playerId),
+          type: ability.type,
+          summary: `${summary} — ${why}`,
+          targetUserId: ability.targetUserId,
+          targetSlotIndex: ability.targetSlotIndex,
+          targetBenchGroup: ability.targetBenchGroup,
+        });
+        continue;
+      }
+
       if (ability.type === 'sub') {
         const mySlot = session.pitches[playerId]?.slots.find(
           (s) => s.index === ability.sourceSlotIndex,
@@ -2368,12 +2447,20 @@ export class GameService implements OnModuleDestroy {
     // longer applies.
     session.abilityActivationDeadlineAt = null;
     const userSubs = session.subsPhase?.userSubs ?? {};
+    // A frozen Extra Bench grants nothing — same rule as every other ability.
+    // Recomputed here (pure function of the same declarations the reveal pass
+    // already resolved) rather than trusting a flag, so this can never drift
+    // from what the reveal actually showed.
+    const abilityResolution = resolveAbilityLayers(session);
     for (const player of session.players) {
       // Players who activated the Extra Bench card get a 4th any-position sub,
       // available starting now (see _enterBenchSelectionPhase's doc comment —
       // this couldn't be known until ability_activation resolved).
       const ab = session.playerAbilities[player.id];
-      const hasExtraBench = ab?.type === 'extra_bench' && ab.status === 'used';
+      const hasExtraBench =
+        ab?.type === 'extra_bench' &&
+        ab.status === 'used' &&
+        abilityTakesEffect(player.id, ab.type, ab.targetUserId, abilityResolution);
       const existing = userSubs[player.id] ?? { isComplete: false, lineupConfirmed: false };
       const requiredGroups: SubPositionGroup[] = hasExtraBench
         ? ['att', 'mid', 'def', 'extra']

@@ -726,6 +726,42 @@ describe('GameService — ability activation state machine (Task 2.5)', () => {
     expect(finishResult.session.subsPhase!.userSubs.p1.hasExtraBench).toBe(true);
     expect(finishResult.session.subsPhase!.userSubs.p2.hasExtraBench).toBe(false);
   });
+
+  it('REGRESSION: a frozen Extra Bench grants no 4th sub slot — freeze disables every ability, this one included', () => {
+    const session = activationSession({
+      playerAbilities: {
+        p1: { type: 'extra_bench', status: 'pending' },
+        p2: { type: 'freeze', status: 'pending' },
+      },
+    });
+    inject(gameService, session);
+
+    gameService.activateAbility('ABLTY1', 'p1', {});
+    gameService.activateAbility('ABLTY1', 'p2', { targetUserId: 'p1' });
+
+    const revealResult = gameService.revealAbilityActivations('ABLTY1');
+    expect('error' in revealResult).toBe(false);
+    if ('error' in revealResult) return;
+    // The reveal itself reports the true cause, not silence.
+    expect(revealResult.session.abilityActivations[0]).toMatchObject({
+      byPlayerId: 'p1',
+      type: 'extra_bench',
+    });
+    expect(revealResult.session.abilityActivations[0].summary).toContain(
+      'frozen',
+    );
+
+    const finishResult = gameService.finishAbilityActivation('ABLTY1');
+    expect('error' in finishResult).toBe(false);
+    if ('error' in finishResult) return;
+    expect(finishResult.session.status).toBe('lineup_edit');
+    // The actual bug this guards against: hasExtraBench must be false once
+    // the caster was frozen — lineup_edit is a different phase from the
+    // reveal pass and previously granted the 4th slot regardless.
+    expect(finishResult.session.subsPhase!.userSubs.p1.hasExtraBench).toBe(
+      false,
+    );
+  });
 });
 
 /**

@@ -18,6 +18,26 @@ import { BasePositionType } from './formation.interface';
  *                  player is treated exactly as if they naturally had it — full
  *                  chemistry when fielded there, valid for swap/placement checks.
  *                  Purely additive: it grants no protection from red/yellow/etc.
+ *  - protect     : shields YOU from every hostile ability aimed at you this
+ *                  activation — yellow, red, and sub all fizzle. Self-targeting
+ *                  (no target is chosen). It blocks ALL incoming attacks, not
+ *                  one; see `resolveAbilityLayers` for why a single-charge
+ *                  shield is not workable under simultaneous activation.
+ *  - freeze      : disables another user's ability entirely — whatever they
+ *                  chose simply never happens. Freeze OUTRANKS protect: a
+ *                  protected player can still be frozen, which is what makes
+ *                  Protection counterable rather than an auto-include.
+ *
+ * ── Resolution priority ────────────────────────────────────────────────────
+ * Activation is simultaneous and hidden, so there is no turn-based priority
+ * window to lean on. Priority is therefore an explicit rule:
+ *
+ *      freeze  >  protect  >  everything else
+ *
+ * Each layer is computed from the ORIGINAL declarations, never from the
+ * mutated output of the previous layer — the only formulation without a
+ * circular dependency (protect blocking the freeze that disables it). See
+ * `resolveAbilityLayers`.
  */
 export type AbilityType =
   | 'captain'
@@ -25,7 +45,9 @@ export type AbilityType =
   | 'red'
   | 'extra_bench'
   | 'sub'
-  | 'coach';
+  | 'coach'
+  | 'protect'
+  | 'freeze';
 
 export const ABILITY_ORIGINALS: AbilityType[] = [
   'captain',
@@ -34,7 +56,18 @@ export const ABILITY_ORIGINALS: AbilityType[] = [
   'extra_bench',
   'sub',
   'coach',
+  'protect',
+  'freeze',
 ];
+
+/**
+ * Abilities that target another user with a hostile effect — the set
+ * `protect` defends against.
+ *
+ * `freeze` is deliberately NOT here: it is hostile, but it outranks protection
+ * by design.
+ */
+export const HOSTILE_ABILITIES: AbilityType[] = ['yellow', 'red', 'sub'];
 
 /**
  * Every base position a Coach card may add / target, i.e. all of

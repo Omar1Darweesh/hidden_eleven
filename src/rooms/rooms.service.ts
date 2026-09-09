@@ -209,6 +209,102 @@ export class RoomsService {
     return { room, playerId };
   }
 
+  // ── Bots (solo mode) ──────────────────────────────────────────────────────
+
+  /**
+   * Seats `count` AI opponents in a room. They are ordinary [Player] records
+   * apart from `isBot` and having no socket, so the draft engine, turn order,
+   * scoring and tournament seeding all treat them as real entrants with no
+   * special-casing — see `Player.isBot`.
+   *
+   * Marked `isConnected: true` permanently: a bot has no socket that could
+   * drop, and the turn-order/disconnect-sweep logic reads that flag to decide
+   * who is still playing.
+   */
+  addBots(roomCode: string, count: number): { room: Room } | { error: string } {
+    const room = this.rooms.get(roomCode.toUpperCase());
+    if (!room) return { error: 'ROOM_NOT_FOUND' };
+    if (room.isStarted) return { error: 'ROOM_STARTED' };
+    if (count < 1) return { error: 'INVALID_BOT_COUNT' };
+    if (room.players.length + count > MAX_PLAYERS) {
+      return { error: 'ROOM_FULL' };
+    }
+
+    const taken = new Set(
+      room.players.map((p) => p.displayName.toLowerCase()),
+    );
+    for (let i = 0; i < count; i++) {
+      const displayName = this._nextBotName(taken);
+      taken.add(displayName.toLowerCase());
+      const bot: Player = {
+        id: uuidv4(),
+        displayName,
+        isHost: false,
+        isConnected: true,
+        socketId: null,
+        isBot: true,
+      };
+      room.players.push(bot);
+      this.playerRoomIndex.set(bot.id, room.code);
+    }
+    room.lastActivityAt = Date.now();
+    return { room };
+  }
+
+  /**
+   * Host-initiated version of `addBots`, callable from inside an already-
+   * open lobby (not just at creation time) — this is what lets a room with
+   * real players ALSO seat bots, e.g. to fill seats nobody's joined yet.
+   * Resolves the room/host from the caller's own socket, mirroring
+   * `kickPlayer`'s and `transferHost`'s host-check pattern, since (unlike
+   * `addBots`) a caller here isn't inherently the room's creator.
+   */
+  addBotsFromLobby(
+    socketId: string,
+    count: number,
+  ): { room: Room; roomCode: string } | { error: string } {
+    const entry = this.socketIndex.get(socketId);
+    if (!entry) return { error: 'NOT_IN_ROOM' };
+
+    const { roomCode, playerId } = entry;
+    const room = this.rooms.get(roomCode);
+    if (!room) return { error: 'ROOM_NOT_FOUND' };
+
+    const requester = room.players.find((p) => p.id === playerId);
+    if (!requester?.isHost) return { error: 'NOT_HOST' };
+
+    const result = this.addBots(roomCode, count);
+    if ('error' in result) return result;
+    return { room: result.room, roomCode };
+  }
+
+  /** True when this room has at least one AI opponent seated. */
+  hasBots(roomCode: string): boolean {
+    const room = this.rooms.get(roomCode.toUpperCase());
+    return !!room?.players.some((p) => p.isBot);
+  }
+
+  private _nextBotName(taken: Set<string>): string {
+    const pool = [
+      'AI Rossi',
+      'AI Dupont',
+      'AI García',
+      'AI Silva',
+      'AI Müller',
+      'AI Novak',
+      'AI Haaland',
+      'AI Costa',
+      'AI Okafor',
+    ];
+    const free = pool.find((n) => !taken.has(n.toLowerCase()));
+    if (free) return free;
+    // Pool exhausted (only reachable near MAX_PLAYERS) — fall back to a
+    // numbered name, still guaranteeing uniqueness within the room.
+    let n = 1;
+    while (taken.has(`ai manager ${n}`)) n++;
+    return `AI Manager ${n}`;
+  }
+
   // ── Join ──────────────────────────────────────────────────────────────────
 
   joinRoom(

@@ -4,6 +4,7 @@ import { ScoreBreakdown, ScoreBreakdownLine } from './interfaces/game-result.int
 import { ChemistryBonus, POSITION_GROUPS } from './data/league-bonus-pools.js';
 import { UserChemistryChallenge } from './data/user-challenge-pools.js';
 import { ScoringConfigValues, DEFAULT_SCORING_CONFIG_V1 } from './scoring-config.js';
+import { resolveAbilityLayers, abilityTakesEffect } from './ability-resolution.js';
 
 type CardChemThresholds = ScoringConfigValues['cardChemistry']['thresholds'];
 
@@ -430,10 +431,20 @@ function extractAbilityEffects(
   const redCardIds = new Set<string>();
   const yellowPenaltyByPlayer: Record<string, number> = {};
 
+  // Freeze/protect are resolved from the same pure function the reveal pass
+  // uses, so a cancelled ability can never take effect here after being shown
+  // as blocked on screen (or vice versa).
+  const resolution = resolveAbilityLayers(session);
+
   // Card/red effects are keyed on the CARD id (recorded at activation), so they
   // follow the player even if the lineup is rearranged in the subs phase.
   for (const [pid, ab] of Object.entries(session.playerAbilities ?? {})) {
     if (ab.status !== 'used') continue;
+    // A frozen caster contributes nothing; a hostile ability aimed at a
+    // protected user fizzles. Both checks live in `abilityTakesEffect`.
+    if (!abilityTakesEffect(pid, ab.type, ab.targetUserId, resolution)) {
+      continue;
+    }
     if (ab.type === 'captain' && ab.targetPlayerId) {
       captainCardByPlayer[pid] = ab.targetPlayerId;
     } else if (ab.type === 'red' && ab.targetPlayerId) {

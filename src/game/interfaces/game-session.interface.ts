@@ -101,6 +101,9 @@ export interface GamePlayer {
   displayName: string;
   isHost: boolean;
   isConnected: boolean;
+  /** Mirrors `Player.isBot` — carried into the session so the gateway can tell
+   *  whose turn needs driving, and so clients can badge AI opponents. */
+  isBot?: boolean;
 }
 
 export interface TurnTimeoutPolicy {

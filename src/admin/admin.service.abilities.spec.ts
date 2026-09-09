@@ -52,7 +52,7 @@ describe('AdminService — abilities self-heal and editing', () => {
 
     const abilities = service.getAbilities();
 
-    expect(abilities).toHaveLength(6); // all 6 types present, not just the 2 stored
+    expect(abilities).toHaveLength(8); // all 8 types present, not just the 2 stored
     for (const a of abilities) {
       expect(typeof a.description).toBe('string');
       expect(a.description.length).toBeGreaterThan(0);

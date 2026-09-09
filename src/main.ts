@@ -61,10 +61,43 @@ async function bootstrap() {
   // CanvasKit renderer needs WASM execution a strict script-src also disallows.
   // Getting a CSP that's both meaningful and compatible with Flutter web's
   // bootstrap would need careful, browser-verified tuning per renderer mode —
-  // a separate, focused piece of work, not a one-line helmet() call. Every
-  // other helmet protection (HSTS, X-Frame-Options, X-Content-Type-Options,
-  // Referrer-Policy, etc.) is unaffected by this and stays enabled.
-  app.use(helmet({ contentSecurityPolicy: false }));
+  // a separate, focused piece of work, not a one-line helmet() call.
+  //
+  // `frame-ancestors` is the one exception, enabled below: it governs who may
+  // embed this origin and touches nothing about script/WASM execution, so it
+  // is safe to ship while the rest of the CSP stays off. It replaces (rather
+  // than joins) helmet's blanket `X-Frame-Options: SAMEORIGIN`, because the
+  // two would otherwise disagree — GameMonetize's SDK verifier loads the game
+  // in an iframe on their domain to confirm an ad plays, and SAMEORIGIN
+  // refuses that outright. Framing stays denied to every other origin, so
+  // this is narrower than a blanket ALLOWALL, not a blanket relaxation.
+  //
+  // frameguard:false removes X-Frame-Options entirely rather than leaving a
+  // stricter header behind that modern browsers ignore (frame-ancestors wins)
+  // but which would give a confusing, contradictory answer to anything else
+  // reading the response.
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        useDefaults: false,
+        directives: {
+          // Omitting default-src is the whole point, and helmet refuses to
+          // do it silently — this symbol is its explicit opt-in. A
+          // default-src is exactly the directive the comment above describes
+          // as breaking the Flutter build (inline bootstrap script +
+          // CanvasKit WASM), so the emitted policy deliberately carries
+          // frame-ancestors and nothing else.
+          defaultSrc: helmet.contentSecurityPolicy.dangerouslyDisableDefaultSrc,
+          frameAncestors: [
+            "'self'",
+            'https://gamemonetize.com',
+            'https://*.gamemonetize.com',
+          ],
+        },
+      },
+      frameguard: false,
+    }),
+  );
   // Covers the HTTP admin API's @Body() DTOs. NOTE: this does NOT reach
   // RoomsGateway's WebSocket @MessageBody() params in practice — verified
   // live that @nestjs/platform-ws doesn't consult globally-registered pipes

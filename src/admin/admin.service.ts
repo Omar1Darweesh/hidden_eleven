@@ -216,6 +216,8 @@ function seedAbilities(): AdminAbility[] {
     { type: 'extra_bench', name: 'Extra Bench Card', enabled: true, color: '#22D3EE', description: 'An extra sub that fits ANY position.' },
     { type: 'sub',         name: 'Sub Card',         enabled: true, color: '#2ECC71', description: 'Swap a player with a rival’s same-position player.' },
     { type: 'coach',       name: 'Coach Card',       enabled: true, color: '#A55CFF', description: 'Add a new position to one of your players.' },
+    { type: 'protect',     name: 'Protection',       enabled: true, color: '#4FD1C5', description: 'Shields you from every hostile ability this round — unless someone freezes you first.' },
+    { type: 'freeze',      name: 'Freeze',           enabled: true, color: '#63B3ED', description: 'Disable a rival’s ability entirely — even Protection.' },
   ];
 }
 

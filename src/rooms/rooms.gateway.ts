@@ -21,10 +21,12 @@ import { Throttle, seconds } from '@nestjs/throttler';
 import { Server, WebSocket } from 'ws';
 import { AdminService } from '../admin/admin.service';
 import { GameService } from '../game/game.service';
+import { BotService, BotAction } from '../game/bot.service.js';
 import { RoomsService } from './rooms.service';
 import { WsSafetyInterceptor } from './ws-safety.interceptor.js';
 import { CreateRoomDto } from './dto/create-room.dto';
 import { SetRatingRangeDto } from './dto/set-rating-range.dto';
+import { AddBotDto } from './dto/add-bot.dto';
 import { JoinRoomDto } from './dto/join-room.dto';
 import { ReconnectDto } from './dto/reconnect.dto';
 import { KickPlayerDto } from './dto/kick-player.dto';
@@ -113,6 +115,18 @@ const HEARTBEAT_INTERVAL_MS =
 // turnSeconds timeout already uses — so a temporary disconnect can never
 // leave a still-in-room player with fewer drafted cards than everyone else.
 const ACTIVE_TURN_DISCONNECT_GRACE_MS = 10_000;
+
+// Solo mode. An AI opponent pauses between moves so a game against it reads as
+// a real opponent taking their turn rather than the board resolving instantly
+// — long enough to follow what happened, short enough not to feel like waiting
+// on a slow human.
+const BOT_THINK_MIN_MS = 700;
+const BOT_THINK_MAX_MS = 1_600;
+// Hard ceiling on moves per `_driveBots` invocation. A full 10-player game is
+// well under 200 bot moves, so this is unreachable in normal play and exists
+// purely so a decide/apply pair that stopped advancing the session can never
+// spin the event loop forever.
+const MAX_BOT_STEPS = 400;
 
 // Restricted to ALLOWED_ORIGINS (env, comma-separated) — see cors-origins.ts.
 // Evaluated once at module load, same as main.ts's HTTP CORS config, so both
@@ -254,6 +268,14 @@ export class RoomsGateway
     WebSocket & { id: string }
   >();
 
+  /**
+   * Room codes with a bot-driving loop currently in flight. `_driveBots` is
+   * async (it pauses between moves so the AI reads as deliberate rather than
+   * instant), and it is invoked from the same broadcast path its own moves
+   * trigger — this set is what stops that from recursing into itself.
+   */
+  private readonly _botLoops = new Set<string>();
+
   constructor(
     private readonly roomsService: RoomsService,
     private readonly gameService: GameService,
@@ -272,6 +294,10 @@ export class RoomsGateway
     private readonly logger: PinoLogger = new PinoLogger({
       pinoHttp: { level: 'silent' },
     }),
+    // Defaulted for the same reason as `logger` above — BotService is
+    // dependency-free, so a standalone instance is equivalent to the injected
+    // one and every `new RoomsGateway(rooms, game)` test keeps working.
+    private readonly botService: BotService = new BotService(),
   ) {
     this.cleanupTimer = setInterval(
       () => this._cleanStaleRooms(),
@@ -606,6 +632,7 @@ export class RoomsGateway
         displayName: p.displayName,
         isHost: p.isHost,
         isConnected: p.isConnected,
+        isBot: p.isBot ?? false,
       })),
       // Read-only observers — see Spectator's docstring in room.interface.ts.
       // Included so players can see who's watching; never affects gameplay.
@@ -718,6 +745,21 @@ export class RoomsGateway
       minRating,
       maxRating,
     );
+
+    // Solo mode: seat the AI opponents before the room snapshot goes out, so
+    // the host sees a full lobby immediately and can start straight away
+    // rather than watching players appear after the fact.
+    if (dto.botCount && dto.botCount > 0) {
+      const botResult = this.roomsService.addBots(
+        result.room.code,
+        dto.botCount,
+      );
+      if ('error' in botResult) {
+        this.send(client, 'error', { code: botResult.error });
+        return;
+      }
+    }
+
     this.send(client, 'room_update', {
       ...this.roomSnapshot(result.room, result.playerId),
       reconnectToken: generateReconnectToken(result.playerId, result.room.code),
@@ -1403,6 +1445,9 @@ export class RoomsGateway
     // call both).
     this._scheduleTurnTimer(session, startResult.roomCode);
     this._scheduleAbilityDraftTimer(session, startResult.roomCode);
+    // Solo mode: the very first pick of the game may belong to a bot, and
+    // nothing has broadcast through `_broadcastGameStateToRoom` yet.
+    this._driveBots(startResult.roomCode);
   }
 
   @SubscribeMessage('set_rating_range')
@@ -1422,6 +1467,25 @@ export class RoomsGateway
     // Broadcast the new range + freshly-recomputed pool sufficiency to
     // everyone in the lobby (roomSnapshot embeds both), so the host sees
     // live feedback as they drag and guests see the current setting.
+    this.broadcastRoom(
+      result.roomCode,
+      'room_update',
+      this.roomSnapshot(result.room),
+    );
+  }
+
+  @SubscribeMessage('add_bot')
+  handleAddBot(
+    @MessageBody() dto: AddBotDto,
+    @ConnectedSocket() client: WebSocket & { id: string },
+  ): void {
+    const result = this.roomsService.addBotsFromLobby(client.id, dto.count);
+    if ('error' in result) {
+      this.send(client, 'error', { code: result.error });
+      return;
+    }
+    // Same broadcast shape as set_rating_range: every seat (bot or human)
+    // lives in the one room snapshot, so nothing bot-specific is needed here.
     this.broadcastRoom(
       result.roomCode,
       'room_update',
@@ -1494,11 +1558,17 @@ export class RoomsGateway
         if ('error' in r2) return;
         broadcast(r2.session);
         this._scheduleTurnTimer(r2.session, roomCode);
+        // Solo mode: the draft has just opened and the first turn may be a
+        // bot's. This path broadcasts via the local closure above rather than
+        // `_broadcastGameStateToRoom`, so it needs its own nudge.
+        this._driveBots(roomCode);
       }, 3500);
       this._abilityRevealTimers.set(roomCode, tid);
     } else {
       // Still picks remaining — arm a fresh timer for the next picker.
       this._scheduleAbilityDraftTimer(result.session, roomCode);
+      // The next ability picker may itself be a bot (same closure caveat).
+      this._driveBots(roomCode);
     }
   }
 
@@ -1648,6 +1718,11 @@ export class RoomsGateway
     });
 
     this._scheduleTurnTimer(session, entry.roomCode);
+
+    // Solo mode: this handler broadcasts game_state inline rather than
+    // through _broadcastGameStateToRoom, so it needs its own nudge for the
+    // AI opponents. No-ops instantly in rooms without bots.
+    this._driveBots(entry.roomCode);
   }
 
   @SubscribeMessage('pick_card')
@@ -1701,6 +1776,11 @@ export class RoomsGateway
     this._maybeArmSubsTimer(session, entry.roomCode);
     this._maybeArmAbilityActivationTimer(session, entry.roomCode);
     this._scheduleTurnTimer(session, entry.roomCode);
+
+    // Solo mode: this handler broadcasts game_state inline rather than
+    // through _broadcastGameStateToRoom, so it needs its own nudge for the
+    // AI opponents. No-ops instantly in rooms without bots.
+    this._driveBots(entry.roomCode);
   }
 
   @SubscribeMessage('order_hidden_deck')
@@ -1768,6 +1848,11 @@ export class RoomsGateway
     // subs/ability_activation, arm the relevant timer (both no-op otherwise).
     this._maybeArmSubsTimer(session, entry.roomCode);
     this._maybeArmAbilityActivationTimer(session, entry.roomCode);
+
+    // Solo mode: this handler broadcasts game_state inline rather than
+    // through _broadcastGameStateToRoom, so it needs its own nudge for the
+    // AI opponents. No-ops instantly in rooms without bots.
+    this._driveBots(entry.roomCode);
   }
 
   @SubscribeMessage('pick_hidden_slot')
@@ -1816,6 +1901,11 @@ export class RoomsGateway
     this._scheduleHiddenRevealTimeout(entry.roomCode, session.turn.turnId);
     // Cancel any pending turn timer — we're now in the reveal phase.
     this._clearTurnTimer(session.sessionId);
+
+    // Solo mode: this handler broadcasts game_state inline rather than
+    // through _broadcastGameStateToRoom, so it needs its own nudge for the
+    // AI opponents. No-ops instantly in rooms without bots.
+    this._driveBots(entry.roomCode);
   }
 
   @SubscribeMessage('confirm_hidden_reveal')
@@ -1930,6 +2020,11 @@ export class RoomsGateway
       'game_state',
       this.gameSnapshot(result.session, entry.playerId),
     );
+
+    // Solo mode: this handler broadcasts game_state inline rather than
+    // through _broadcastGameStateToRoom, so it needs its own nudge for the
+    // AI opponents. No-ops instantly in rooms without bots.
+    this._driveBots(entry.roomCode);
   }
 
   @SubscribeMessage('swap_roster')
@@ -1967,6 +2062,11 @@ export class RoomsGateway
       'game_state',
       this.gameSnapshot(result.session, entry.playerId),
     );
+
+    // Solo mode: this handler broadcasts game_state inline rather than
+    // through _broadcastGameStateToRoom, so it needs its own nudge for the
+    // AI opponents. No-ops instantly in rooms without bots.
+    this._driveBots(entry.roomCode);
   }
 
   @SubscribeMessage('confirm_lineup')
@@ -2006,6 +2106,11 @@ export class RoomsGateway
     if ('tournamentStarting' in result && result.tournamentStarting) {
       this.beginBracketReveal(entry.roomCode);
     }
+
+    // Solo mode: this handler broadcasts game_state inline rather than
+    // through _broadcastGameStateToRoom, so it needs its own nudge for the
+    // AI opponents. No-ops instantly in rooms without bots.
+    this._driveBots(entry.roomCode);
   }
 
   // ── Hidden-reveal timeout helpers ─────────────────────────────────────────
@@ -2281,6 +2386,266 @@ export class RoomsGateway
         availableSlots,
         previewCards: this._previewCardsFor(session),
       });
+    }
+  }
+
+  // ── Solo mode: driving AI opponents ───────────────────────────────────────
+
+  /**
+   * Advances every AI opponent in a room until it is a human's turn again.
+   *
+   * Invoked from the broadcast path, so it runs after any state change from
+   * any source (a human move, a timeout auto-pick, a phase transition) without
+   * each call site needing to remember it. Re-entrancy is prevented by
+   * `_botLoops`, and every move re-reads the session from `GameService` rather
+   * than trusting a captured snapshot, so a human acting mid-loop cannot make
+   * a bot play against stale state.
+   *
+   * Fire-and-forget by design: callers are synchronous WebSocket handlers that
+   * must not block on an opponent's thinking time.
+   */
+  private _driveBots(roomCode: string): void {
+    if (this._botLoops.has(roomCode)) return;
+    if (!this.roomsService.hasBots(roomCode)) return;
+    this._botLoops.add(roomCode);
+
+    void (async () => {
+      try {
+        // Bounded rather than `while (true)`: a decide/apply pair that always
+        // reported success without advancing the session would otherwise spin
+        // forever. The cap is far above the ~200 moves a full 10-player game
+        // needs, so it can only be reached by a genuine bug — and it fails by
+        // stopping the AI, never by hanging the room.
+        for (let step = 0; step < MAX_BOT_STEPS; step++) {
+          const session = this.gameService.getSessionByRoomCode(roomCode);
+          if (!session || session.isFinished) return;
+
+          const bots = session.players.filter((p) => p.isBot);
+          if (bots.length === 0) return;
+
+          let acted = false;
+          for (const bot of bots) {
+            const action = this.botService.decide(session, bot.id);
+            if (!action) continue;
+
+            await this._botThink();
+            // The room can end (host leaves, everyone disconnects) while the
+            // bot is "thinking" — re-check before committing the move.
+            if (!this.gameService.getSessionByRoomCode(roomCode)) return;
+
+            if (this._applyBotAction(roomCode, bot.id, action)) {
+              acted = true;
+              // Re-evaluate from the top: this move may have handed the turn
+              // to a human, ended the phase, or promoted a different bot.
+              break;
+            }
+          }
+          if (!acted) return;
+        }
+      } catch (err) {
+        // An AI failure must never take a room down with it — the humans in
+        // that room can still play, and the loop simply stops.
+        this.logger.error(
+          { err, roomCode },
+          'bot driver stopped after an unexpected error',
+        );
+      } finally {
+        this._botLoops.delete(roomCode);
+      }
+    })();
+  }
+
+  /** Human-feeling pause between AI moves. */
+  private _botThink(): Promise<void> {
+    const ms =
+      BOT_THINK_MIN_MS +
+      Math.floor(Math.random() * (BOT_THINK_MAX_MS - BOT_THINK_MIN_MS));
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  /**
+   * Commits one decided move through the very same `GameService` entry points
+   * a human's socket message would reach, then broadcasts exactly as that
+   * handler does. Returns whether the move actually landed — a rejected move
+   * (stale turn, phase moved on) stops the loop instead of retrying blindly.
+   */
+  private _applyBotAction(
+    roomCode: string,
+    botId: string,
+    action: BotAction,
+  ): boolean {
+    const socketIds = this.roomsService.getSocketIds(roomCode);
+    const broadcast = (session: GameSession) => {
+      for (const id of socketIds) {
+        const c = this._connectedSockets.get(id);
+        if (!c) continue;
+        const roomEntry = this.roomsService.getSocketEntry(id);
+        this.send(
+          c,
+          'game_state',
+          this.gameSnapshot(session, roomEntry?.playerId),
+        );
+      }
+    };
+
+    switch (action.kind) {
+      case 'pick_ability': {
+        const r = this.gameService.pickAbilityCard(
+          roomCode,
+          botId,
+          action.cardId,
+        );
+        if ('error' in r) return false;
+        // Reuses the human tail so the final pick still triggers the reveal
+        // window and the start of the player draft.
+        this._afterAbilityPick(r, roomCode);
+        return true;
+      }
+
+      case 'pick_slot': {
+        const r = this.gameService.pickSlot(
+          roomCode,
+          botId,
+          action.turnId,
+          action.slotIndex,
+        );
+        if ('error' in r) return false;
+        broadcast(r.session);
+        this._scheduleTurnTimer(r.session, roomCode);
+        return true;
+      }
+
+      case 'pick_card': {
+        const r = this.gameService.pickCard(
+          roomCode,
+          botId,
+          action.turnId,
+          action.cardId,
+        );
+        if ('error' in r) return false;
+        broadcast(r.session);
+        this._maybeArmSubsTimer(r.session, roomCode);
+        this._maybeArmAbilityActivationTimer(r.session, roomCode);
+        this._scheduleTurnTimer(r.session, roomCode);
+        return true;
+      }
+
+      case 'order_hidden_deck': {
+        const r = this.gameService.orderHiddenDeck(
+          roomCode,
+          botId,
+          action.turnId,
+          action.orderedCardIds,
+        );
+        if ('error' in r) return false;
+        broadcast(r.session);
+        if (r.availableSlots !== undefined) {
+          // Hands off to the first hidden picker — same gap as
+          // confirm_hidden_reveal below: without this, whoever picks first
+          // (very often the human, since the bot just finished ordering)
+          // never receives the payload that renders the actual pick UI.
+          this.sendHiddenPickPromptToActivePlayer(
+            r.session,
+            roomCode,
+            r.availableSlots,
+          );
+        }
+        this._scheduleTurnTimer(r.session, roomCode);
+        return true;
+      }
+
+      case 'pick_hidden_slot': {
+        const r = this.gameService.pickHiddenSlot(
+          roomCode,
+          botId,
+          action.turnId,
+          action.slotIndex,
+        );
+        if ('error' in r) return false;
+        broadcast(r.session);
+        this._maybeArmSubsTimer(r.session, roomCode);
+        this._maybeArmAbilityActivationTimer(r.session, roomCode);
+        this._scheduleTurnTimer(r.session, roomCode);
+        return true;
+      }
+
+      case 'confirm_hidden_reveal': {
+        // Reuses the exact human tail (_doAdvanceFromReveal) rather than
+        // calling confirmHiddenReveal + broadcast directly: that method also
+        // sends `hidden_pick_prompt` to whoever the reveal hands the turn to.
+        // A hand-rolled version here previously skipped that — the human
+        // side would advance turns fine, but the *next* human picker's
+        // client never received the payload that actually renders the pick
+        // UI (hiddenPickProvider stays null), leaving their screen stuck on
+        // a "waiting for X" placeholder despite it genuinely being their
+        // turn.
+        // _doAdvanceFromReveal no-ops silently on a stale/invalid turnId
+        // (mirroring confirmHiddenReveal's own error return), and already
+        // handles its own broadcast + timer arming — nothing left to do
+        // here. Reported as "acted" either way: a no-op just means the next
+        // loop iteration finds nothing left to do for this bot and stops.
+        this._doAdvanceFromReveal(roomCode, action.turnId, botId);
+        return true;
+      }
+
+      case 'fill_bench': {
+        // Spin and pick are one indivisible bot move: the choice can only be
+        // made from what the spin returned, and leaving a spun-but-unpicked
+        // group would stall the phase.
+        const spin = this.gameService.requestSubSpin(
+          roomCode,
+          botId,
+          action.group,
+        );
+        if ('error' in spin) return false;
+        const chosen = this.botService.chooseSubFromSpin(spin.players);
+        if (!chosen) return false;
+        const r = this.gameService.pickSub(
+          roomCode,
+          botId,
+          action.group,
+          chosen,
+        );
+        if ('error' in r) return false;
+        broadcast(r.session);
+        this._maybeArmSubsTimer(r.session, roomCode);
+        return true;
+      }
+
+      case 'discard_ability': {
+        const r = this.gameService.discardAbility(roomCode, botId);
+        if ('error' in r) return false;
+        // Reuses the human tail so the all-resolved case still clears the
+        // auto-discard deadline, reveals every ability at once, and holds the
+        // reveal window before advancing.
+        this._afterAbilityActivation(r, roomCode);
+        return true;
+      }
+
+      case 'confirm_lineup': {
+        const r = this.gameService.confirmLineup(roomCode, botId);
+        if ('error' in r) return false;
+        broadcast(r.session);
+        this._maybeArmSubsTimer(r.session, roomCode);
+        // Same fork as the human handler: the last confirmation in a
+        // tournament-enabled session starts the bracket rather than finishing.
+        if ('tournamentStarting' in r && r.tournamentStarting) {
+          this.beginBracketReveal(roomCode);
+        }
+        return true;
+      }
+
+      case 'tournament_ready': {
+        const r = this.gameService.recordTournamentReady(roomCode, botId);
+        if ('error' in r) return false;
+        // Tournament progress rides its own event, not `game_state`.
+        this.broadcastTournamentStateToRoom(roomCode);
+        if (r.allReady) {
+          this._clearTournamentReadyTimer(roomCode);
+          this.beginSimulating(roomCode);
+        }
+        return true;
+      }
     }
   }
 
@@ -2633,6 +2998,11 @@ export class RoomsGateway
     }
     this._maybeArmSubsTimer(session, roomCode);
     this._maybeArmAbilityActivationTimer(session, roomCode);
+    // Central chokepoint for state changes, so solo mode needs no per-handler
+    // wiring: whatever just moved the game on — a human move, a timeout
+    // auto-pick, a phase transition — the AI opponents get their chance here.
+    // No-ops instantly for rooms without bots.
+    this._driveBots(roomCode);
   }
 
   // ── Subs-phase timer ──────────────────────────────────────────────────────

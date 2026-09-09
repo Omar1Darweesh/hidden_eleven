@@ -77,6 +77,19 @@ export class CreateRoomDto {
   @Max(99)
   maxRating?: number | null;
 
+  /**
+   * Solo mode: seat this many server-driven AI opponents in the room at
+   * creation. Absent/0 = a normal room that waits for humans to join.
+   *
+   * Capped at 9 because a room holds 10 players including the host; the
+   * gateway additionally rejects a count that would exceed the room limit.
+   */
+  @IsOptional()
+  @IsInt()
+  @Min(1)
+  @Max(9)
+  botCount?: number;
+
   /** When true, a knockout tournament runs after the subs phase instead of going
    *  straight to the result screen. Absent = false (normal game). */
   @IsOptional()

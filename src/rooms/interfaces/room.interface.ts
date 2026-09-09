@@ -8,6 +8,19 @@ export interface Player {
   isHost: boolean;
   isConnected: boolean;
   socketId: string | null;
+  /**
+   * A server-driven AI opponent (solo mode). Structurally a normal Player so
+   * every existing engine path — turn order, pitches, scoring, chemistry,
+   * tournament seeding — treats it exactly like a human with no special
+   * cases. The only differences are that it never owns a socket
+   * (`socketId: null`) and that `BotService` decides its moves; see
+   * `RoomsGateway._driveBots`.
+   *
+   * Deliberately always `isConnected: true`: a bot has no socket to drop, so
+   * the disconnect sweep and the "skip disconnected players" turn-order logic
+   * must never consider it absent.
+   */
+  isBot?: boolean;
 }
 
 /**
