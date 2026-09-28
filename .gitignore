@@ -28,5 +28,15 @@ public/
 ecosystem.config.js
 ecosystem.config.jsy
 
+# Live admin catalog data (players, clubs, leagues, nations, formations,
+# abilities, scoring config, etc.) — edited in place on the production
+# server through the admin panel and never meant to round-trip through git.
+# Tracking these caused a near-miss: a routine code deploy nearly collided
+# with live, uncommitted catalog edits sitting on the server. Untracked as
+# of 2026-09-09 — see rebuild-server-dist / admin-data notes. A fresh clone
+# starts with none of these; seed data lives in admin-data/*.json.example
+# or is entered through the admin panel after first deploy.
+admin-data/*.json
+
 # OS/editor cruft
 .DS_Store
