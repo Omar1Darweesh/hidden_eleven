@@ -2622,6 +2622,20 @@ export class RoomsGateway
         return true;
       }
 
+      case 'activate_ability': {
+        const r = this.gameService.activateAbility(
+          roomCode,
+          botId,
+          action.payload,
+        );
+        if ('error' in r) return false;
+        // Same shared tail as discard_ability above — the bot's commit is
+        // only visible to it until every player has locked in, then the
+        // reveal broadcasts all at once, same as a human's activation.
+        this._afterAbilityActivation(r, roomCode);
+        return true;
+      }
+
       case 'confirm_lineup': {
         const r = this.gameService.confirmLineup(roomCode, botId);
         if ('error' in r) return false;

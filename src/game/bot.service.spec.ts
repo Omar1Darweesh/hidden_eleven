@@ -309,7 +309,7 @@ describe('BotService', () => {
   });
 
   describe('ability activation', () => {
-    it('discards a pending ability rather than mis-targeting it', () => {
+    it('discards captain when its own pitch has no filled slot to target', () => {
       const s = session({
         status: 'ability_activation' as never,
         playerAbilities: { [BOT]: { type: 'captain', status: 'pending' } } as never,
@@ -323,6 +323,175 @@ describe('BotService', () => {
         playerAbilities: { [BOT]: { type: 'captain', status: 'discarded' } } as never,
       });
       expect(bot.decide(s, BOT)).toBeNull();
+    });
+
+    it('captains its own highest-rated starting-XI card', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'captain', status: 'pending' } } as never,
+        pitches: {
+          [BOT]: {
+            slots: [
+              { index: 0, basePositionType: 'ST', card: card('c1', 'ST', 70) },
+              { index: 1, basePositionType: 'CM', card: card('c2', 'CM', 88) },
+              { index: 2, basePositionType: 'CB', card: null },
+            ],
+          },
+        } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({
+        kind: 'activate_ability',
+        payload: { ownSlotIndex: 1 },
+      });
+    });
+
+    it('always activates Extra Bench — pure upside, no target to weigh', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'extra_bench', status: 'pending' } } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({
+        kind: 'activate_ability',
+        payload: {},
+      });
+    });
+
+    it('always activates Protection — pure upside, no target to weigh', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'protect', status: 'pending' } } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({
+        kind: 'activate_ability',
+        payload: {},
+      });
+    });
+
+    it('targets the highest-rated opposing card with Yellow Card', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'yellow', status: 'pending' } } as never,
+        pitches: {
+          [HUMAN]: {
+            slots: [
+              { index: 0, basePositionType: 'ST', card: card('h1', 'ST', 60) },
+              { index: 1, basePositionType: 'GK', card: card('h2', 'GK', 91) },
+            ],
+          },
+        } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({
+        kind: 'activate_ability',
+        payload: { targetUserId: HUMAN },
+      });
+    });
+
+    it('targets the highest-rated opposing card and slot with Red Card', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'red', status: 'pending' } } as never,
+        pitches: {
+          [HUMAN]: {
+            slots: [
+              { index: 0, basePositionType: 'ST', card: card('h1', 'ST', 60) },
+              { index: 1, basePositionType: 'GK', card: card('h2', 'GK', 91) },
+            ],
+          },
+        } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({
+        kind: 'activate_ability',
+        payload: { targetUserId: HUMAN, targetSlotIndex: 1 },
+      });
+    });
+
+    it('discards an attacking ability when no opponent pitch is visible yet', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'red', status: 'pending' } } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({ kind: 'discard_ability' });
+    });
+
+    it('freezes a random opponent — genuinely blind, same as a hidden-deck pick', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'freeze', status: 'pending' } } as never,
+        pitches: { [HUMAN]: { slots: [] } } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({
+        kind: 'activate_ability',
+        payload: { targetUserId: HUMAN },
+      });
+    });
+
+    it('finds a beneficial Sub swap against a same-position rival card', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'sub', status: 'pending' } } as never,
+        pitches: {
+          [BOT]: {
+            slots: [{ index: 0, basePositionType: 'ST', card: card('mine', 'ST', 65) }],
+          },
+          [HUMAN]: {
+            slots: [{ index: 2, basePositionType: 'ST', card: card('theirs', 'ST', 85) }],
+          },
+        } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({
+        kind: 'activate_ability',
+        payload: { ownSlotIndex: 0, targetUserId: HUMAN, targetSlotIndex: 2 },
+      });
+    });
+
+    it('discards Sub when no rival card at a matching position is actually better', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'sub', status: 'pending' } } as never,
+        pitches: {
+          [BOT]: {
+            slots: [{ index: 0, basePositionType: 'ST', card: card('mine', 'ST', 90) }],
+          },
+          [HUMAN]: {
+            slots: [{ index: 2, basePositionType: 'ST', card: card('theirs', 'ST', 50) }],
+          },
+        } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({ kind: 'discard_ability' });
+    });
+
+    it('coaches its best card into a genuinely new, not-already-owned position', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'coach', status: 'pending' } } as never,
+        coachedPositions: {},
+        pitches: {
+          [BOT]: {
+            slots: [{ index: 0, basePositionType: 'CM', card: card('mine', 'CM', 80) }],
+          },
+        } as never,
+      });
+      const result = bot.decide(s, BOT);
+      expect(result?.kind).toBe('activate_ability');
+      if (result?.kind === 'activate_ability') {
+        expect(result.payload.ownSlotIndex).toBe(0);
+        expect(result.payload.coachedPosition).toBeDefined();
+        expect(result.payload.coachedPosition).not.toBe('GK');
+      }
+    });
+
+    it('never targets a goalkeeper with Coach', () => {
+      const s = session({
+        status: 'ability_activation' as never,
+        playerAbilities: { [BOT]: { type: 'coach', status: 'pending' } } as never,
+        coachedPositions: {},
+        pitches: {
+          [BOT]: {
+            slots: [{ index: 0, basePositionType: 'GK', card: card('keeper', 'GK', 90) }],
+          },
+        } as never,
+      });
+      expect(bot.decide(s, BOT)).toEqual({ kind: 'discard_ability' });
     });
   });
 
