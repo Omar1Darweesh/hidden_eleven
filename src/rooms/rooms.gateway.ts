@@ -3324,6 +3324,16 @@ export class RoomsGateway
       return;
     }
 
+    // `_currentRoundAiParticipantIds` above only covers simulated tournament
+    // AI clubs (bracket filler with no room seat) — an in-room bot opponent
+    // (e.g. "Play vs AI") is a real participant and was previously left
+    // waiting on the 60s timeout below like a slow human, forcing whoever
+    // readied first to sit through nearly a minute for no reason. Driving
+    // bots here lets `BotService._decideTournament` submit its own
+    // `tournament_ready` almost immediately (after the same human-feeling
+    // `_botThink` pause every other bot move gets), same as a fast human.
+    this._driveBots(roomCode);
+
     const t = setTimeout(() => {
       this._tournamentReadyTimers.delete(roomCode);
       this.autoReadyAndBeginSimulating(roomCode);
