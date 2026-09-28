@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <!--
+    Flutter fetches its CanvasKit renderer from Google's global CDN by
+    default (gstatic.com), not from this server — verified live by checking
+    performance.getEntriesByType('resource') on the deployed site. This
+    preconnect lets the browser start that TLS handshake in parallel with
+    parsing the rest of this page, instead of only starting it once the
+    Flutter bootstrap script decides it needs CanvasKit.
+  -->
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preload" as="script" href="main.dart.js">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <!--
+    Static viewport tag — Flutter's engine injects its own dynamically once
+    it boots, but a canvas-only app should never depend on JS execution for
+    something this basic (mobile-friendliness signals, initial paint before
+    the engine loads).
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VFxHgZBkHqUv5g6YSScg86Pr1qKfLVDa8MGubdal3rY" />
+  <meta name="description" content="Play Hidden Eleven free — a multiplayer football card-draft game. Draft your XI, hide your best picks, and outsmart opponents online in real time.">
+  <meta name="theme-color" content="#0B1E3D">
+  <meta name="author" content="OYO">
+  <!--
+    Self-referential, not the root domain: this file is served at /play/
+    (see main.ts and --base-href), a distinct URL from the static content
+    homepage at https://hiddeneleven.online/. Pointing canonical at the root
+    would tell crawlers this page and the homepage are the same resource —
+    misleading, and undermines the whole reason /play and / were split apart.
+  -->
+  <link rel="canonical" href="https://hiddeneleven.online/play/">
+
+  <!-- Open Graph / social-share preview (WhatsApp, Facebook, Discord, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hidden Eleven">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://hiddeneleven.online/play/">
+  <meta property="og:title" content="Hidden Eleven — Free Multiplayer Football Card-Draft Game">
+  <meta property="og:description" content="Draft your XI, hide your best picks, and outsmart opponents online in real time. Play this fast, tactical football card-draft game free in your browser.">
+  <meta property="og:image" content="https://hiddeneleven.online/play/icons/Icon-512.png">
+  <meta property="og:image:alt" content="Hidden Eleven — football card-draft game">
+
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hidden Eleven — Free Multiplayer Football Card-Draft Game">
+  <meta name="twitter:description" content="Draft your XI, hide your best picks, and outsmart opponents online in real time. Play this fast, tactical football card-draft game free in your browser.">
+  <meta name="twitter:image" content="https://hiddeneleven.online/play/icons/Icon-512.png">
+  <meta name="twitter:image:alt" content="Hidden Eleven — football card-draft game">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Hidden Eleven">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Hidden Eleven — Free Multiplayer Football Card-Draft Game</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Structured data — explicit, machine-readable context for search engines. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Hidden Eleven",
+    "alternateName": "Hidden Eleven — Football Card-Draft Game",
+    "url": "https://hiddeneleven.online/play/",
+    "image": "https://hiddeneleven.online/play/icons/Icon-512.png",
+    "description": "Hidden Eleven is a free online multiplayer football card-draft game. Draft your XI, hide your best picks, manage squad chemistry, and outsmart opponents in real time.",
+    "genre": ["Sports", "Card Game", "Strategy", "Multiplayer"],
+    "keywords": "football draft game, soccer card game, multiplayer football game, online draft game, fantasy football draft, free browser game",
+    "gamePlatform": "Web Browser",
+    "playMode": "MultiPlayer",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Organization",
+      "name": "OYO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "OYO"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!--
+    Google AdSense verification + ad-serving script for hiddeneleven.online.
+    Required for Google's site-review crawl and for every ad unit rendered
+    once ads are turned on (see AdConfig.enabled) — but deliberately NOT
+    loaded as a static <script> tag here. AdSense's own background
+    beacons/verification calls (gen_204, sodar, ads) were measured live
+    taking 38+ seconds to settle, and the browser's `load` event won't fire
+    until every resource a page has requested — including these — finishes,
+    even though the actual game is playable in ~1s regardless. That made
+    the tab visually look "stuck loading" for real users. Injecting the
+    script after `window.load` has already fired keeps it fully functional
+    for AdSense's crawler (which executes JS and waits for network activity
+    to settle, so it still sees and evaluates this script) while letting
+    the page for a real visitor report itself as loaded almost immediately.
+  -->
+  <script>
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.crossOrigin = 'anonymous';
+      s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5635881358498755';
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <!--
+    GameMonetize HTML5 SDK — the second ad network, independent of AdSense
+    above. hiddeneleven.online is an approved GameMonetize publisher domain
+    and carries their ads.txt lines, but that approval only authorises the
+    domain; it serves nothing on its own. This SDK is what actually requests
+    and renders an ad, triggered from Dart via sdk.showBanner() (see
+    lib/shared/ads/gamemonetize_web.dart).
+
+    Loaded after `window.load` for the same reason as the AdSense script: the
+    SDK pulls in Google's IMA library and its own beacons, and blocking the
+    load event on that made the tab look stuck while the game was already
+    playable. Nothing requests an ad until a match ends (minutes in), so
+    deferring costs nothing.
+  -->
+  <script>
+    window.SDK_OPTIONS = {
+      gameId: 'dtjt1o329c7aw89m73lr4328zdgcdzmy',
+      onEvent: function (event) {
+        switch (event.name) {
+          case 'SDK_GAME_PAUSE':
+            // An ad is taking over the screen. Flutter owns a <canvas>, not
+            // <video>/<audio> elements, so there is no media for the browser
+            // to duck automatically — expose the state and let Dart react.
+            window.__heAdActive = true;
+            break;
+          case 'SDK_GAME_START':
+            // Ad finished/skipped/errored — control returns to the game.
+            window.__heAdActive = false;
+            break;
+        }
+      },
+    };
+    window.addEventListener('load', function () {
+      var first = document.getElementsByTagName('script')[0];
+      if (document.getElementById('gamemonetize-sdk')) return;
+      var s = document.createElement('script');
+      s.id = 'gamemonetize-sdk';
+      s.src = 'https://api.gamemonetize.com/sdk.js';
+      first.parentNode.insertBefore(s, first);
+    });
+  </script>
+</head>
+<body>
+  <!--
+    Real, crawlable HTML content — not hidden, not cloaked, just what a
+    visitor actually sees for the moment before Flutter's CanvasKit renderer
+    takes over and draws the game to a <canvas> (which has zero extractable
+    text of its own). Google crawled the page successfully but declined to
+    index it because the previous <body> was functionally empty text-wise;
+    this loading screen carries real, genuine copy about the game and is
+    naturally covered once the Flutter app paints its first frame — the same
+    "SEO-friendly loading screen" pattern used by other canvas-rendered web
+    apps trying to be indexable.
+  -->
+  <div id="seo-loading-content" style="
+    position: fixed; inset: 0; z-index: 0; overflow-y: auto;
+    background: #0B1E3D; color: #E8ECF4;
+    font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px; box-sizing: border-box;
+    pointer-events: none;
+  ">
+    <div style="max-width: 640px; text-align: center;">
+      <h1 style="font-size: 1.8em; margin-bottom: 8px;">Hidden Eleven — Free Multiplayer Football Card-Draft Game</h1>
+      <p style="font-size: 1.1em; color: #A9B4C9;">
+        Hidden Eleven is a free online multiplayer football card-draft game —
+        build your XI, keep your best pick secret, and outsmart your opponent
+        in real time.
+      </p>
+      <p style="color: #A9B4C9;">
+        Draft soccer players round by round, hide your strongest picks from
+        your opponent using the hidden-deck mechanic, then manage
+        substitutions and squad chemistry to field the strongest possible
+        lineup. Play free in your browser against a friend or another player
+        online — quick to learn, tactical to master.
+      </p>
+      <p style="color: #6B7B99; font-size: 0.9em;">Loading the game…</p>
+      <p style="color: #6B7B99; font-size: 0.8em; margin-top: 24px; letter-spacing: 1px;">A GAME BY OYO</p>
+    </div>
+  </div>
+
+  <!--
+    Admin/dev tool: we always want the latest build. Older visits may have
+    installed a Flutter service worker that keeps serving a stale main.dart.js
+    even after a hard refresh. This unregisters any such worker, clears its
+    caches, and reloads ONCE so fresh code is loaded. The app itself is now
+    built with --pwa-strategy=none, so no new service worker is registered.
+  -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (regs) {
+        var had = regs.length > 0;
+        Promise.all(regs.map(function (r) { return r.unregister(); }))
+          .then(function () {
+            if (window.caches) {
+              return caches.keys().then(function (keys) {
+                return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+              });
+            }
+          })
+          .then(function () {
+            if (had && !sessionStorage.getItem('he_sw_cleared')) {
+              sessionStorage.setItem('he_sw_cleared', '1');
+              location.reload();
+            }
+          });
+      });
+    }
+  </script>
+
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
