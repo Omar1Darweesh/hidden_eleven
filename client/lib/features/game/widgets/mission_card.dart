@@ -232,6 +232,9 @@ class MissionCard extends StatelessWidget {
                     roundProgress: _showAsActive ? progress : null,
                     onUrgent: () =>
                         ref.read(audioServiceProvider).playSfx(Sfx.timerTicker),
+                    onCritical: () => ref
+                        .read(audioServiceProvider)
+                        .playSfx(Sfx.timerWarning),
                   ),
                 ),
               ],

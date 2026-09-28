@@ -13,6 +13,7 @@ class TurnTimerWidget extends StatefulWidget {
     required this.durationSeconds,
     this.muted = false,
     this.onUrgent,
+    this.onCritical,
     this.roundProgress,
   });
 
@@ -32,6 +33,11 @@ class TurnTimerWidget extends StatefulWidget {
   /// whoever's turn it actually is.
   final VoidCallback? onUrgent;
 
+  /// Fired once per countdown, the moment it crosses into the last-seconds
+  /// range (< 10% remaining) — a second, more urgent cue distinct from
+  /// [onUrgent]'s earlier 25% warning. Same muted/reset rules as [onUrgent].
+  final VoidCallback? onCritical;
+
   @override
   State<TurnTimerWidget> createState() => _TurnTimerWidgetState();
 }
@@ -41,6 +47,7 @@ class _TurnTimerWidgetState extends State<TurnTimerWidget>
   late Timer _ticker;
   double _remaining = 1.0; // 0.0 → 1.0 fraction of time left
   bool _urgentFired = false;
+  bool _criticalFired = false;
 
   /// Null under reduced motion — the urgency pulse then expresses itself
   /// through the ring's colour change alone, which is the accessible
@@ -89,6 +96,10 @@ class _TurnTimerWidgetState extends State<TurnTimerWidget>
       _urgentFired = true;
       widget.onUrgent?.call();
     }
+    if (!widget.muted && !_criticalFired && remaining < 0.10) {
+      _criticalFired = true;
+      widget.onCritical?.call();
+    }
   }
 
   @override
@@ -96,7 +107,10 @@ class _TurnTimerWidgetState extends State<TurnTimerWidget>
     super.didUpdateWidget(old);
     // A new turn (different startedAt) is a fresh countdown — let it fire
     // again rather than staying silenced by the previous turn's trigger.
-    if (old.startedAt != widget.startedAt) _urgentFired = false;
+    if (old.startedAt != widget.startedAt) {
+      _urgentFired = false;
+      _criticalFired = false;
+    }
   }
 
   @override

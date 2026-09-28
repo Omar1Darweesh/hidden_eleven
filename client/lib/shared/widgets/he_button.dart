@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hidden_eleven/app/he_theme.dart';
+import 'package:hidden_eleven/shared/audio/audio_service.dart';
 import 'package:hidden_eleven/shared/widgets/he_visual_style.dart';
 
 enum HEButtonVariant { primary, secondary, ghost, danger }
@@ -41,6 +43,28 @@ class HEButton extends StatelessWidget {
   Size get _minSize =>
       small ? const Size.fromHeight(44) : const Size.fromHeight(52);
 
+  /// Every button in the app routes through here, so this is the single
+  /// place a tap sound can cover the whole game at once. Reads the provider
+  /// via `ProviderScope.containerOf` rather than converting this widget to
+  /// a Consumer — it stays a plain, cheap `StatelessWidget` used everywhere.
+  /// Fire-and-forget and never blocks the real `onPressed` behind it: a
+  /// missing/muted sound must never be the reason a button stops working.
+  VoidCallback? _withTapSound(BuildContext context) {
+    if (onPressed == null) return null;
+    return () {
+      try {
+        ProviderScope.containerOf(
+          context,
+          listen: false,
+        ).read(audioServiceProvider).playSfx(Sfx.buttonTap);
+      } catch (_) {
+        // Audio is strictly a nice-to-have layered on top of the real
+        // action — never let it stop the button underneath from working.
+      }
+      onPressed!();
+    };
+  }
+
   Widget _content(Color spinnerColor) {
     if (loading) {
       return SizedBox(
@@ -62,10 +86,10 @@ class HEButton extends StatelessWidget {
     return Text(label);
   }
 
-  Widget _child() {
+  Widget _child(VoidCallback? effectiveOnPressed) {
     return switch (variant) {
       HEButtonVariant.primary => ElevatedButton(
-        onPressed: loading ? null : onPressed,
+        onPressed: loading ? null : effectiveOnPressed,
         style: ElevatedButton.styleFrom(
           minimumSize: _minSize,
           // Left null when enabled with no override — that defers entirely
@@ -82,7 +106,7 @@ class HEButton extends StatelessWidget {
         child: _content(HETheme.pfTextPrimary),
       ),
       HEButtonVariant.secondary => OutlinedButton(
-        onPressed: loading ? null : onPressed,
+        onPressed: loading ? null : effectiveOnPressed,
         style: OutlinedButton.styleFrom(
           minimumSize: _minSize,
           foregroundColor: HETheme.pfTextPrimary,
@@ -94,7 +118,7 @@ class HEButton extends StatelessWidget {
         child: _content(HETheme.pfTextPrimary),
       ),
       HEButtonVariant.ghost => TextButton(
-        onPressed: loading ? null : onPressed,
+        onPressed: loading ? null : effectiveOnPressed,
         style: TextButton.styleFrom(
           foregroundColor: HETheme.pfTextSecondary,
           minimumSize: _minSize,
@@ -102,7 +126,7 @@ class HEButton extends StatelessWidget {
         child: _content(HETheme.pfTextSecondary),
       ),
       HEButtonVariant.danger => TextButton(
-        onPressed: loading ? null : onPressed,
+        onPressed: loading ? null : effectiveOnPressed,
         style: TextButton.styleFrom(
           foregroundColor: HETheme.pfDanger,
           minimumSize: _minSize,
@@ -118,7 +142,10 @@ class HEButton extends StatelessWidget {
     // here is the cheapest possible way to give the whole game a tactile
     // "physical" feel — previously every tap had only the default Material
     // ripple, with zero motion on the button itself.
-    return _PressScale(enabled: onPressed != null && !loading, child: _child());
+    return _PressScale(
+      enabled: onPressed != null && !loading,
+      child: _child(_withTapSound(context)),
+    );
   }
 }
 

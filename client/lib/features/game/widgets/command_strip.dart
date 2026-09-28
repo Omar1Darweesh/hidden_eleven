@@ -288,6 +288,9 @@ class CommandStrip extends StatelessWidget {
                     muted: !_showAsActive,
                     onUrgent: () =>
                         ref.read(audioServiceProvider).playSfx(Sfx.timerTicker),
+                    onCritical: () => ref
+                        .read(audioServiceProvider)
+                        .playSfx(Sfx.timerWarning),
                   ),
                 ),
               ],

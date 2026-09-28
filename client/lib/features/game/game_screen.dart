@@ -601,6 +601,29 @@ class _GameScreenState extends ConsumerState<GameScreen> {
       if (justEnteredReveal) {
         ref.read(audioServiceProvider).playSfx(Sfx.reveal);
       }
+
+      // Card deal: a fresh turn's candidates land the moment this player
+      // (any player, not just the locally active one — everyone sees the
+      // same dealt row) enters card selection. Keyed on turnId rather than
+      // "phase just became selecting_card" so it can't replay on an
+      // unrelated rebuild while already in that phase.
+      final justDealt =
+          next.status == 'drafting' &&
+          next.turn.phase == 'selecting_card' &&
+          prev?.turn.turnId != next.turn.turnId;
+      if (justDealt) {
+        ref.read(audioServiceProvider).playSfx(Sfx.cardDeal);
+      }
+    });
+
+    // Turn notification: a soft cue the moment it becomes this player's
+    // turn — `prev == false` (not `!prev`) deliberately excludes the very
+    // first delivery on load/reconnect, where `prev` is `null` and there is
+    // nothing to "become" yet.
+    ref.listen<bool>(isLocalPlayerTurnProvider, (prev, next) {
+      if (next && prev == false) {
+        ref.read(audioServiceProvider).playSfx(Sfx.notification);
+      }
     });
 
     ref.listen(kickedProvider, (_, next) {
@@ -733,6 +756,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
           _ => null,
         };
         if (message == null) return;
+        ref.read(audioServiceProvider).playSfx(Sfx.invalidAction);
         ScaffoldMessenger.of(context)
           ..hideCurrentSnackBar()
           ..showSnackBar(SnackBar(content: Text(message)));
