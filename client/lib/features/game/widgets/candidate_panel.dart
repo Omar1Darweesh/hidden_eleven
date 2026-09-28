@@ -7,6 +7,7 @@ import 'package:hidden_eleven/features/game/widgets/card_details_modal.dart';
 import 'package:hidden_eleven/features/game/widgets/panel_header.dart';
 import 'package:hidden_eleven/features/game/widgets/player_card.dart';
 import 'package:hidden_eleven/shared/widgets/he_button.dart';
+import 'package:hidden_eleven/shared/widgets/screen_entrance.dart';
 
 // ── Candidate card selection panel ────────────────────────────────────────────
 
@@ -126,58 +127,73 @@ class _CandidatePanelState extends State<CandidatePanel> {
                   final availW = box.maxWidth;
                   final cols = _cols(n, availW);
                   final cardW = (availW - _cardGap * (cols - 1)) / cols;
+                  // Identifies THIS round's specific pool — changes the
+                  // instant a new round's candidates replace the old ones,
+                  // which is exactly when the staggered entrance below
+                  // should replay. Re-picking within the same round (a tap
+                  // that only stages, never mutates `widget.candidates`)
+                  // leaves this unchanged, so the cards never re-animate on
+                  // a mere selection change.
+                  final roundKey = widget.candidates
+                      .map((c) => c.cardId)
+                      .join('|');
 
                   return Wrap(
                     spacing: _cardGap,
                     runSpacing: _cardGap,
                     alignment: WrapAlignment.center,
-                    children: widget.candidates
-                        .map(
-                          (c) => SizedBox(
-                            width: cardW,
-                            // Height is derived from AspectRatio(3/4.2)
-                            // inside PlayerCard — no explicit cardH needed.
-                            child: _StageableCandidate(
-                              card: c,
-                              isStaged: c.cardId == _stagedCardId,
-                              onPick: () => _handleTap(c.cardId),
-                              onTap: () => showCardDetailsModal(
-                                ctx,
-                                playerName: c.playerName,
-                                rating: c.rating,
-                                position: c.primaryPosition,
-                                imageSeed: c.cardId,
-                                club: c.club,
-                                clubLogoUrl: c.clubLogoUrl,
-                                primaryColor: c.primaryColor,
-                                secondaryColor: c.secondaryColor,
-                                tertiaryColor: c.tertiaryColor,
-                                kitPattern: c.kitPattern,
-                                cardStyle: c.cardStyle,
-                                kitNumber: c.kitNumber,
-                                nationality: c.nationality,
-                                altPositions: c.naturalAltPositions,
-                                pace: c.pace,
-                                shooting: c.shooting,
-                                passing: c.passing,
-                                dribbling: c.dribbling,
-                                defending: c.defending,
-                                physical: c.physical,
-                                chemistryBonuses: c.chemistryBonuses,
-                                lineup: widget.lineup,
-                                // The modal's own PICK button also only
-                                // stages — closing back to the grid with the
-                                // card staged and the confirm bar showing,
-                                // never committing directly from the modal.
-                                onPick: () {
-                                  Navigator.of(ctx).pop();
-                                  _handleTap(c.cardId);
-                                },
-                              ),
+                    children: widget.candidates.asMap().entries.map((entry) {
+                      final i = entry.key;
+                      final c = entry.value;
+                      return SizedBox(
+                        width: cardW,
+                        // Height is derived from AspectRatio(3/4.2)
+                        // inside PlayerCard — no explicit cardH needed.
+                        child: ScreenEntrance(
+                          key: ValueKey('$roundKey-${c.cardId}'),
+                          duration: const Duration(milliseconds: 300),
+                          delay: Duration(milliseconds: i * 60),
+                          child: _StageableCandidate(
+                            card: c,
+                            isStaged: c.cardId == _stagedCardId,
+                            onPick: () => _handleTap(c.cardId),
+                            onTap: () => showCardDetailsModal(
+                              ctx,
+                              playerName: c.playerName,
+                              rating: c.rating,
+                              position: c.primaryPosition,
+                              imageSeed: c.cardId,
+                              club: c.club,
+                              clubLogoUrl: c.clubLogoUrl,
+                              primaryColor: c.primaryColor,
+                              secondaryColor: c.secondaryColor,
+                              tertiaryColor: c.tertiaryColor,
+                              kitPattern: c.kitPattern,
+                              cardStyle: c.cardStyle,
+                              kitNumber: c.kitNumber,
+                              nationality: c.nationality,
+                              altPositions: c.naturalAltPositions,
+                              pace: c.pace,
+                              shooting: c.shooting,
+                              passing: c.passing,
+                              dribbling: c.dribbling,
+                              defending: c.defending,
+                              physical: c.physical,
+                              chemistryBonuses: c.chemistryBonuses,
+                              lineup: widget.lineup,
+                              // The modal's own PICK button also only
+                              // stages — closing back to the grid with the
+                              // card staged and the confirm bar showing,
+                              // never committing directly from the modal.
+                              onPick: () {
+                                Navigator.of(ctx).pop();
+                                _handleTap(c.cardId);
+                              },
                             ),
                           ),
-                        )
-                        .toList(),
+                        ),
+                      );
+                    }).toList(),
                   );
                 },
               ),
