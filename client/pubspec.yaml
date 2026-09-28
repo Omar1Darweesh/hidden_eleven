@@ -83,6 +83,7 @@ flutter:
     - assets/sounds/button_tap.ogg
     - assets/sounds/card_deal.ogg
     - assets/sounds/timer_warning.ogg
+    - assets/sounds/match_music.ogg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

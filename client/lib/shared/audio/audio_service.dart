@@ -144,12 +144,15 @@ class AudioService {
     for (final sfx in Sfx.values) sfx: AudioPlayer(playerId: 'sfx_${sfx.name}'),
   };
   final AudioPlayer _music = AudioPlayer(playerId: 'menu_music');
+  final AudioPlayer _matchMusic = AudioPlayer(playerId: 'match_music');
 
   bool _sfxMuted = false;
   bool _musicMuted = false;
   bool _musicWanted = false;
+  bool _matchMusicWanted = false;
 
   static const _musicVolume = 0.35;
+  static const _matchMusicVolume = 0.25;
 
   AudioService() {
     // Manual loop instead of ReleaseMode.loop: on this app's web backend,
@@ -163,6 +166,14 @@ class AudioService {
         _guardAsync(() async {
           await _music.seek(Duration.zero);
           await _music.resume();
+        });
+      }
+    });
+    _matchMusic.onPlayerComplete.listen((_) {
+      if (_matchMusicWanted && !_musicMuted) {
+        _guardAsync(() async {
+          await _matchMusic.seek(Duration.zero);
+          await _matchMusic.resume();
         });
       }
     });
@@ -191,6 +202,15 @@ class AudioService {
         _music.pause();
       } else if (_musicWanted) {
         _music.resume();
+      }
+      // Same hard guarantee applied to the match track — only one of the
+      // two is ever actually wanted at a time, but forcing both costs
+      // nothing and can't leave either one able to slip past mute.
+      _matchMusic.setVolume(muted ? 0 : _matchMusicVolume);
+      if (muted) {
+        _matchMusic.pause();
+      } else if (_matchMusicWanted) {
+        _matchMusic.resume();
       }
     });
   }
@@ -231,12 +251,44 @@ class AudioService {
     await _guardAsync(() => _music.stop());
   }
 
+  /// Starts the looping in-match track and pauses the menu loop underneath
+  /// it — the two are never meant to be heard together. Unlike
+  /// [playMenuMusic] (which fires once, before the page has necessarily
+  /// been interacted with, and so can hit the browser's autoplay block),
+  /// this only ever starts from deep inside an already-interactive session
+  /// (joining/starting a match), so there's no equivalent deferred-play race
+  /// to guard against here.
+  Future<void> playMatchMusic() async {
+    _matchMusicWanted = true;
+    await _guardAsync(() => _music.pause());
+    if (_musicMuted) return;
+    await _guardAsync(() async {
+      if (_matchMusic.state == PlayerState.playing) return;
+      await _matchMusic.setReleaseMode(ReleaseMode.stop);
+      await _matchMusic.play(
+        AssetSource('sounds/match_music.ogg'),
+        volume: _matchMusicVolume,
+      );
+    });
+  }
+
+  /// Stops the in-match track and resumes the menu loop — called on
+  /// returning to the lobby/home/results, where the match music no longer
+  /// applies but the ambient menu loop should still be playing.
+  Future<void> stopMatchMusic() async {
+    _matchMusicWanted = false;
+    await _guardAsync(() => _matchMusic.stop());
+    if (_musicMuted || !_musicWanted) return;
+    await _guardAsync(() => _music.resume());
+  }
+
   void dispose() {
     _guard(() {
       for (final player in _sfxPlayers.values) {
         player.dispose();
       }
       _music.dispose();
+      _matchMusic.dispose();
     });
   }
 

@@ -279,9 +279,17 @@ class _GameScreenState extends ConsumerState<GameScreen> {
   String? _subPendingGroup;
   int? _subPendingSlot;
 
+  /// Captured once rather than calling `ref.read(audioServiceProvider)` from
+  /// `dispose()` — Riverpod forbids reading `ref` once a widget is
+  /// deactivated/unmounted (`dispose` runs after that point), so the
+  /// reference has to be grabbed while `ref` is still safe to use.
+  late final AudioService _audio;
+
   @override
   void initState() {
     super.initState();
+    _audio = ref.read(audioServiceProvider);
+    _audio.playMatchMusic();
     WidgetsBinding.instance.addPostFrameCallback((_) => _maybeBootstrap());
     // Load admin-configured card colours, then repaint so cards use them.
     CardTier.ensureLoaded().then((_) {
@@ -306,6 +314,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
   @override
   void dispose() {
     _gameLoadTimer?.cancel();
+    _audio.stopMatchMusic();
     super.dispose();
   }
 
